@@ -9,7 +9,6 @@ library(gridExtra)
 library(tidyr)
 
 # read gene expression and ase data for NPX region
-setwd("~/Documents/Harpak/X inactivation/XCI_code/")
 npx_df <- read.csv("meddiff_SMTSD_NPXgene.txt", sep="\t")
 ase_df <- read.csv("ASE_tissue.txt", sep="\t")
 

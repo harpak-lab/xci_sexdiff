@@ -40,10 +40,18 @@ Plot M-F median TPM difference against ASE
 
 ####### Figure 2
 Plot phenotype values against alleles
+## Liaoyi code ##
 
 Figure S1
 SD ASE and Gene Expression Across Tissues
-- Run 
+- Inputs: meddiff_SMTSD_NPXgene.txt and ASE_tissue.txt
+- Run FigS1_SD.R
+
+Figure S5
+Fisher exact test of individual x read count for 3 skewed XCI GTEx females
+- Inputs: Gylemo_ase_raw.txt from Supplementary Table 4 from Gylemo et al.(3)
+- Run FigS5_Fisher.R
+
 
 ### XWAS
 
@@ -88,6 +96,7 @@ Create heatmap of XWAS p-values for each tissue and trait
 
 
 References:
-1. San Roman
-2. Tukiainen
+1. San Roman, A. K. et al. The human inactive X chromosome modulates expression of the active X chromosome. Cell Genomics 3, 100259 (2023). 
+2. Tukiainen, T. et al. Landscape of X chromosome inactivation across human tissues. Nature 550, 244–248 (2017).
+3. Gylemo, B., et al. A whole-organism landscape of X-inactivation in humans. eLife 14, (2025). 
 
