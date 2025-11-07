@@ -10,6 +10,7 @@ library(tidyr)
 
 # read gene expression and ase data for NPX region
 npx_df <- read.csv("meddiff_SMTSD_NPXgene.txt", sep="\t")
+npx_df <- npx_df[npx_df$data == "med_diff_adj", -c("data")]
 ase_df <- read.csv("ASE_tissue.txt", sep="\t")
 
 # merge dataframes
