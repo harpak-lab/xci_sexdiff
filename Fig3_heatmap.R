@@ -35,9 +35,9 @@ agg_df <- agg_df %>%
 ## Dendrogram
 # pairwise correlation of ASE for tissues 
 df_ase <- read.csv("ASE_tissue.txt", sep="\t")
+colnames(df_ase) <- c("Gene", "Tissue", "ASE")
 
 df_ase <- df_ase %>%
-  select(Gene, Tissue, ASE) %>%
   arrange(Tissue) %>%
   pivot_wider(names_from = Tissue, values_from = ASE) %>%
   as.data.frame()

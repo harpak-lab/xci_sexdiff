@@ -12,6 +12,7 @@ library(tidyr)
 
 # ASE and associated SNPs
 df_ase <- read.csv("ASE_tissue.txt", sep="\t") 
+colnames(df_ase) <- c("Gene", "Tissue", "ASE")
 
 # get nearby associated genes
 gene_list <- read.csv("ensemblGene_name_rsid.txt", sep="\t")  # gene name
@@ -76,7 +77,6 @@ ggplot(df_xwas, aes(x=ASE, y=neg_logP, color=cor_test)) +
 
 ######## ######## ######## ######## ######## ######## ######## ######## ######## ######## ######## 
 ######## TISSUE-SPECIFIC ########
-df_ase <- read.csv("ASE_tissue.txt", sep="\t")
 
 # all SNPs
 
@@ -102,7 +102,6 @@ df_tis <- df_tis[df_tis$gene_name != "XIST",] # remove XIST as outlier
 #   summarise(correlation=cor.test(neg_logP, ASE)$estimate,
 #             cor_pvalue=cor.test(neg_logP, ASE)$p.value) %>%
 #   as.data.frame()
-# setwd("~/Documents/Harpak/X inactivation/XWAS/logP_ASE_tissue/")
 # write.table(cor_df, paste0(pheno, "_ase_bytissue.txt"), sep="\t", row.names = F, quote=F)
 
 # rename for easier plotting

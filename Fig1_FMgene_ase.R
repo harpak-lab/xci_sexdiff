@@ -30,8 +30,8 @@ write.table(ase_df, "ASE_tissue.txt", sep="\t", row.names = F, quote = F)
 setwd("~/Documents/Harpak/X inactivation/")
 npx_df <- read.csv("meddiff_SMTSD_allgene.txt", sep="\t")
 par_df <- read.csv("meddiff_SMTSD_PAR1gene.txt", sep="\t")
-npx_df <- npx_df[npx_df$data == "med_diff_adj", -c("data")]
-par_df <- par_df[par_df$data == "med_diff_adj", -c("data")]
+npx_df <- npx_df[npx_df$data == "med_diff_adj", c(1,3,4)]
+par_df <- par_df[par_df$data == "med_diff_adj", c(1,3,4)]
 
 # y homologue
 y_df <- read.csv("allNPX.txt", sep="\t")
