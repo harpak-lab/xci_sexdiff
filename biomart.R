@@ -23,14 +23,14 @@ list_gene <- read.csv("gene_id_list.txt", sep="\t")
 df <- data.frame(matrix(ncol = 2, nrow = 0))
 colnames(df) <- c("id", "gene")
 for (i in 1:nrow(list_gene)) {
-  geneId <- list_gene[i,]
+  geneId <- list_gene[i,1]
   sub_df <- fetch_endpoint(geneId)
   df <- rbind(df, sub_df)
 }
-
+head(list_gene)
 
 gene_names <- read.csv("gene_list.txt", sep="\t")
-df <- merge(gene_df, names, by.x = "ensembl_gene_id", by.y = "gene")
+df <- merge(gene_names, df, by.x = "ensembl_gene_id", by.y = "gene")
 
 write.table(df, "ensemblGene_name_rsid.txt", sep="\t", row.names=FALSE, quote=FALSE)
 
