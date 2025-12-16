@@ -1,0 +1,1458 @@
+---
+title: "replicate"
+output:
+  pdf_document: default
+  html_document: default
+date: "2025-11-04"
+---
+```{r}
+library(ggplot2)
+library(ggrepel)
+library(reshape2)
+library(stringr)
+library(dplyr)
+library(ggpubr)
+library(grid)
+library(gridExtra)
+library(tidyr)
+library(ggdendro)
+library(Hmisc)
+library(ggnewscale)
+library(data.table)
+library(dplyr)
+library(cowplot)
+library(readxl)
+source("../../../igc/src/rtheme.R")
+```
+
+# Use 3 individuals from Gylemo et al
+```{r}
+df = read_excel("../../TABELS/elife-102701-supp1-v1.xlsx", sheet = 'Table D')
+```
+
+## convert ref/alt allele count to xi/xa allele count using binomial test p-value
+```{r}
+df$binomP = as.numeric(df$binomP)
+df$my_binom_p <- exp(pbinom(df$refCount - 1,
+                            size = df$totalCount,
+                            prob = 0.025,
+                            lower.tail = FALSE,
+                            log.p = TRUE))
+par(mfrow = c(1, 2))
+plot(df$my_binom_p, df$binomP, main = 'before process')
+
+eps <- 1e-300
+df <- df %>%
+  mutate(
+    my_binom_p = pmax(my_binom_p, eps),
+    binomP = pmax(binomP, eps),
+    neglog10p_diff = abs(-log10(my_binom_p) - -log10(binomP))
+  )
+
+
+df <- df %>%
+  mutate(my_binom_p = if_else(
+    neglog10p_diff > 1,
+    1 - pbinom(altCount - 1, size = totalCount, prob = 0.025),
+    my_binom_p  # keep the old value otherwise
+  )) %>% 
+  mutate(my_xi_count = ifelse(
+    neglog10p_diff > 1,
+    altCount,
+    refCount
+  )) %>% 
+  mutate(my_xa_count = ifelse(
+    neglog10p_diff > 1,
+    refCount,
+    altCount
+  ))
+plot(df$my_binom_p, df$binomP, main = 'after process')
+```
+## calcuate xi to total ratio
+```{r}
+df$AE = df$my_xi_count / (df$my_xi_count + df$my_xa_count)
+write.csv(df, "../../TABELS/Gylemo_supp_D_w_AE.csv", row.names = FALSE)
+```
+
+## map tissue name
+```{r}
+df_ase_new <- read.csv("../../TABELS/Gylemo_supp_D_w_AE.csv")
+tissue_name_map <- read_excel("../../TABELS/elife-102701-supp1-v1.xlsx", sheet = 'Table G')
+# correct typo in tissue_name_map
+tissue_name_map <- tissue_name_map %>%
+  mutate(
+    tissue = ifelse(abbreviation == "skin-lleg",
+                    'Skin-Sun Exposed (Lower leg)',
+                    tissue),
+    tissue = ifelse(abbreviation == "skin-supr",
+                    'Skin-Not Sun Exposed (Suprapubic)',
+                    tissue)
+  )
+tissue_name_map$tissue <- sub("-", " - ", tissue_name_map$tissue)
+df_ase_new <- merge(df_ase_new, tissue_name_map, by.x = 'tissue_id', by.y = 'abbreviation')
+# df_ase_all = merge(df_ase, df_ase_new, by.x = c("Tissue", "Gene"), by.y = c("tissue", "gene"), all = TRUE)
+# 
+# # not sure if it's correct, by they are negatively correlated
+# df_ase_all$ASE_new = abs(0.5-df_ase_all$ASE)
+# df_ase_all <- df_ase_all%>%
+#   mutate(
+#     ase_all = ifelse(
+#       is.na(ASE_new) & !is.na(allelic_expression), allelic_expression,
+#       ifelse(!is.na(ASE_new) & is.na(allelic_expression), ASE_new,
+#              rowMeans(cbind(ASE_new, allelic_expression), na.rm = TRUE))
+#     )
+#   )
+```
+
+#test
+```{r}
+ggplot(df_ase_new, aes(x = individual, y = allelic_expression, color = tissue)) +
+  geom_boxplot(outlier.shape = NA, alpha = 0.5) +  # semi-transparent boxplot
+  # geom_jitter(width = 0.2, height = 0, size = 2, alpha = 0.8) +  # individual points
+  theme_minimal() +
+  labs(x = "Individual", y = "Allelic Expression (AE)", color = "Tissue") +
+  theme_Publication()
+```
+
+
+## calcualte the avergae across 3 individuals
+```{r}
+UPIC = df_ase_new %>% filter(individual == 'UPIC') %>% 
+  select(c("contig", "gene", "PAR", "AE", "tissue"))
+nmXCI1 = df_ase_new %>% filter(individual == 'nmXCI-1') %>% 
+  select(c("contig", "gene", "PAR", "AE", "tissue"))
+nmXCI2 = df_ase_new %>% filter(individual == 'nmXCI-2') %>% 
+  select(c("contig", "gene", "PAR", "AE", "tissue"))
+
+# Tukiainen_UPIC = read.csv("../../TABELS/Tukiainen_ase_bytissue.txt", sep="\t") %>%
+#   select(c("Gene", "Tissue", "ASE"))
+# Tukiainen_UPIC$ASE = abs(0.5-Tukiainen_UPIC$ASE)
+
+all3_ase <- full_join(UPIC, nmXCI1, 
+                      by = c("contig", "gene", "PAR", "tissue"), 
+                      suffix = c("_UPIC", "_nmXCI1"))
+all3_ase <- full_join(all3_ase, nmXCI2, 
+                      by = c("contig", "gene", "PAR", "tissue"))
+all3_ase <- all3_ase %>%
+  rename(AE_nmXCI2 = AE)
+# all3_ase <- full_join(all3_ase, Tukiainen_UPIC,
+#                       by = c("gene" = "Gene", "tissue" = "Tissue"))
+all3_ase <- all3_ase %>%
+  rename(
+    Gene = gene,
+    Tissue = tissue
+  )
+
+# Calculate row-wise mean ignoring NA
+all3_ase$mean_ASE <- rowMeans(
+  all3_ase[, c("AE_UPIC", 
+               "AE_nmXCI1",
+               "AE_nmXCI2")],
+  na.rm = TRUE
+)
+
+# rename
+all3_ase = all3_ase %>% 
+  mutate(Tissue = case_when(Tissue=="Brain - Spinal_cord_cervical_c-1" ~ "Brain - Spinal cord cervical c-1",
+                            Tissue=="Brain - Caudate_basal_ganglia" ~ "Brain - Caudate basal ganglia",
+                            Tissue=="Brain - Cerebellar_Hemisphere" ~ "Brain - Cerebellar Hemisphere",
+                            Tissue=="Breast - Mammary_Tissue" ~ "Breast - Mammary Tissue",
+                            Tissue=="Heart - Left_Ventricle" ~ "Heart - Left Ventricle",
+                            Tissue=="Heart - Atrial_Appendage" ~ "Heart - Atrial Appendage",
+                            TRUE ~ Tissue))
+
+tissues <- unique(all3_ase$Tissue)
+```
+
+
+# Figure 1
+```{r}
+# load ASE data for each tissue
+# ase_df <- read.csv("../../TABELS/Suppl.Table.5.ASE.txt", sep="\t")
+# format tissue names
+# ase_df <- all3_ase %>% 
+#   mutate(Tissue = str_replace(Tissue, "ESPMCS", "Esophagus - Mucosa")) %>% mutate(Tissue = str_replace(Tissue, "PNCREAS", "Pancreas")) %>%
+#   mutate(Tissue = str_replace(Tissue, "STMACH", "Stomach")) %>% mutate(Tissue = str_replace(Tissue, "KDNCTX", "Kidney - Cortex")) %>%
+#   mutate(Tissue = str_replace(Tissue, "ESPMSL", "Esophagus - Muscularis")) %>% mutate(Tissue = str_replace(Tissue, "VAGINA", "Vagina")) %>%
+#   mutate(Tissue = str_replace(Tissue, "ARTAORT", "Artery - Aorta")) %>% mutate(Tissue = str_replace(Tissue, "CLNTRN", "Colon - Transverse")) %>%
+#   mutate(Tissue = str_replace(Tissue, "LUNG", "Lung")) %>% mutate(Tissue = str_replace(Tissue, "WHLBLD", "Whole Blood")) %>%
+#   mutate(Tissue = str_replace(Tissue, "ARTCRN", "Artery - Coronary")) %>% mutate(Tissue = str_replace(Tissue, "LIVER", "Liver")) %>%
+#   mutate(Tissue = str_replace(Tissue, "SKINS", "Skin - Not Sun Exposed (Suprapubic)")) %>% mutate(Tissue = str_replace(Tissue, "THYROID", "Thyroid")) %>%
+#   mutate(Tissue = str_replace(Tissue, "UTERUS", "Uterus")) %>% mutate(Tissue = str_replace(Tissue, "LCL", "Cells - EBV-transformed lymphocytes")) 
+# ase_df$Gene_ID <- gsub("\\..*","",ase_df$Gene_ID)
+ase_df <- all3_ase %>% select(c("Gene", "Tissue", "mean_ASE"))
+write.table(ase_df, "../../TABELS/ASE_tissue_3_ind.txt", sep="\t", row.names = F, quote = F)
+
+# load gene expression for NPX and PAR1 genes
+# setwd("~/Documents/Harpak/X inactivation/")
+# npx_df <- read.csv("../../TABELS/meddiff_SMTSD_allgene.txt", sep="\t")
+npx_df <- read.csv("../../TABELS/meddiff_SMTSD_NPXgene.txt", sep = "\t")
+npx_df <- npx_df %>% filter(data == "med_diff_adj")
+par_df <- read.csv("../../TABELS/meddiff_SMTSD_PAR1gene.txt", sep="\t")
+par_df <- par_df %>% filter(data == "med_diff_adj")
+
+# y homologue
+y_df <- read.csv("../../TABELS/allNPX.txt", sep="\t")
+
+# function to merge df
+merge_df <- function(npx_df, par_df, ase_df, tis_name="sum") {
+  if (tis_name == "sum") {
+    colnames(npx_df) <- c("Gene", "median")
+    colnames(par_df) <- c("Gene", "median")
+  } else {
+    colnames(npx_df) <- c("SMTSD", "data", "Gene", "median")
+    colnames(par_df) <- c("SMTSD", "data", "Gene", "median")
+  }
+  # merge
+  df <- rbind(npx_df, par_df)
+  
+  df <- merge(df, ase_df, by="Gene")
+  # add regions
+  df$Region <- ifelse(df$Gene %in% par_df$Gene, "PAR1", "NPX") 
+  # remove XIST as outlier
+  df <- df[!df$Gene %in% c("XIST"),]
+  return(df)
+}
+
+# ACROSS TISSUES
+# get median across tissues
+med_tissue <- function(df){
+  colnames(df)[which(names(df) == "variable")] <- "Gene"
+  df <- df %>% 
+    group_by(Gene) %>%
+    summarise(across(where(is.numeric), ~median(.x, na.rm=TRUE))) %>%
+    as.data.frame()
+  return(df)
+}
+ase_df_sum <- med_tissue(ase_df)
+npx_df_sum <- med_tissue(npx_df)
+par_df_sum <- med_tissue(par_df)
+
+# merge df
+df <- merge_df(npx_df_sum, par_df_sum, ase_df_sum)
+
+# add Y-homologue
+y_df <- merge(df, y_df[c(1,2)], by="Gene", all.x = T)
+y_df <- y_df %>% filter(NPY.Pair)
+
+# plot aggregate plot
+pB = ggplot(df, aes(x=mean_ASE, y=median, color=Region)) +
+  geom_point() +
+  geom_smooth(method="lm", formula=y~x, se=FALSE) +
+  scale_color_manual(values=c("#D64B27","grey40")) +
+  geom_point(data=y_df, aes(x=mean_ASE, y=median), color="#7f171c", shape=17, size=2) +
+  labs(title = "Averaged Across Tissues", y="Median Female-Male TPM Difference",
+       x="Proportion of Gene Expression from Xi") +
+  theme_classic() +
+  stat_cor(label.y=c(0.65, 0.60)) +
+  theme(legend.position = "none",
+        plot.title = element_text(size=13),
+        axis.title = element_text(size=11),
+        axis.text = element_text(size=8)) +
+  geom_text_repel(aes(label=Gene), size=3.2)
+
+
+# TISSUE SPECIFIC
+
+## Liver
+
+tissue <- "Liver"    ## USER INPUT
+ase_df_tis <- ase_df[ase_df$Tissue == tissue, c("Gene", "mean_ASE")]
+npx_df_tis <- npx_df[npx_df$SMTSD == tissue,]
+par_df_tis <- par_df[par_df$SMTSD == tissue,]
+
+# merge df
+df_tissue <- merge_df(npx_df_tis, par_df_tis, ase_df_tis, tissue)
+
+# y homologue
+y_df <- read.csv("../../TABELS/allNPX.txt", sep="\t")
+# add Y-homologue
+y_df <- merge(df_tissue, y_df[c(1,2)], by="Gene", all.x = T)
+y_df <- y_df %>% filter(NPY.Pair)
+
+# plot tissue-specific
+pA1 = ggplot(df_tissue, aes(x=mean_ASE, y=median, color=Region)) +
+  geom_point() +
+  geom_smooth(method="lm", formula=y~x, se=FALSE) +
+  scale_color_manual(values=c("#D64B27","grey40")) +
+  geom_point(data=y_df, aes(x=mean_ASE, y=median), color="#7f171c", shape=17, size=2) +
+  labs(y="Median Female-Male TPM Difference",
+       x="Proportion of Gene Expression from Xi", title=tissue) +
+  theme_classic() +
+  stat_cor(label.y=c(1.05, 0.95), label.x=c(0.0,0.0), size=3.2) +
+  # labs(y="", x="", title = tissue) +
+  theme(legend.position = "none",
+        plot.title = element_text(size=13),
+        axis.title = element_text(size=11),
+        axis.text = element_text(size=8)) +
+  geom_text_repel(aes(label=Gene), size=3.2)
+
+## Skin
+
+tissue <- "Skin - Not Sun Exposed (Suprapubic)"    ## USER INPUT
+ase_df_tis <- ase_df[ase_df$Tissue == tissue, c("Gene", "mean_ASE")]
+npx_df_tis <- npx_df[npx_df$SMTSD == tissue,]
+par_df_tis <- par_df[par_df$SMTSD == tissue,]
+
+# merge df
+df_tissue <- merge_df(npx_df_tis, par_df_tis, ase_df_tis, tissue)
+
+# y homologue
+y_df <- read.csv("../../TABELS/allNPX.txt", sep="\t")
+# add Y-homologue
+y_df <- merge(df_tissue, y_df[c(1,2)], by="Gene", all.x = T)
+y_df <- y_df %>% filter(NPY.Pair)
+
+# plot tissue-specific
+pA2 = ggplot(df_tissue, aes(x=mean_ASE, y=median, color=Region)) +
+  geom_point() +
+  geom_smooth(method="lm", formula=y~x, se=FALSE) +
+  scale_color_manual(values=c("#D64B27","grey40")) +
+  geom_point(data=y_df, aes(x=mean_ASE, y=median), color="#7f171c", shape=17, size=2) +
+  labs(y="Median Female-Male TPM Difference",
+       x="Proportion of Gene Expression from Xi", title=tissue) +
+  theme_classic() +
+  stat_cor(label.y=c(1.05, 0.95), label.x=c(0.0,0.0), size=3.2) +
+  # labs(y="", x="", title = tissue) +
+  theme(legend.position = "none",
+        plot.title = element_text(size=13),
+        axis.title = element_text(size=11),
+        axis.text = element_text(size=8)) +
+  geom_text_repel(aes(label=Gene), size=3.2)
+
+# pA <- plot_grid(pA1, pA2, ncol = 1)
+# p <- plot_grid(pA, pB, ncol = 2)
+# p
+
+pA1 <- pA1 + theme(axis.title.x = element_blank(),
+                   axis.title.y = element_blank())
+pA2 <- pA2 + theme(axis.title.x = element_blank(),
+                   axis.title.y = element_blank())
+pB  <- pB  + theme(axis.title.x = element_blank(),
+                   axis.title.y = element_blank())
+
+pA <- plot_grid(pA1, pA2, ncol = 1)
+p  <- plot_grid(pA, pB, ncol = 2)
+p_final <- ggdraw(p) +
+  draw_label("Proportion of Gene Expression from Xi", 
+             x = 0.5, y = 0.03, vjust = 0, size = 12) +
+  draw_label("Median Female–Male TPM Difference", 
+             x = 0.02, y = 0.5, angle = 90, vjust = 1, size = 12)
+
+p_final
+ggsave("../../FIGURES/sex_diff_vs_xi_expression.pdf", height = 7, width = 10)
+```
+
+
+# Figure 3
+
+
+## prepare data: Xi expression, gene annotation
+```{r}
+# phenos <- sort(c(
+#   "HbA1c", "RBC_count", "albumin", "height", "bmi", "lymphocyte_perc",
+#   "K50", "K51", "K80", "M05", "G43", "F20", "E050"
+# ))
+
+df_ase <- all3_ase
+tissues <- unique(df_ase$Tissue)
+
+anno <- read.csv("../../TABELS/NCBI37.3.gene.loc", sep = '\t', header = FALSE,
+                 col.names = c("GENE", "CHR", "START", "END", "STRAND", "NAME"))
+anno$LEN = anno$END - anno$START
+anno$START5K = anno$START - 5000
+anno$END5K = anno$END + 5000
+```
+
+## Clustering
+```{r}
+df_ase_converted <- df_ase %>%
+  select(Gene, Tissue, mean_ASE) %>%
+  # filter(!Tissue %in% c("Uterus", "Vagina")) %>%
+  arrange(Tissue) %>%
+  pivot_wider(names_from = Tissue, values_from = mean_ASE) %>%
+  as.data.frame()
+row.names(df_ase_converted) <- df_ase_converted[,1]
+df_ase_converted[,1] <- NULL
+# correlation matrix 
+corr_matrix <- rcorr(as.matrix(df_ase_converted), type="pearson")
+tissue_dendro <- as.dendrogram(hclust(d = dist(x = corr_matrix$r)))
+
+# dendrogram plot
+dendro_plot <- ggdendrogram(data = tissue_dendro, rotate=T, labels = F, leaf_labels = F)
+dendro_order <- order.dendrogram(tissue_dendro)
+dendro_plot
+```
+
+## Association between minp and xi expression
+
+### get gene minimum p-value for biomarker traits
+```{r}
+add_sumstats_dir = "../../PLINK_LM_OUTPUT/20250923_biomarkers/"
+dom_sumstats_dir = "../../PLINK_LM_OUTPUT/20250923_biomarkers/DOMDEV_flt/"
+
+get_min_p <- function(sumstats, anno) {
+  anno_dt <- as.data.table(anno)
+  sumstats_dt <- as.data.table(sumstats)
+  
+  # match col names
+  setnames(sumstats_dt, "X.CHROM", "CHR")
+  
+  setkey(anno_dt, CHR, START5K, END5K)
+  # Add SNP positions as both start & end (since they're single bp positions)
+  sumstats_dt[, `:=`(SNP_START = POS, SNP_END = POS)]
+  setkey(sumstats_dt, CHR, SNP_START, SNP_END)
+  res <- foverlaps(sumstats_dt, anno_dt, 
+                   by.x=c("CHR","SNP_START","SNP_END"),
+                   by.y=c("CHR","START5K","END5K"), nomatch=0L)
+  gene_min_p <- res[, .(
+    minP = min(P, na.rm=TRUE),
+    nSNP = .N
+  ), by=NAME]
+  
+  return(gene_min_p)
+}
+
+add_min_p_results <- data.frame()
+for (f in list.files(
+  path = add_sumstats_dir, 
+  pattern = '^20250923_female_add.*glm.*',
+  full.names = TRUE)
+  ) {
+  pheno = strsplit(basename(f), "\\.")[[1]][2]
+  ss = read.csv(f, sep = '\t')
+  # only keep chrx
+  ss = ss %>% filter(`X.CHROM` == 'X')
+  min_p_df = get_min_p(ss, anno)
+  min_p_df <- min_p_df %>% mutate(pheno = pheno)
+  add_min_p_results <- rbind(add_min_p_results, min_p_df)
+}
+add_min_p_results <- add_min_p_results %>% mutate(test = 'add')
+
+dom_min_p_results <- data.frame()
+for (f in list.files(
+  path = dom_sumstats_dir, 
+  pattern = '^20250923_female_dom.*domdev',
+  full.names = TRUE)
+) {
+  pheno = strsplit(basename(f), "\\.")[[1]][2]
+  ss = read.csv(f, sep = '\t')
+  # only keep chrx
+  ss = ss %>% filter(`X.CHROM` == 'X')
+  min_p_df = get_min_p(ss, anno)
+  min_p_df <- min_p_df %>% mutate(pheno = pheno)
+  dom_min_p_results <- rbind(dom_min_p_results, min_p_df)
+}
+dom_min_p_results <- dom_min_p_results %>% mutate(test = 'dom')
+
+biomarker_min_p_results <- rbind(add_min_p_results, dom_min_p_results)
+head(biomarker_min_p_results)
+```
+
+### get gene minimum p-value for 13 traits
+```{r}
+add_sumstats_dir = "../../PLINK_LM_OUTPUT/all_13_traits_x/"
+dom_sumstats_dir = "../../PLINK_LM_OUTPUT/all_13_traits_x/DOMDEV_flt/"
+
+get_min_p <- function(sumstats, anno) {
+  anno_dt <- as.data.table(anno)
+  sumstats_dt <- as.data.table(sumstats)
+  
+  # match col names
+  setnames(sumstats_dt, "X.CHROM", "CHR")
+  
+  setkey(anno_dt, CHR, START5K, END5K)
+  # Add SNP positions as both start & end (since they're single bp positions)
+  sumstats_dt[, `:=`(SNP_START = POS, SNP_END = POS)]
+  setkey(sumstats_dt, CHR, SNP_START, SNP_END)
+  res <- foverlaps(sumstats_dt, anno_dt, 
+                   by.x=c("CHR","SNP_START","SNP_END"),
+                   by.y=c("CHR","START5K","END5K"), nomatch=0L)
+  gene_min_p <- res[, .(
+    minP = min(P, na.rm=TRUE),
+    nSNP = .N
+  ), by=NAME]
+  
+  return(gene_min_p)
+}
+
+add_min_p_results <- data.frame()
+for (f in list.files(
+  path = add_sumstats_dir, 
+  pattern = '^20250807_female_X_add.*glm.*',
+  full.names = TRUE)
+  ) {
+  pheno = strsplit(basename(f), "\\.")[[1]][2]
+  ss = read.csv(f, sep = '\t')
+  min_p_df = get_min_p(ss, anno)
+  min_p_df <- min_p_df %>% mutate(pheno = pheno)
+  add_min_p_results <- rbind(add_min_p_results, min_p_df)
+}
+add_min_p_results <- add_min_p_results %>% mutate(test = 'add')
+
+dom_min_p_results <- data.frame()
+for (f in list.files(
+  path = dom_sumstats_dir, 
+  pattern = '^20250807_female_X_dom.*domdev',
+  full.names = TRUE)
+) {
+  pheno = strsplit(basename(f), "\\.")[[1]][2]
+  ss = read.csv(f, sep = '\t')
+  min_p_df = get_min_p(ss, anno)
+  min_p_df <- min_p_df %>% mutate(pheno = pheno)
+  dom_min_p_results <- rbind(dom_min_p_results, min_p_df)
+}
+dom_min_p_results <- dom_min_p_results %>% mutate(test = 'dom')
+
+traits_13_min_p_results <- rbind(add_min_p_results, dom_min_p_results)
+head(traits_13_min_p_results)
+```
+
+### combine 13 trait min_p_results and biomarker min_p_results
+```{r}
+min_p_results = rbind(traits_13_min_p_results, biomarker_min_p_results)
+```
+
+### save min p results
+```{r}
+write.csv(min_p_results, "../../TABELS/min_p_results.csv", row.names = FALSE)
+```
+
+### run regression log10(p-value) ~ xi expression + # snp
+```{r}
+log10_min_p_reg_results <- data.frame(
+  pheno = character(),
+  tissue = character(),
+  test = character(),
+  beta_xi_exp = numeric(),
+  beta_xi_exp_p = numeric(),
+  beta_gene_len = numeric(),
+  beta_gene_len_p = numeric(),
+  stringsAsFactors = FALSE
+)
+phenos = unique(min_p_results$pheno)
+for (Pheno in phenos) {
+  for (Test in c("add", "dom")) {
+    min_p = min_p_results %>% 
+      filter(pheno == Pheno) %>% 
+      filter(test == Test)
+    
+    # min_p <- merge(min_p, anno, by = 'GENE')
+    
+    # get ase
+    t <- inner_join(min_p, all3_ase, by = c("NAME" = "Gene"))
+    t <- inner_join(t, anno, by = c("NAME" = "NAME"))
+    for (tissue in tissues) {
+      subt = t %>% 
+        filter(Tissue == tissue) %>% 
+        filter(mean_ASE != 0)
+      model = lm(-log10(minP)~mean_ASE+nSNP, data = subt)
+      
+      log10_min_p_reg_results <- rbind(
+        log10_min_p_reg_results,
+        data.frame(
+          pheno = Pheno,
+          tissue = tissue,
+          test = Test,
+          beta_xi_exp = summary(model)$coefficients["mean_ASE", "Estimate"],
+          beta_xi_exp_p = summary(model)$coefficients["mean_ASE", "Pr(>|t|)"],
+          beta_gene_len = summary(model)$coefficients["nSNP", "Estimate"],
+          beta_gene_len_p = summary(model)$coefficients["nSNP", "Pr(>|t|)"],
+          stringsAsFactors = FALSE
+        )
+      )
+    }
+  }
+}
+
+head(log10_min_p_reg_results)
+```
+
+### format min p regrssion result
+```{r}
+agg_df <- log10_min_p_reg_results %>%
+  mutate(beta_xi_exp_p_fdr = p.adjust(beta_xi_exp_p, "fdr")) %>%
+  mutate(beta_xi_exp_p_bonferroni = p.adjust(beta_xi_exp_p, "bonferroni")) %>%
+  mutate(beta_xi_exp_p = case_when(beta_xi_exp_p > 0.05 ~ NaN,    
+                                TRUE ~ beta_xi_exp_p)) %>%
+  mutate(p_label = ifelse(!is.na(beta_xi_exp_p), sapply(beta_xi_exp_p, format, digits=1, nsmall=3), ""))
+agg_df <- agg_df %>%
+  mutate(pheno = case_when(pheno=="K50" ~ "Crohn's",
+                           pheno=="K51" ~ "Ulcerative colitis",
+                           pheno=="K80" ~ "Cholelithiasis",
+                           pheno=="M05" ~ "Inflammatory polyarthropathies",
+                           pheno=="G43" ~ "Migraine",
+                           pheno=="F20" ~ "Schizophrenia",
+                           pheno=="E050" ~ "Thyrotoxicosis",
+                           pheno=="albumin" ~ "Albumin",
+                           pheno=="bmi" ~ "BMI",
+                           pheno=="height" ~ "Height",
+                           pheno=="lymphocyte_perc" ~ "Lymphocyte %",
+                           pheno=="RBC_count" ~ "Red blood cell count",
+                           pheno=="oestradiol" ~ "Estradiol",
+                           pheno=="cholesterol" ~ "Cholesterol",
+                           pheno=="glucose" ~ "Glucose",
+                           pheno=="IGF1" ~ "IGF-1",
+                           pheno=="testosterone" ~ "Testosterone",
+                           pheno=="total_protein" ~ "Total protein",
+                           pheno=="vitamin_D" ~ "Vitamin D",
+                           TRUE ~ pheno))
+```
+
+
+### plot heatmap for -log10(reg) p and xi expression
+```{r}
+## Split to add and dom 
+# split dataframe
+separate_df <- function(agg_df, mode) {
+  df_half <- agg_df %>%
+    filter(test == mode) %>%
+    select(tissue, beta_xi_exp_p, beta_xi_exp_p_fdr, pheno, p_label, beta_xi_exp) %>%
+    mutate(beta_xi_exp = ifelse(is.na(beta_xi_exp_p), NaN, beta_xi_exp)) %>%
+    mutate(beta_xi_exp = ifelse(is.na(beta_xi_exp_p_fdr), NaN, beta_xi_exp)) %>%
+    as_tibble()
+  # df_half$tissue <- factor(df_half$tissue, levels=df_half$tissue[dendro_order], ordered=T)
+  df_half$tissue <- factor(df_half$tissue, levels=labels(tissue_dendro), ordered=T)
+  return(df_half)
+}
+# create triangle polygon for plot
+triangle_df <- function(df_half, mode) {
+  m <- ifelse(mode=="add", 1, 0)
+  df_half_poly <- df_half[rep(seq(nrow(dom_df)), each = 3),]
+  df_half_poly <- df_half_poly %>%
+    mutate(pheno1 = as.numeric(as.factor(df_half_poly$pheno))) %>%
+    mutate(tissue1 = as.numeric(as.factor(df_half_poly$tissue))) %>%
+    mutate(pheno1 = pheno1 + c(0.5-m, 0.5, -0.5)) %>%
+    mutate(tissue1 = tissue1 + c(-0.5, 0.5-m, 0.5)) %>%
+    mutate(z = rep(seq(nrow(df_half_poly)/3), each = 3))
+  return(df_half_poly)
+}
+add_df <- separate_df(agg_df, "add"); dom_df <- separate_df(agg_df, "dom")
+add_poly <- triangle_df(add_df, "add"); dom_poly <- triangle_df(dom_df, "dom")
+
+hm_plot <- ggplot(add_df, aes(x=pheno, y=as.factor(tissue))) +
+  geom_tile(fill="gray90") +
+  geom_polygon(data = add_poly, aes(x=pheno1, y=tissue1, group=z, fill=beta_xi_exp_p), linewidth=0.2, color="gray90") +      # additive lower left triangle
+  geom_text(aes(label=p_label), size=2.2, hjust=0.8, vjust=1.5) +
+  geom_polygon(data = dom_poly, aes(x=pheno1, y=tissue1, group=z, fill=beta_xi_exp_p), linewidth=0.2, color="gray90") +      # dominance upper right triangle
+  geom_text(data = dom_df, aes(label=p_label), size=2.2, hjust=0.2, vjust=-0.5) +
+  scale_fill_gradientn(colors = c("steelblue", "#ecf2f7"), 
+                       na.value="white", 
+                       trans = "log10",
+                       name="beta (xi expression) p-value",
+                       limits = c(1e-5,0.05)) + # avoid log0
+  scale_x_discrete(position="bottom") +
+  labs(title = "-log10(p-values) ~ Xi expression + n SNPs") +
+  theme(legend.position = "top", axis.title = element_blank(), 
+        axis.text.x = element_text(angle=45, hjust=1, size=13, vjust=1.03), axis.text.y = element_text(size=13)) 
+
+combined_plot <- plot_grid(
+  hm_plot,
+  dendro_plot,
+  ncol = 2,
+  rel_widths = c(5, 1),   # left plot 5x wider than right
+  align = "h"
+)
+
+ggsave("../../FIGURES/heatmap_neglog10p~xi_expression+n_snps.pdf", width = 15, height = 10)
+combined_plot
+```
+
+### Zoom in
+```{r}
+# liver - cholesterol add
+min_p <- min_p_results %>% filter(pheno == 'cholesterol') %>% filter(test == 'add')
+a <- inner_join(min_p, all3_ase, by = c("NAME" = "Gene"))
+a <- inner_join(a, anno, by = c("NAME" = "NAME"))
+a <- a %>% filter(Tissue == 'Liver')
+
+# adrenal gland - oestradiol dom
+min_p <- min_p_results %>% filter(pheno == 'oestradiol') %>% filter(test == 'dom')
+b <- inner_join(min_p, all3_ase, by = c("NAME" = "Gene"))
+b <- inner_join(b, anno, by = c("NAME" = "NAME"))
+b <- b %>% filter(Tissue == 'Adrenal Gland')
+
+ab <- rbind(a, b)
+
+ab <- ab %>%
+  mutate(color_group = case_when(
+    mean_ASE == 0 ~ "gray",
+    test == "add" & mean_ASE != 0 ~ "add",
+    test == "dom" & mean_ASE != 0 ~ "dom",
+    TRUE ~ NA_character_
+  ))
+
+ggplot(ab, aes(x = mean_ASE, y = -log10(minP))) +
+  geom_point(aes(color = color_group), size = 1.5, alpha = 0.7) +   # <-- FIXED
+  geom_smooth(
+    data = subset(ab, mean_ASE != 0.5),
+    aes(color = test),
+    method = "lm", se = FALSE, linewidth = 0.5
+  ) +
+  scale_color_manual(
+    values = c(
+      "gray" = "gray",
+      "add" = "#97B4D3",
+      "dom" = "#5D8EBC"
+    )
+  ) +
+  labs(
+    x = "Proportion of Xi expression",
+    y = expression("-log10p")
+  ) +
+  theme_Publication() +
+  theme(legend.position = "none") +
+  geom_text_repel(aes(label = NAME, color = color_group), size = 3.2) +
+  facet_wrap(~Tissue, scales = "free_y")
+
+ggsave("../../FIGURES/zoom_in_neglog10p_xi_association.pdf", width = 7, height = 4)
+```
+
+
+## Association between MAGMA p and xi expression
+
+### split phenos
+```{r}
+phenos_8_biomarker = c(
+  "cholesterol", "glucose", "IGF1", "oestradiol", "SHBG", "testosterone", "total_protein", "vitamin_D"
+)
+phenos_13_trait = c(
+  "albumin", "bmi", "E050", "F20", "G43", "HbA1c", "height", 
+  "K50", "K51", "K80", "lymphocyte_perc", "M05", "RBC_count"       
+)
+```
+
+### regression for 8 biomarkers
+```{r}
+log10_magma_p_reg_results_biomarkers <- data.frame(
+  pheno = character(),
+  tissue = character(),
+  test = character(),
+  beta_xi_exp = numeric(),
+  beta_xi_exp_p = numeric(),
+  beta_nsnps = numeric(),
+  beta_nsnps_p = numeric(),
+  stringsAsFactors = FALSE
+)
+
+for (Pheno in phenos_8_biomarker) {
+  for (Test in c("add", "dom")) {
+    file_path <- paste0("../../MAGMA_OUTPUT/20251103_biomarkers/20250923_female_", Test, ".", Pheno, "_window_5k.genes.out")
+    magma <- read.table(file_path, header = TRUE, stringsAsFactors = FALSE)
+    magma <- merge(magma, anno, by = 'GENE')
+    
+    # get ase
+    t <- merge(all3_ase, magma, by.x = 'Gene', by.y = 'NAME', how = 'inner')
+    for (tissue in tissues) {
+      subt = t %>% 
+        filter(Tissue == tissue) %>% 
+        filter(mean_ASE != 0)
+      model = lm(-log10(P)~mean_ASE+NSNPS, data = subt)
+      
+      log10_magma_p_reg_results_biomarkers <- rbind(
+        log10_magma_p_reg_results_biomarkers,
+        data.frame(
+          pheno = Pheno,
+          tissue = tissue,
+          test = Test,
+          beta_xi_exp = summary(model)$coefficients["mean_ASE", "Estimate"],
+          beta_xi_exp_p = summary(model)$coefficients["mean_ASE", "Pr(>|t|)"],
+          beta_nsnps = summary(model)$coefficients["NSNPS", "Estimate"],
+          beta_nsnps_p = summary(model)$coefficients["NSNPS", "Pr(>|t|)"],
+          stringsAsFactors = FALSE
+        )
+      )
+    }
+  }
+}
+```
+
+### regression for 13 traits
+```{r}
+log10_magma_p_reg_results_13_tratis <- data.frame(
+  pheno = character(),
+  tissue = character(),
+  test = character(),
+  beta_xi_exp = numeric(),
+  beta_xi_exp_p = numeric(),
+  beta_nsnps = numeric(),
+  beta_nsnps_p = numeric(),
+  stringsAsFactors = FALSE
+)
+
+for (Pheno in phenos_13_trait) {
+  for (Test in c("add", "dom")) {
+    file_path <- paste0("../../MAGMA_OUTPUT/20251011_all_13_traits/20250807_female_X_", Test, ".", Pheno, "_window_5k.genes.out")
+    magma <- read.table(file_path, header = TRUE, stringsAsFactors = FALSE)
+    magma <- merge(magma, anno, by = 'GENE')
+    
+    # get ase
+    t <- merge(all3_ase, magma, by.x = 'Gene', by.y = 'NAME', how = 'inner')
+    for (tissue in tissues) {
+      subt = t %>% 
+        filter(Tissue == tissue) %>% 
+        filter(mean_ASE != 0)
+      model = lm(-log10(P)~mean_ASE+NSNPS, data = subt)
+      
+      log10_magma_p_reg_results_13_tratis <- rbind(
+        log10_magma_p_reg_results_13_tratis,
+        data.frame(
+          pheno = Pheno,
+          tissue = tissue,
+          test = Test,
+          beta_xi_exp = summary(model)$coefficients["mean_ASE", "Estimate"],
+          beta_xi_exp_p = summary(model)$coefficients["mean_ASE", "Pr(>|t|)"],
+          beta_nsnps = summary(model)$coefficients["NSNPS", "Estimate"],
+          beta_nsnps_p = summary(model)$coefficients["NSNPS", "Pr(>|t|)"],
+          stringsAsFactors = FALSE
+        )
+      )
+    }
+  }
+}
+```
+
+### combine MAGMA regression results for all traits
+```{r}
+log10_magma_p_reg_results <- rbind(
+  log10_magma_p_reg_results_biomarkers, 
+  log10_magma_p_reg_results_13_tratis
+)
+```
+
+### format MAGMA regression result
+```{r}
+agg_df <- log10_magma_p_reg_results %>%
+  mutate(p_fdr = p.adjust(beta_xi_exp_p, "fdr")) %>%
+  mutate(beta_xi_exp_p = case_when(beta_xi_exp_p > 0.05 ~ NaN,    
+                                TRUE ~ beta_xi_exp_p)) %>%
+  mutate(p_label = ifelse(!is.na(beta_xi_exp_p), sapply(beta_xi_exp_p, format, digits=1, nsmall=3), ""))
+agg_df <- agg_df %>%
+  mutate(pheno = case_when(pheno=="K50" ~ "Crohn's",
+                           pheno=="K51" ~ "Ulcerative colitis",
+                           pheno=="K80" ~ "Cholelithiasis",
+                           pheno=="M05" ~ "Inflammatory polyarthropathies",
+                           pheno=="G43" ~ "Migraine",
+                           pheno=="F20" ~ "Schizophrenia",
+                           pheno=="E050" ~ "Thyrotoxicosis",
+                           pheno=="albumin" ~ "Albumin",
+                           pheno=="bmi" ~ "BMI",
+                           pheno=="height" ~ "Height",
+                           pheno=="lymphocyte_perc" ~ "Lymphocyte %",
+                           pheno=="RBC_count" ~ "Red blood cell count",
+                           pheno=="oestradiol" ~ "Estradiol",
+                           pheno=="cholesterol" ~ "Cholesterol",
+                           pheno=="glucose" ~ "Glucose",
+                           pheno=="IGF1" ~ "IGF-1",
+                           pheno=="testosterone" ~ "Testosterone",
+                           pheno=="total_protein" ~ "Total protein",
+                           pheno=="vitamin_D" ~ "Vitamin D",
+                           TRUE ~ pheno))
+# %>%
+#   mutate(tissue = case_when(tissue=="Skin - Not Sun Exposed (Suprapubic)" ~ "Skin - Suprapubic",
+#                             tissue=="Cells - EBV - transformed lymphocytes" ~ "Lymphoblastoid Cell Lines",
+#                             TRUE ~ tissue))
+```
+
+```{r}
+## Split to add and dom 
+# split dataframe
+separate_df <- function(mode) {
+  df_half <- agg_df %>%
+    filter(test == mode) %>%
+    select(tissue, beta_xi_exp_p, p_fdr, pheno, p_label, beta_xi_exp) %>%
+    mutate(beta_xi_exp = ifelse(is.na(beta_xi_exp_p), NaN, beta_xi_exp)) %>%
+    mutate(beta_xi_exp = ifelse(is.na(p_fdr), NaN, beta_xi_exp)) %>%
+    as_tibble()
+  # df_half$tissue <- factor(df_half$tissue, levels=df_half$tissue[dendro_order], ordered=T)
+  df_half$tissue <- factor(df_half$tissue, levels=labels(tissue_dendro), ordered=T)
+  return(df_half)
+}
+# create triangle polygon for plot
+triangle_df <- function(df_half, mode) {
+  m <- ifelse(mode=="add", 1, 0)
+  df_half_poly <- df_half[rep(seq(nrow(dom_df)), each = 3),]
+  df_half_poly <- df_half_poly %>%
+    mutate(pheno1 = as.numeric(as.factor(df_half_poly$pheno))) %>%
+    mutate(tissue1 = as.numeric(as.factor(df_half_poly$tissue))) %>%
+    mutate(pheno1 = pheno1 + c(0.5-m, 0.5, -0.5)) %>%
+    mutate(tissue1 = tissue1 + c(-0.5, 0.5-m, 0.5)) %>%
+    mutate(z = rep(seq(nrow(df_half_poly)/3), each = 3))
+  return(df_half_poly)
+}
+add_df <- separate_df("add"); dom_df <- separate_df("dom")
+add_poly <- triangle_df(add_df, "add"); dom_poly <- triangle_df(dom_df, "dom")
+```
+### Plot heatmap for MAGMA p and xi expression
+```{r}
+hm_plot <- ggplot(add_df, aes(x=pheno, y=as.factor(tissue))) +
+  geom_tile(fill="gray90") +
+  geom_polygon(data = add_poly, aes(x=pheno1, y=tissue1, group=z, fill=beta_xi_exp_p), linewidth=0.2, color="gray90") +      # additive lower left triangle
+  geom_text(aes(label=p_label), size=2.2, hjust=0.8, vjust=1.5) +
+  geom_polygon(data = dom_poly, aes(x=pheno1, y=tissue1, group=z, fill=beta_xi_exp_p), linewidth=0.2, color="gray90") +      # dominance upper right triangle
+  geom_text(data = dom_df, aes(label=p_label), size=2.2, hjust=0.2, vjust=-0.5) +
+  scale_fill_gradientn(colors = c("steelblue", "#ecf2f7"), 
+                       na.value="white", 
+                       trans = "log10",
+                       name="beta (xi expression) p-value",
+                       limits = c(1e-5,0.05)) + # avoid log0
+  scale_x_discrete(position="bottom") +
+  labs(title = "-log10(MAGMA p-values) ~ Xi expression + n SNPs") +
+  theme(legend.position = "top", axis.title = element_blank(), 
+        axis.text.x = element_text(angle=45, hjust=1, size=13, vjust=1.03), axis.text.y = element_text(size=13)) 
+
+combined_plot <- plot_grid(
+  hm_plot,
+  dendro_plot,
+  ncol = 2,
+  rel_widths = c(5, 1),
+  align = "h"
+)
+ggsave("../../FIGURES/heatmap_neglog10magmap~xi_expression+nsnps.pdf", width = 15, height = 10)
+combined_plot
+```
+# Figure S1
+```{r}
+npx_df <- read.csv("../../TABELS/meddiff_SMTSD_NPXgene.txt", sep="\t")
+npx_df <- npx_df %>% filter(data == "med_diff_adj")
+ase_df <- all3_ase
+
+# merge dataframes
+df <- merge(npx_df, ase_df, by.x=c("variable","SMTSD"), by.y=c("Gene","Tissue"))
+df <- df %>% 
+  dplyr::select(variable, SMTSD, value, mean_ASE)
+colnames(df) <- c("Gene","SMTSD","TPMdiff", "mean_ASE")
+head(df)
+
+# get sd
+sd_df <- df %>%
+  filter(mean_ASE>0) %>%
+  group_by(Gene) %>%
+  mutate(n=n()) %>%
+  group_by(Gene, n) %>%
+  summarise_at(vars(TPMdiff, mean_ASE), sd) %>%
+  as.data.frame() %>%
+  na.omit() %>%
+  filter(!Gene %in% c("XIST")) %>%
+  arrange((TPMdiff)) 
+head(sd_df)
+
+# plot 4x6
+ggplot(sd_df, aes(x=mean_ASE, y=TPMdiff)) +
+  geom_point(color="#D64B27") +
+  geom_smooth(method="lm", formula=y~x, se=FALSE, color = "#D64B27") +
+  stat_cor(label.y=c(0.37), label.x=c(0.1), color="#D64B27") +
+  labs(
+    y = "Standard Deviatio of Female-Male \nGene Expression Differencess Across Tissues", 
+    x="Standard Deviation of Proportion of Xi Expression Across Tissues") +
+  theme_classic() +
+  theme(plot.title = element_text(size=14), axis.title = element_text(size=14),
+        axis.text = element_text(size=10)) +
+  geom_text_repel(aes(label=Gene), size=3.2, color="#D64B27") +
+  ylim(0,0.45)
+ggsave("../../FIGURES/sd_sex_diff_vs_sd_xi_expression.pdf", height = 7, width = 7)
+```
+
+# Figure S2
+```{r}
+# load ASE data for each tissue
+ase_df <- all3_ase %>% select(c("Gene", "Tissue", "mean_ASE"))
+write.table(ase_df, "../../TABELS/ASE_tissue_3_ind.txt", sep="\t", row.names = F, quote = F)
+
+# load gene expression for NPX and PAR1 genes
+# setwd("~/Documents/Harpak/X inactivation/")
+# npx_df <- read.csv("../../TABELS/meddiff_SMTSD_allgene.txt", sep="\t")
+npx_df <- read.csv("../../TABELS/meddiff_SMTSD_NPXgene.txt", sep = "\t")
+npx_df <- npx_df %>% filter(data == "med_diff_adj")
+par_df <- read.csv("../../TABELS/meddiff_SMTSD_PAR1gene.txt", sep="\t")
+par_df <- par_df %>% filter(data == "med_diff_adj")
+
+colnames(npx_df) <- c("Tissue", "data", "Gene", "value")
+colnames(par_df) <- c("Tissue", "data", "Gene", "value")
+df <- rbind(npx_df, par_df)
+df <- merge(df, ase_df, by=c("Tissue", "Gene"))
+df$Region <- ifelse(df$Gene %in% par_df$Gene, "PAR1", "NPX") 
+df <- df[!df$Gene %in% c("XIST"),]
+
+# remove outlier with value > 6
+df = df %>% filter(value < 6)
+
+ggplot(df, aes(x = mean_ASE, y = value, color = Region)) +
+  geom_point() +
+  geom_smooth(method = "lm", formula = y ~ x, se = FALSE) +
+  scale_color_manual(values = c("#D64B27", "grey40")) +
+  labs(
+    title = "All Tissues",
+    y = "Median Female-Male TPM Difference",
+    x = "Proportion of Gene Expression from Xi"
+  ) +
+  theme_classic() +
+  stat_cor(label.y = c(1.5, 1.3)) +
+  theme(
+    legend.position = "none",
+    plot.title = element_text(size = 13),
+    axis.title = element_text(size = 11),
+    axis.text = element_text(size = 8)
+  ) +
+  geom_text_repel(aes(label = Gene), size = 3.2) +
+  facet_wrap(~Tissue)
+
+ggsave("../../FIGURES/tissue_specific_xi_vs_sex_diff.pdf", height = 15, width = 15)
+```
+
+
+
+# Figure S4
+
+## calculate correlation
+```{r}
+# regress out # snp across tissues
+min_p_results_resid <- min_p_results %>%
+  group_by(pheno, test) %>%
+  mutate(
+    log10minP_resid_nSNP = residuals(lm(-log10(minP) ~ nSNP))
+  ) %>%
+  ungroup()
+
+all3_ase_median <- all3_ase %>%
+  group_by(Gene) %>%
+  summarise(median_ASE = median(mean_ASE, na.rm = TRUE))
+
+# join ASE and annotations
+min_p_results_resid <- inner_join(
+  min_p_results_resid, 
+  all3_ase_median, 
+  by = c("NAME" = "Gene")
+)
+min_p_results_resid <- inner_join(min_p_results_resid, anno, by = c("NAME" = "NAME"))
+
+# compute correlation only for ASE != 0.5
+cor_df <- min_p_results_resid %>%
+  filter(median_ASE != 0.5) %>%
+  group_by(pheno, test) %>%
+  summarise(
+    r = cor(median_ASE, log10minP_resid_nSNP, use = "pairwise.complete.obs"),
+    p = cor.test(median_ASE, log10minP_resid_nSNP)$p.value,
+    .groups = "drop"
+  ) %>%
+  mutate(label = sprintf("italic(r)==%.2f*','~~italic(p)==%.2g", r, p))
+
+```
+
+```{r}
+min_p_results_resid <- min_p_results_resid %>%
+  mutate(pheno = case_when(pheno=="K50" ~ "Crohn's",
+                           pheno=="K51" ~ "Ulcerative colitis",
+                           pheno=="K80" ~ "Cholelithiasis",
+                           pheno=="M05" ~ "Inflammatory \n polyarthropathies",
+                           pheno=="G43" ~ "Migraine",
+                           pheno=="F20" ~ "Schizophrenia",
+                           pheno=="E050" ~ "Thyrotoxicosis",
+                           pheno=="albumin" ~ "Albumin",
+                           pheno=="bmi" ~ "BMI",
+                           pheno=="height" ~ "Height",
+                           pheno=="lymphocyte_perc" ~ "Lymphocyte %",
+                           pheno=="RBC_count" ~ "RBC count",
+                           pheno=="oestradiol" ~ "Estradiol",
+                           pheno=="cholesterol" ~ "Cholesterol",
+                           pheno=="glucose" ~ "Glucose",
+                           pheno=="IGF1" ~ "IGF-1",
+                           pheno=="testosterone" ~ "Testosterone",
+                           pheno=="total_protein" ~ "Total protein",
+                           pheno=="vitamin_D" ~ "Vitamin D",
+                           TRUE ~ pheno)) %>% 
+  mutate(test = case_when(test=="add" ~ "Additive", 
+                          test=="dom" ~ "Domiance"))
+
+cor_df <- cor_df %>%
+  mutate(pheno = case_when(pheno=="K50" ~ "Crohn's",
+                           pheno=="K51" ~ "Ulcerative colitis",
+                           pheno=="K80" ~ "Cholelithiasis",
+                           pheno=="M05" ~ "Inflammatory polyarthropathies",
+                           pheno=="G43" ~ "Migraine",
+                           pheno=="F20" ~ "Schizophrenia",
+                           pheno=="E050" ~ "Thyrotoxicosis",
+                           pheno=="albumin" ~ "Albumin",
+                           pheno=="bmi" ~ "BMI",
+                           pheno=="height" ~ "Height",
+                           pheno=="lymphocyte_perc" ~ "Lymphocyte %",
+                           pheno=="RBC_count" ~ "RBC count",
+                           pheno=="oestradiol" ~ "Estradiol",
+                           pheno=="cholesterol" ~ "Cholesterol",
+                           pheno=="glucose" ~ "Glucose",
+                           pheno=="IGF1" ~ "IGF-1",
+                           pheno=="testosterone" ~ "Testosterone",
+                           pheno=="total_protein" ~ "Total protein",
+                           pheno=="vitamin_D" ~ "Vitamin D",
+                           TRUE ~ pheno)) %>% 
+  mutate(test = case_when(test=="add" ~ "Additive", 
+                          test=="dom" ~ "Domiance"))
+```
+
+## plot
+```{r}
+# add color variable (gray for ASE == 0.5)
+min_p_results_resid <- min_p_results_resid %>%
+  mutate(color_group = ifelse(median_ASE == 0, "gray", "steelblue"))
+
+# plot
+p <- ggplot(min_p_results_resid, aes(x = median_ASE, y = log10minP_resid_nSNP)) +
+  geom_point(aes(color = color_group), size = 1.5, alpha = 0.7) +
+  geom_smooth(
+    data = subset(min_p_results_resid, median_ASE != 0),
+    method = "lm", color = "steelblue", se = FALSE, linewidth = 0.5
+  ) +
+  facet_grid(pheno ~ test, scales = "free_y") +
+  geom_text(
+    data = cor_df,
+    aes(label = label),
+    parse = TRUE, hjust = 0, vjust = 1.2,
+    x = 0.05, y = Inf, color = "black", size = 3
+  ) +
+  scale_color_identity() +
+  labs(
+    x = "Proportion of Xi expression",
+    y = expression("Residual(-log10p ~ # SNPs)")
+  ) +
+  theme_classic(base_size = 12) +
+  theme(
+    strip.background = element_rect(fill = "gray90", color = NA),
+    strip.text = element_text(face = "bold"),
+    plot.title = element_text(face = "bold", hjust = 0),
+    axis.text = element_text(size = 9)
+  ) +
+  geom_text_repel(aes(label=NAME, color = color_group), size=3.2)
+
+ggsave("../../FIGURES/cor_xi_exp_and_log10minP_resid_nSNP.pdf",
+       plot = p, height = 45, width = 5)
+```
+
+
+# Figure S6
+```{r}
+df <- min_p_results %>%
+  mutate(pheno = case_when(pheno=="K50" ~ "Crohn's",
+                           pheno=="K51" ~ "Ulcerative colitis",
+                           pheno=="K80" ~ "Cholelithiasis",
+                           pheno=="M05" ~ "Inflammatory polyarthropathies",
+                           pheno=="G43" ~ "Migraine",
+                           pheno=="F20" ~ "Schizophrenia",
+                           pheno=="E050" ~ "Thyrotoxicosis",
+                           pheno=="albumin" ~ "Albumin",
+                           pheno=="bmi" ~ "BMI",
+                           pheno=="height" ~ "Height",
+                           pheno=="lymphocyte_perc" ~ "Lymphocyte %",
+                           pheno=="RBC_count" ~ "RBC count",
+                           pheno=="oestradiol" ~ "Estradiol",
+                           pheno=="cholesterol" ~ "Cholesterol",
+                           pheno=="glucose" ~ "Glucose",
+                           pheno=="IGF1" ~ "IGF-1",
+                           pheno=="testosterone" ~ "Testosterone",
+                           pheno=="total_protein" ~ "Total protein",
+                           pheno=="vitamin_D" ~ "Vitamin D",
+                           TRUE ~ pheno))
+
+p <- ggplot(df, aes(x = nSNP, y = -log10(minP), color = pheno)) +
+  geom_point(alpha = 0.3) +
+  geom_smooth(aes(group = pheno, color = pheno), method = "lm", se = FALSE) +
+  facet_wrap(~ test, labeller = labeller(test = c(add = 'Additive', dom = 'DOMDEV'))) +
+  theme_Publication() +
+  labs(x = "Number of SNPs in the gene", y = "-log10(gene minimum p-value)", color = "pheno")
+ggsave(filename = "../../FIGURES/cor_minP_vs_nSNPs.png",
+       plot = p,
+       width = 12,
+       height = 9,
+       dpi = 600) 
+p
+```
+
+```{r}
+library(dplyr)
+
+correlations <- df %>%
+  group_by(pheno) %>%
+  summarise(
+    cor_test = list(cor.test(nSNP, -log10(minP))),
+    .groups = "drop"
+  ) %>%
+  mutate(
+    correlation = sapply(cor_test, function(x) x$estimate),
+    p_value = sapply(cor_test, function(x) x$p.value)
+  ) %>%
+  select(pheno, correlation, p_value)
+
+correlations
+```
+
+# correlation
+
+## get expression data
+```{r}
+exp <- read.delim("../../TABELS/NPX_TPM_gylemo.txt",
+                  header = TRUE,
+                  stringsAsFactors = FALSE,
+                  check.names = FALSE)
+exp_flt <- exp %>% filter(SEX == 2) %>% filter(SMTSD %in% tissues) %>% select(-SEX)
+exp_long <- exp_flt %>%
+  pivot_longer(
+    cols = -c(SAMPID, SMTSD),   # all gene columns
+    names_to = "Gene",           # new column for gene names
+    values_to = "Expression"     # new column for expression values
+  )
+```
+
+## overlapped tissues
+```{r}
+tissue_overlap = intersect(unique(all3_ase$Tissue), unique(exp_long$SMTSD))
+```
+
+```{r}
+exp_long = exp_long %>% filter(exp_long$SMTSD %in% tissue_overlap)
+
+# bootstrap
+all_ids <- unique(exp_long$SAMPID)
+bootstrap_cor <- function() {
+  sampled_ids <- sample(all_ids, size = length(all_ids), replace = TRUE)
+  exp_boot <- exp_long %>%
+    filter(SAMPID %in% sampled_ids)
+
+  #  median expression for each tissue × gene
+  exp_median <- exp_boot %>%
+    group_by(SMTSD, Gene) %>%
+    summarise(Expression = median(Expression), .groups = "drop")
+
+  # Gene × Tissue matrix
+  gene_wide <- exp_median %>%
+    pivot_wider(names_from = SMTSD, values_from = Expression)
+  mat <- gene_wide %>% select(-Gene)
+
+  # correlation across genes (rows)
+  cor(mat, use = "pairwise.complete.obs")
+}
+cor_list <- replicate(100, bootstrap_cor(), simplify = FALSE)
+
+cor_long <- do.call(rbind,
+  lapply(seq_along(cor_list), function(i) {
+    mat <- cor_list[[i]]
+    df <- as.data.frame(mat)
+    df$tissue1 <- rownames(mat)
+    out <- tidyr::pivot_longer(
+      df, 
+      cols = -tissue1,
+      names_to = "tissue2",
+      values_to = "cor"
+    )
+    out$iter <- i
+    out
+  })
+)
+ggplot(
+  cor_long, # %>% dplyr::filter(tissue1 != tissue2),
+  aes(x = cor)
+) +
+  geom_histogram(bins = 50) +
+  facet_grid(tissue1 ~ tissue2) +
+  theme_Publication()
+```
+
+## Xi expression correlation
+```{r}
+ase_wide <- all3_ase %>%
+  filter(Tissue %in % tissue_overlap)
+  select(Gene, Tissue, mean_ASE) %>%
+  pivot_wider(names_from = Tissue, values_from = mean_ASE)
+
+xi_mat <- as.matrix(ase_wide[,-1])
+
+# Compute correlations and p-values
+res <- rcorr(xi_mat, type = "pearson")
+cor_matrix <- res$r
+p_matrix <- res$P
+```
+
+
+## Combine
+```{r}
+cor2_long <- as.data.frame(cor_matrix)
+cor2_long$tissue1 <- rownames(cor_matrix)
+
+cor2_long <- tidyr::pivot_longer(
+  cor2_long,
+  cols = -tissue1,
+  names_to = "tissue2",
+  values_to = "cor2"
+)
+
+plot_data <- dplyr::left_join(
+  cor_long,
+  cor2_long,
+  by = c("tissue1", "tissue2")
+)
+
+ggplot(
+  plot_data,
+  aes(x = cor)
+) +
+  geom_histogram(bins = 50) +
+  geom_vline(aes(xintercept = cor2), color = "red", linewidth = 0.3) +
+  facet_grid(tissue1 ~ tissue2) +
+  theme_Publication()
+
+ggsave(
+  filename = "../../FIGURES/gene_exp_vs_xi_exp.pdf",
+  plot = last_plot(),
+  width = 20,
+  height = 20,
+  units = "in",
+  dpi = 300
+)
+```
+
+# bootstrap on mean ASE
+```{r}
+# Pivot to wide format
+ase_wide <- all3_ase %>%
+  select(Gene, Tissue, mean_ASE) %>%
+  pivot_wider(names_from = Tissue, values_from = mean_ASE)
+
+# Number of bootstrap iterations
+n_boot <- 100
+
+# Initialize list to store correlation matrices
+cor_matrices <- vector("list", n_boot)
+
+set.seed(123)  # for reproducibility
+
+for (i in 1:n_boot) {
+  # Shuffle ASE values for each tissue independently
+  boot_sample <- ase_wide[sample(1:nrow(ase_wide), size = nrow(ase_wide), replace = TRUE), ]
+  
+  # Compute correlation matrix (pairwise complete)
+  cor_matrices[[i]] <- cor(boot_sample[ , -1], use = "pairwise.complete.obs")
+}
+
+```
+
+```{r}
+cor_long <- do.call(rbind,
+  lapply(seq_along(cor_matrices), function(i) {
+    mat <- cor_matrices[[i]]
+    df <- as.data.frame(mat)
+    df$tissue1 <- rownames(mat)
+    out <- tidyr::pivot_longer(
+      df, 
+      cols = -tissue1,
+      names_to = "tissue2",
+      values_to = "cor"
+    )
+    out$iter <- i
+    out
+  })
+)
+
+cor2_long <- as.data.frame(cor_matrix)
+cor2_long$tissue1 <- rownames(cor_matrix)
+
+cor2_long <- tidyr::pivot_longer(
+  cor2_long,
+  cols = -tissue1,
+  names_to = "tissue2",
+  values_to = "cor2"
+)
+
+plot_data <- dplyr::left_join(
+  cor_long,
+  cor2_long,
+  by = c("tissue1", "tissue2")
+)
+```
+
+```{r}
+ggplot(
+  plot_data,
+  aes(x = cor)
+) +
+  geom_histogram(bins = 50) +
+  geom_vline(aes(xintercept = cor2), color = "red", linewidth = 0.3) +
+  facet_grid(tissue1 ~ tissue2) +
+  theme_Publication()
+
+ggsave(
+  filename = "../../FIGURES/xi_exp_cor.pdf",
+  plot = last_plot(),
+  width = 20,
+  height = 20,
+  units = "in",
+  dpi = 300
+)
+```
+
+# test
+```{r}
+df_ase <- all3_ase
+df_ase_converted <- df_ase %>%
+  select(Gene, Tissue, mean_ASE) %>%
+  # filter(!Tissue %in% c("Uterus", "Vagina")) %>%
+  arrange(Tissue) %>%
+  pivot_wider(names_from = Tissue, values_from = mean_ASE) %>%
+  as.data.frame()
+row.names(df_ase_converted) <- df_ase_converted[,1]
+df_ase_converted[,1] <- NULL
+# correlation matrix 
+corr_matrix <- rcorr(as.matrix(df_ase_converted), type="pearson")
+tissue_dendro <- as.dendrogram(hclust(d = dist(x = corr_matrix$r)))
+
+# dendrogram plot
+dendro_plot <- ggdendrogram(data = tissue_dendro, rotate=T, labels = F, leaf_labels = F)
+dendro_order <- order.dendrogram(tissue_dendro)
+dendro_plot
+```
+
+```{r}
+# 1. Prepare Data
+df_ase <- all3_ase
+df_ase_converted <- df_ase %>%
+  select(Gene, Tissue, mean_ASE) %>%
+  arrange(Tissue) %>%
+  pivot_wider(names_from = Tissue, values_from = mean_ASE) %>%
+  column_to_rownames("Gene") %>% # concise way to set row names
+  as.matrix() # Convert to matrix immediately for math operations
+
+corr_matrix <- cor(df_ase_converted, 
+                   use = "pairwise.complete.obs", 
+                   method = "pearson")
+dist_matrix <- dist(corr_matrix)
+
+# 4. Hierarchical Clustering
+tissue_hclust <- hclust(dist_matrix)
+tissue_dendro <- as.dendrogram(tissue_hclust)
+
+# 5. Plot
+ggdendrogram(data = tissue_dendro, rotate = TRUE) +
+  labs(title = "Tissue Clustering based on ASE")
+```
+```{r}
+df_ase <- all3_ase
+df_ase_converted <- df_ase %>%
+  select(Gene, Tissue, mean_ASE) %>%
+  arrange(Tissue) %>%
+  pivot_wider(names_from = Tissue, values_from = mean_ASE) %>%
+  column_to_rownames("Gene") %>% # concise way to set row names
+  as.matrix() # Convert to matrix immediately for math operations
+
+random_rows <- sample(nrow(df_ase_converted), 200, replace = F)
+df_sampled <- df_ase_converted[random_rows, ]
+corr_matrix <- cor(df_sampled, 
+                   use = "pairwise.complete.obs", 
+                   method = "pearson")
+dist_matrix <- dist(corr_matrix)
+
+# 4. Hierarchical Clustering
+tissue_hclust <- hclust(dist_matrix)
+tissue_dendro <- as.dendrogram(tissue_hclust)
+
+# 5. Plot
+ggdendrogram(data = tissue_dendro, rotate = TRUE) +
+  labs(title = "Tissue Clustering based on ASE")
+```
+

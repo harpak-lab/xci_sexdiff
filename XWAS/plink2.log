@@ -1,0 +1,12 @@
+PLINK v2.0.0-a.7LM AVX2 Intel (1 Sep 2025)
+Options in effect:
+  --extract ../../PLINK_RECODE_INPUT/rs142164313.txt
+
+Hostname: v320-010.ls6.tacc.utexas.edu
+Working directory: /scratch/09059/xliaoyi/harpak_lab/domdev/CODE/PLINK_LM
+Start time: Fri Oct 24 00:22:41 2025
+
+Warning: No output requested.  (Did you forget --make-bed/--make-[b]pgen?)
+Exiting.
+
+End time: Fri Oct 24 00:22:41 2025
