@@ -1,0 +1,2047 @@
+SMTSD	data	variable	value
+Adipose - Subcutaneous	med_diff_adj	PLCXD1	-0.0710526315789474
+Adipose - Visceral (Omentum)	med_diff_adj	PLCXD1	-0.162309368191721
+Adrenal Gland	med_diff_adj	PLCXD1	-0.265683579105224
+Artery - Aorta	med_diff_adj	PLCXD1	-0.297359154929577
+Artery - Coronary	med_diff_adj	PLCXD1	-0.35656146179402
+Artery - Tibial	med_diff_adj	PLCXD1	-0.299958965941732
+Bladder	med_diff_adj	PLCXD1	-0.255034979860081
+Brain - Amygdala	med_diff_adj	PLCXD1	-0.332081019274747
+Brain - Anterior cingulate cortex (BA24)	med_diff_adj	PLCXD1	-0.427430319510537
+Brain - Caudate (basal ganglia)	med_diff_adj	PLCXD1	-0.452269536733739
+Brain - Cerebellar Hemisphere	med_diff_adj	PLCXD1	-0.46521855010661
+Brain - Cerebellum	med_diff_adj	PLCXD1	-0.356676873918253
+Brain - Cortex	med_diff_adj	PLCXD1	-0.442940320232897
+Brain - Frontal Cortex (BA9)	med_diff_adj	PLCXD1	-0.428593628593629
+Brain - Hippocampus	med_diff_adj	PLCXD1	-0.438766006984866
+Brain - Hypothalamus	med_diff_adj	PLCXD1	-0.42561065877128
+Brain - Nucleus accumbens (basal ganglia)	med_diff_adj	PLCXD1	-0.420644661197597
+Brain - Putamen (basal ganglia)	med_diff_adj	PLCXD1	-0.327846915562692
+Brain - Spinal cord (cervical c-1)	med_diff_adj	PLCXD1	-0.198443579766537
+Brain - Substantia nigra	med_diff_adj	PLCXD1	-0.326236820762368
+Breast - Mammary Tissue	med_diff_adj	PLCXD1	-0.209045584045584
+Cells - Cultured fibroblasts	med_diff_adj	PLCXD1	-0.0140115747791656
+Cells - EBV-transformed lymphocytes	med_diff_adj	PLCXD1	0.00670263200915476
+Colon - Sigmoid	med_diff_adj	PLCXD1	-0.372025668692146
+Colon - Transverse	med_diff_adj	PLCXD1	-0.127319025100036
+Esophagus - Gastroesophageal Junction	med_diff_adj	PLCXD1	-0.297297297297297
+Esophagus - Mucosa	med_diff_adj	PLCXD1	-0.0447924253459579
+Esophagus - Muscularis	med_diff_adj	PLCXD1	-0.223898822503271
+Heart - Atrial Appendage	med_diff_adj	PLCXD1	-0.224631268436578
+Heart - Left Ventricle	med_diff_adj	PLCXD1	-0.103257328990228
+Kidney - Cortex	med_diff_adj	PLCXD1	-0.427635722383172
+Kidney - Medulla	med_diff_adj	PLCXD1	-0.823090826931767
+Liver	med_diff_adj	PLCXD1	-0.132138014163025
+Lung	med_diff_adj	PLCXD1	-0.118307426597582
+Minor Salivary Gland	med_diff_adj	PLCXD1	-0.106758832565284
+Muscle - Skeletal	med_diff_adj	PLCXD1	-0.2140605296343
+Nerve - Tibial	med_diff_adj	PLCXD1	-0.196184863523573
+Pancreas	med_diff_adj	PLCXD1	-0.140512310370555
+Pituitary	med_diff_adj	PLCXD1	-0.23027310289227
+Skin - Not Sun Exposed (Suprapubic)	med_diff_adj	PLCXD1	0.0451410658307212
+Skin - Sun Exposed (Lower leg)	med_diff_adj	PLCXD1	0.0283155856727977
+Small Intestine - Terminal Ileum	med_diff_adj	PLCXD1	-1.60032147693716e-16
+Spleen	med_diff_adj	PLCXD1	-0.208121827411167
+Stomach	med_diff_adj	PLCXD1	-0.178418803418803
+Thyroid	med_diff_adj	PLCXD1	-0.242035884291468
+Whole Blood	med_diff_adj	PLCXD1	-0.119923161361142
+Adipose - Subcutaneous	male_med	PLCXD1	11.4
+Adipose - Visceral (Omentum)	male_med	PLCXD1	18.36
+Adrenal Gland	male_med	PLCXD1	4.001
+Artery - Aorta	male_med	PLCXD1	5.68
+Artery - Coronary	male_med	PLCXD1	6.02
+Artery - Tibial	male_med	PLCXD1	3.6555
+Bladder	male_med	PLCXD1	7.0755
+Brain - Amygdala	male_med	PLCXD1	6.122
+Brain - Anterior cingulate cortex (BA24)	male_med	PLCXD1	8.826
+Brain - Caudate (basal ganglia)	male_med	PLCXD1	8.548
+Brain - Cerebellar Hemisphere	male_med	PLCXD1	37.52
+Brain - Cerebellum	male_med	PLCXD1	37.555
+Brain - Cortex	male_med	PLCXD1	13.74
+Brain - Frontal Cortex (BA9)	male_med	PLCXD1	12.87
+Brain - Hippocampus	male_med	PLCXD1	8.59
+Brain - Hypothalamus	male_med	PLCXD1	6.755
+Brain - Nucleus accumbens (basal ganglia)	male_med	PLCXD1	7.7405
+Brain - Putamen (basal ganglia)	male_med	PLCXD1	7.473
+Brain - Spinal cord (cervical c-1)	male_med	PLCXD1	8.224
+Brain - Substantia nigra	male_med	PLCXD1	4.932
+Breast - Mammary Tissue	male_med	PLCXD1	14.04
+Cells - Cultured fibroblasts	male_med	PLCXD1	9.849
+Cells - EBV-transformed lymphocytes	male_med	PLCXD1	30.585
+Colon - Sigmoid	male_med	PLCXD1	8.8045
+Colon - Transverse	male_med	PLCXD1	8.247
+Esophagus - Gastroesophageal Junction	male_med	PLCXD1	6.512
+Esophagus - Mucosa	male_med	PLCXD1	13.73
+Esophagus - Muscularis	male_med	PLCXD1	5.7325
+Heart - Atrial Appendage	male_med	PLCXD1	3.39
+Heart - Left Ventricle	male_med	PLCXD1	1.535
+Kidney - Cortex	male_med	PLCXD1	3.9695
+Kidney - Medulla	male_med	PLCXD1	8.852
+Liver	male_med	PLCXD1	6.637
+Lung	male_med	PLCXD1	11.58
+Minor Salivary Gland	male_med	PLCXD1	7.812
+Muscle - Skeletal	male_med	PLCXD1	1.586
+Nerve - Tibial	male_med	PLCXD1	9.672
+Pancreas	male_med	PLCXD1	4.021
+Pituitary	male_med	PLCXD1	9.923
+Skin - Not Sun Exposed (Suprapubic)	male_med	PLCXD1	15.95
+Skin - Sun Exposed (Lower leg)	male_med	PLCXD1	20.66
+Small Intestine - Terminal Ileum	male_med	PLCXD1	11.1
+Spleen	male_med	PLCXD1	20.685
+Stomach	male_med	PLCXD1	14.04
+Thyroid	male_med	PLCXD1	13.655
+Whole Blood	male_med	PLCXD1	3.644
+Adipose - Subcutaneous	female_med	PLCXD1	10.59
+Adipose - Visceral (Omentum)	female_med	PLCXD1	15.38
+Adrenal Gland	female_med	PLCXD1	2.938
+Artery - Aorta	female_med	PLCXD1	3.991
+Artery - Coronary	female_med	PLCXD1	3.8735
+Artery - Tibial	female_med	PLCXD1	2.559
+Bladder	female_med	PLCXD1	5.271
+Brain - Amygdala	female_med	PLCXD1	4.089
+Brain - Anterior cingulate cortex (BA24)	female_med	PLCXD1	5.0535
+Brain - Caudate (basal ganglia)	female_med	PLCXD1	4.682
+Brain - Cerebellar Hemisphere	female_med	PLCXD1	20.065
+Brain - Cerebellum	female_med	PLCXD1	24.16
+Brain - Cortex	female_med	PLCXD1	7.654
+Brain - Frontal Cortex (BA9)	female_med	PLCXD1	7.354
+Brain - Hippocampus	female_med	PLCXD1	4.821
+Brain - Hypothalamus	female_med	PLCXD1	3.88
+Brain - Nucleus accumbens (basal ganglia)	female_med	PLCXD1	4.4845
+Brain - Putamen (basal ganglia)	female_med	PLCXD1	5.023
+Brain - Spinal cord (cervical c-1)	female_med	PLCXD1	6.592
+Brain - Substantia nigra	female_med	PLCXD1	3.323
+Breast - Mammary Tissue	female_med	PLCXD1	11.105
+Cells - Cultured fibroblasts	female_med	PLCXD1	9.711
+Cells - EBV-transformed lymphocytes	female_med	PLCXD1	30.79
+Colon - Sigmoid	female_med	PLCXD1	5.529
+Colon - Transverse	female_med	PLCXD1	7.197
+Esophagus - Gastroesophageal Junction	female_med	PLCXD1	4.576
+Esophagus - Mucosa	female_med	PLCXD1	13.115
+Esophagus - Muscularis	female_med	PLCXD1	4.449
+Heart - Atrial Appendage	female_med	PLCXD1	2.6285
+Heart - Left Ventricle	female_med	PLCXD1	1.3765
+Kidney - Cortex	female_med	PLCXD1	2.272
+Kidney - Medulla	female_med	PLCXD1	1.566
+Liver	female_med	PLCXD1	5.76
+Lung	female_med	PLCXD1	10.21
+Minor Salivary Gland	female_med	PLCXD1	6.978
+Muscle - Skeletal	female_med	PLCXD1	1.2465
+Nerve - Tibial	female_med	PLCXD1	7.7745
+Pancreas	female_med	PLCXD1	3.456
+Pituitary	female_med	PLCXD1	7.638
+Skin - Not Sun Exposed (Suprapubic)	female_med	PLCXD1	16.67
+Skin - Sun Exposed (Lower leg)	female_med	PLCXD1	21.245
+Small Intestine - Terminal Ileum	female_med	PLCXD1	11.1
+Spleen	female_med	PLCXD1	16.38
+Stomach	female_med	PLCXD1	11.535
+Thyroid	female_med	PLCXD1	10.35
+Whole Blood	female_med	PLCXD1	3.207
+Adipose - Subcutaneous	med_diff_adj	GTPBP6	-0.0590246419816798
+Adipose - Visceral (Omentum)	med_diff_adj	GTPBP6	-0.0524081291759466
+Adrenal Gland	med_diff_adj	GTPBP6	0.0042908762420957
+Artery - Aorta	med_diff_adj	GTPBP6	-0.0530274059910771
+Artery - Coronary	med_diff_adj	GTPBP6	-0.117696460707858
+Artery - Tibial	med_diff_adj	GTPBP6	-0.0794828685720912
+Bladder	med_diff_adj	GTPBP6	-0.0468847158313642
+Brain - Amygdala	med_diff_adj	GTPBP6	-0.180734856007944
+Brain - Anterior cingulate cortex (BA24)	med_diff_adj	GTPBP6	-0.296544715447155
+Brain - Caudate (basal ganglia)	med_diff_adj	GTPBP6	-0.309447004608295
+Brain - Cerebellar Hemisphere	med_diff_adj	GTPBP6	-0.326728738503463
+Brain - Cerebellum	med_diff_adj	GTPBP6	-0.320002093911951
+Brain - Cortex	med_diff_adj	GTPBP6	-0.280353200883002
+Brain - Frontal Cortex (BA9)	med_diff_adj	GTPBP6	-0.301501766784452
+Brain - Hippocampus	med_diff_adj	GTPBP6	-0.240936911487759
+Brain - Hypothalamus	med_diff_adj	GTPBP6	-0.183479349186483
+Brain - Nucleus accumbens (basal ganglia)	med_diff_adj	GTPBP6	-0.282214547809195
+Brain - Putamen (basal ganglia)	med_diff_adj	GTPBP6	-0.234451019066404
+Brain - Spinal cord (cervical c-1)	med_diff_adj	GTPBP6	-0.190786614515428
+Brain - Substantia nigra	med_diff_adj	GTPBP6	-0.208815562669293
+Breast - Mammary Tissue	med_diff_adj	GTPBP6	-0.102702359807156
+Cells - Cultured fibroblasts	med_diff_adj	GTPBP6	0.0290043883708173
+Cells - EBV-transformed lymphocytes	med_diff_adj	GTPBP6	-0.00877482351388787
+Colon - Sigmoid	med_diff_adj	GTPBP6	-0.113234529381175
+Colon - Transverse	med_diff_adj	GTPBP6	-0.108943343218355
+Esophagus - Gastroesophageal Junction	med_diff_adj	GTPBP6	-0.0886996519144703
+Esophagus - Mucosa	med_diff_adj	GTPBP6	-0.0470109198593374
+Esophagus - Muscularis	med_diff_adj	GTPBP6	-0.0908476865923676
+Heart - Atrial Appendage	med_diff_adj	GTPBP6	-0.029431290108431
+Heart - Left Ventricle	med_diff_adj	GTPBP6	0.0825268817204299
+Kidney - Cortex	med_diff_adj	GTPBP6	0.204319339966028
+Kidney - Medulla	med_diff_adj	GTPBP6	0.297173414820473
+Liver	med_diff_adj	GTPBP6	0.0537091199149163
+Lung	med_diff_adj	GTPBP6	-0.0462620281273131
+Minor Salivary Gland	med_diff_adj	GTPBP6	-0.0325852395338801
+Muscle - Skeletal	med_diff_adj	GTPBP6	-0.0780051150895141
+Nerve - Tibial	med_diff_adj	GTPBP6	-0.0706806282722513
+Pancreas	med_diff_adj	GTPBP6	-0.099056603773585
+Pituitary	med_diff_adj	GTPBP6	-0.123423339250677
+Skin - Not Sun Exposed (Suprapubic)	med_diff_adj	GTPBP6	0.0142053445850915
+Skin - Sun Exposed (Lower leg)	med_diff_adj	GTPBP6	0.0214461672221418
+Small Intestine - Terminal Ileum	med_diff_adj	GTPBP6	-0.0766716196136703
+Spleen	med_diff_adj	GTPBP6	-0.136559347085663
+Stomach	med_diff_adj	GTPBP6	-0.0715955126207543
+Thyroid	med_diff_adj	GTPBP6	-0.141494112870483
+Whole Blood	med_diff_adj	GTPBP6	-0.0835453774385072
+Adipose - Subcutaneous	male_med	GTPBP6	77.51
+Adipose - Visceral (Omentum)	male_med	GTPBP6	71.84
+Adrenal Gland	male_med	GTPBP6	44.28
+Artery - Aorta	male_med	GTPBP6	78.45
+Artery - Coronary	male_med	GTPBP6	83.35
+Artery - Tibial	male_med	GTPBP6	86.245
+Bladder	male_med	GTPBP6	80.41
+Brain - Amygdala	male_med	GTPBP6	40.28
+Brain - Anterior cingulate cortex (BA24)	male_med	GTPBP6	49.2
+Brain - Caudate (basal ganglia)	male_med	GTPBP6	43.4
+Brain - Cerebellar Hemisphere	male_med	GTPBP6	88.07
+Brain - Cerebellum	male_med	GTPBP6	95.515
+Brain - Cortex	male_med	GTPBP6	58.89
+Brain - Frontal Cortex (BA9)	male_med	GTPBP6	56.6
+Brain - Hippocampus	male_med	GTPBP6	42.48
+Brain - Hypothalamus	male_med	GTPBP6	39.95
+Brain - Nucleus accumbens (basal ganglia)	male_med	GTPBP6	46.33
+Brain - Putamen (basal ganglia)	male_med	GTPBP6	38.025
+Brain - Spinal cord (cervical c-1)	male_med	GTPBP6	57.525
+Brain - Substantia nigra	male_med	GTPBP6	40.61
+Breast - Mammary Tissue	male_med	GTPBP6	78.82
+Cells - Cultured fibroblasts	male_med	GTPBP6	72.92
+Cells - EBV-transformed lymphocytes	male_med	GTPBP6	75.785
+Colon - Sigmoid	male_med	GTPBP6	76.92
+Colon - Transverse	male_med	GTPBP6	64.07
+Esophagus - Gastroesophageal Junction	male_med	GTPBP6	80.44
+Esophagus - Mucosa	male_med	GTPBP6	54.03
+Esophagus - Muscularis	male_med	GTPBP6	74.025
+Heart - Atrial Appendage	male_med	GTPBP6	45.19
+Heart - Left Ventricle	male_med	GTPBP6	37.2
+Kidney - Cortex	male_med	GTPBP6	41.21
+Kidney - Medulla	male_med	GTPBP6	39.27
+Liver	male_med	GTPBP6	37.61
+Lung	male_med	GTPBP6	81.06
+Minor Salivary Gland	male_med	GTPBP6	46.34
+Muscle - Skeletal	male_med	GTPBP6	62.56
+Nerve - Tibial	male_med	GTPBP6	114.6
+Pancreas	male_med	GTPBP6	40.28
+Pituitary	male_med	GTPBP6	53.515
+Skin - Not Sun Exposed (Suprapubic)	male_med	GTPBP6	71.1
+Skin - Sun Exposed (Lower leg)	male_med	GTPBP6	69.01
+Small Intestine - Terminal Ileum	male_med	GTPBP6	67.3
+Spleen	male_med	GTPBP6	77.805
+Stomach	male_med	GTPBP6	64.18
+Thyroid	male_med	GTPBP6	98.52
+Whole Blood	male_med	GTPBP6	23.58
+Adipose - Subcutaneous	female_med	GTPBP6	72.935
+Adipose - Visceral (Omentum)	female_med	GTPBP6	68.075
+Adrenal Gland	female_med	GTPBP6	44.47
+Artery - Aorta	female_med	GTPBP6	74.29
+Artery - Coronary	female_med	GTPBP6	73.54
+Artery - Tibial	female_med	GTPBP6	79.39
+Bladder	female_med	GTPBP6	76.64
+Brain - Amygdala	female_med	GTPBP6	33
+Brain - Anterior cingulate cortex (BA24)	female_med	GTPBP6	34.61
+Brain - Caudate (basal ganglia)	female_med	GTPBP6	29.97
+Brain - Cerebellar Hemisphere	female_med	GTPBP6	59.295
+Brain - Cerebellum	female_med	GTPBP6	64.95
+Brain - Cortex	female_med	GTPBP6	42.38
+Brain - Frontal Cortex (BA9)	female_med	GTPBP6	39.535
+Brain - Hippocampus	female_med	GTPBP6	32.245
+Brain - Hypothalamus	female_med	GTPBP6	32.62
+Brain - Nucleus accumbens (basal ganglia)	female_med	GTPBP6	33.255
+Brain - Putamen (basal ganglia)	female_med	GTPBP6	29.11
+Brain - Spinal cord (cervical c-1)	female_med	GTPBP6	46.55
+Brain - Substantia nigra	female_med	GTPBP6	32.13
+Breast - Mammary Tissue	female_med	GTPBP6	70.725
+Cells - Cultured fibroblasts	female_med	GTPBP6	75.035
+Cells - EBV-transformed lymphocytes	female_med	GTPBP6	75.12
+Colon - Sigmoid	female_med	GTPBP6	68.21
+Colon - Transverse	female_med	GTPBP6	57.09
+Esophagus - Gastroesophageal Junction	female_med	GTPBP6	73.305
+Esophagus - Mucosa	female_med	GTPBP6	51.49
+Esophagus - Muscularis	female_med	GTPBP6	67.3
+Heart - Atrial Appendage	female_med	GTPBP6	43.86
+Heart - Left Ventricle	female_med	GTPBP6	40.27
+Kidney - Cortex	female_med	GTPBP6	49.63
+Kidney - Medulla	female_med	GTPBP6	50.94
+Liver	female_med	GTPBP6	39.63
+Lung	female_med	GTPBP6	77.31
+Minor Salivary Gland	female_med	GTPBP6	44.83
+Muscle - Skeletal	female_med	GTPBP6	57.68
+Nerve - Tibial	female_med	GTPBP6	106.5
+Pancreas	female_med	GTPBP6	36.29
+Pituitary	female_med	GTPBP6	46.91
+Skin - Not Sun Exposed (Suprapubic)	female_med	GTPBP6	72.11
+Skin - Sun Exposed (Lower leg)	female_med	GTPBP6	70.49
+Small Intestine - Terminal Ileum	female_med	GTPBP6	62.14
+Spleen	female_med	GTPBP6	67.18
+Stomach	female_med	GTPBP6	59.585
+Thyroid	female_med	GTPBP6	84.58
+Whole Blood	female_med	GTPBP6	21.61
+Adipose - Subcutaneous	med_diff_adj	PPP2R3B	-0.199243061396131
+Adipose - Visceral (Omentum)	med_diff_adj	PPP2R3B	-0.236423841059603
+Adrenal Gland	med_diff_adj	PPP2R3B	-0.0752889721961886
+Artery - Aorta	med_diff_adj	PPP2R3B	-0.0799873203719357
+Artery - Coronary	med_diff_adj	PPP2R3B	-0.191465677179963
+Artery - Tibial	med_diff_adj	PPP2R3B	-0.20375234521576
+Bladder	med_diff_adj	PPP2R3B	-0.294803548795944
+Brain - Amygdala	med_diff_adj	PPP2R3B	-0.273302752293578
+Brain - Anterior cingulate cortex (BA24)	med_diff_adj	PPP2R3B	-0.30635871778463
+Brain - Caudate (basal ganglia)	med_diff_adj	PPP2R3B	-0.212226209627521
+Brain - Cerebellar Hemisphere	med_diff_adj	PPP2R3B	-0.263713080168776
+Brain - Cerebellum	med_diff_adj	PPP2R3B	-0.272051368705644
+Brain - Cortex	med_diff_adj	PPP2R3B	-0.251190746200953
+Brain - Frontal Cortex (BA9)	med_diff_adj	PPP2R3B	-0.241857284932869
+Brain - Hippocampus	med_diff_adj	PPP2R3B	-0.252235772357723
+Brain - Hypothalamus	med_diff_adj	PPP2R3B	-0.314814814814815
+Brain - Nucleus accumbens (basal ganglia)	med_diff_adj	PPP2R3B	-0.216285998013903
+Brain - Putamen (basal ganglia)	med_diff_adj	PPP2R3B	-0.199556848081983
+Brain - Spinal cord (cervical c-1)	med_diff_adj	PPP2R3B	-0.070266753415745
+Brain - Substantia nigra	med_diff_adj	PPP2R3B	-0.282327586206897
+Breast - Mammary Tissue	med_diff_adj	PPP2R3B	0.171572750210261
+Cells - Cultured fibroblasts	med_diff_adj	PPP2R3B	0.0130180969060128
+Cells - EBV-transformed lymphocytes	med_diff_adj	PPP2R3B	-0.0182887001959502
+Colon - Sigmoid	med_diff_adj	PPP2R3B	-0.182130926858454
+Colon - Transverse	med_diff_adj	PPP2R3B	-0.181679194801886
+Esophagus - Gastroesophageal Junction	med_diff_adj	PPP2R3B	-0.222393109812365
+Esophagus - Mucosa	med_diff_adj	PPP2R3B	-0.113731343283582
+Esophagus - Muscularis	med_diff_adj	PPP2R3B	-0.272045251562965
+Heart - Atrial Appendage	med_diff_adj	PPP2R3B	-0.101449275362319
+Heart - Left Ventricle	med_diff_adj	PPP2R3B	-0.0206851971557853
+Kidney - Cortex	med_diff_adj	PPP2R3B	0.110375884569433
+Kidney - Medulla	med_diff_adj	PPP2R3B	-0.159548422198041
+Liver	med_diff_adj	PPP2R3B	0.0452199557630868
+Lung	med_diff_adj	PPP2R3B	-0.0817941952506596
+Minor Salivary Gland	med_diff_adj	PPP2R3B	0.0410830999066293
+Muscle - Skeletal	med_diff_adj	PPP2R3B	-0.173559822747415
+Nerve - Tibial	med_diff_adj	PPP2R3B	-0.270438041695947
+Pancreas	med_diff_adj	PPP2R3B	-0.096272581751658
+Pituitary	med_diff_adj	PPP2R3B	-0.184838558727188
+Skin - Not Sun Exposed (Suprapubic)	med_diff_adj	PPP2R3B	-0.0343406593406593
+Skin - Sun Exposed (Lower leg)	med_diff_adj	PPP2R3B	-0.106716110424392
+Small Intestine - Terminal Ileum	med_diff_adj	PPP2R3B	-0.138826951042172
+Spleen	med_diff_adj	PPP2R3B	-0.181600383325348
+Stomach	med_diff_adj	PPP2R3B	-0.0904821979254276
+Thyroid	med_diff_adj	PPP2R3B	-0.193128290385148
+Whole Blood	med_diff_adj	PPP2R3B	0.106490115628497
+Adipose - Subcutaneous	male_med	PPP2R3B	11.89
+Adipose - Visceral (Omentum)	male_med	PPP2R3B	9.06
+Adrenal Gland	male_med	PPP2R3B	9.603
+Artery - Aorta	male_med	PPP2R3B	9.464
+Artery - Coronary	male_med	PPP2R3B	13.475
+Artery - Tibial	male_med	PPP2R3B	13.325
+Bladder	male_med	PPP2R3B	19.725
+Brain - Amygdala	male_med	PPP2R3B	10.9
+Brain - Anterior cingulate cortex (BA24)	male_med	PPP2R3B	8.5945
+Brain - Caudate (basal ganglia)	male_med	PPP2R3B	8.081
+Brain - Cerebellar Hemisphere	male_med	PPP2R3B	14.22
+Brain - Cerebellum	male_med	PPP2R3B	14.795
+Brain - Cortex	male_med	PPP2R3B	8.818
+Brain - Frontal Cortex (BA9)	male_med	PPP2R3B	8.044
+Brain - Hippocampus	male_med	PPP2R3B	9.84
+Brain - Hypothalamus	male_med	PPP2R3B	17.28
+Brain - Nucleus accumbens (basal ganglia)	male_med	PPP2R3B	10.07
+Brain - Putamen (basal ganglia)	male_med	PPP2R3B	7.221
+Brain - Spinal cord (cervical c-1)	male_med	PPP2R3B	15.37
+Brain - Substantia nigra	male_med	PPP2R3B	10.44
+Breast - Mammary Tissue	male_med	PPP2R3B	11.89
+Cells - Cultured fibroblasts	male_med	PPP2R3B	8.565
+Cells - EBV-transformed lymphocytes	male_med	PPP2R3B	15.31
+Colon - Sigmoid	male_med	PPP2R3B	10.0285
+Colon - Transverse	male_med	PPP2R3B	7.849
+Esophagus - Gastroesophageal Junction	male_med	PPP2R3B	9.753
+Esophagus - Mucosa	male_med	PPP2R3B	16.75
+Esophagus - Muscularis	male_med	PPP2R3B	8.3975
+Heart - Atrial Appendage	male_med	PPP2R3B	50.37
+Heart - Left Ventricle	male_med	PPP2R3B	46.41
+Kidney - Cortex	male_med	PPP2R3B	5.4405
+Kidney - Medulla	male_med	PPP2R3B	7.352
+Liver	male_med	PPP2R3B	4.069
+Lung	male_med	PPP2R3B	11.37
+Minor Salivary Gland	male_med	PPP2R3B	10.71
+Muscle - Skeletal	male_med	PPP2R3B	67.7
+Nerve - Tibial	male_med	PPP2R3B	42.69
+Pancreas	male_med	PPP2R3B	4.373
+Pituitary	male_med	PPP2R3B	32.055
+Skin - Not Sun Exposed (Suprapubic)	male_med	PPP2R3B	29.12
+Skin - Sun Exposed (Lower leg)	male_med	PPP2R3B	24.27
+Small Intestine - Terminal Ileum	male_med	PPP2R3B	10.315
+Spleen	male_med	PPP2R3B	20.87
+Stomach	male_med	PPP2R3B	7.134
+Thyroid	male_med	PPP2R3B	18.045
+Whole Blood	male_med	PPP2R3B	8.043
+Adipose - Subcutaneous	female_med	PPP2R3B	9.521
+Adipose - Visceral (Omentum)	female_med	PPP2R3B	6.918
+Adrenal Gland	female_med	PPP2R3B	8.88
+Artery - Aorta	female_med	PPP2R3B	8.707
+Artery - Coronary	female_med	PPP2R3B	10.895
+Artery - Tibial	female_med	PPP2R3B	10.61
+Bladder	female_med	PPP2R3B	13.91
+Brain - Amygdala	female_med	PPP2R3B	7.921
+Brain - Anterior cingulate cortex (BA24)	female_med	PPP2R3B	5.9615
+Brain - Caudate (basal ganglia)	female_med	PPP2R3B	6.366
+Brain - Cerebellar Hemisphere	female_med	PPP2R3B	10.47
+Brain - Cerebellum	female_med	PPP2R3B	10.77
+Brain - Cortex	female_med	PPP2R3B	6.603
+Brain - Frontal Cortex (BA9)	female_med	PPP2R3B	6.0985
+Brain - Hippocampus	female_med	PPP2R3B	7.358
+Brain - Hypothalamus	female_med	PPP2R3B	11.84
+Brain - Nucleus accumbens (basal ganglia)	female_med	PPP2R3B	7.892
+Brain - Putamen (basal ganglia)	female_med	PPP2R3B	5.78
+Brain - Spinal cord (cervical c-1)	female_med	PPP2R3B	14.29
+Brain - Substantia nigra	female_med	PPP2R3B	7.4925
+Breast - Mammary Tissue	female_med	PPP2R3B	13.93
+Cells - Cultured fibroblasts	female_med	PPP2R3B	8.6765
+Cells - EBV-transformed lymphocytes	female_med	PPP2R3B	15.03
+Colon - Sigmoid	female_med	PPP2R3B	8.202
+Colon - Transverse	female_med	PPP2R3B	6.423
+Esophagus - Gastroesophageal Junction	female_med	PPP2R3B	7.584
+Esophagus - Mucosa	female_med	PPP2R3B	14.845
+Esophagus - Muscularis	female_med	PPP2R3B	6.113
+Heart - Atrial Appendage	female_med	PPP2R3B	45.26
+Heart - Left Ventricle	female_med	PPP2R3B	45.45
+Kidney - Cortex	female_med	PPP2R3B	6.041
+Kidney - Medulla	female_med	PPP2R3B	6.179
+Liver	female_med	PPP2R3B	4.253
+Lung	female_med	PPP2R3B	10.44
+Minor Salivary Gland	female_med	PPP2R3B	11.15
+Muscle - Skeletal	female_med	PPP2R3B	55.95
+Nerve - Tibial	female_med	PPP2R3B	31.145
+Pancreas	female_med	PPP2R3B	3.952
+Pituitary	female_med	PPP2R3B	26.13
+Skin - Not Sun Exposed (Suprapubic)	female_med	PPP2R3B	28.12
+Skin - Sun Exposed (Lower leg)	female_med	PPP2R3B	21.68
+Small Intestine - Terminal Ileum	female_med	PPP2R3B	8.883
+Spleen	female_med	PPP2R3B	17.08
+Stomach	female_med	PPP2R3B	6.4885
+Thyroid	female_med	PPP2R3B	14.56
+Whole Blood	female_med	PPP2R3B	8.8995
+Adipose - Subcutaneous	med_diff_adj	SHOX	-0.397420867526377
+Adipose - Visceral (Omentum)	med_diff_adj	SHOX	-0.299773139745917
+Artery - Aorta	med_diff_adj	SHOX	0.373926619828259
+Artery - Coronary	med_diff_adj	SHOX	-0.311576011157601
+Artery - Tibial	med_diff_adj	SHOX	-0.335639251857546
+Brain - Anterior cingulate cortex (BA24)	med_diff_adj	SHOX	-1
+Brain - Cerebellar Hemisphere	med_diff_adj	SHOX	-0.181241504304486
+Brain - Cerebellum	med_diff_adj	SHOX	-0.245489837862526
+Brain - Cortex	med_diff_adj	SHOX	-0.220720720720721
+Brain - Frontal Cortex (BA9)	med_diff_adj	SHOX	-1
+Brain - Hypothalamus	med_diff_adj	SHOX	-1
+Brain - Spinal cord (cervical c-1)	med_diff_adj	SHOX	-0.465462157100364
+Breast - Mammary Tissue	med_diff_adj	SHOX	-0.640106461086637
+Cells - Cultured fibroblasts	med_diff_adj	SHOX	-0.436188178528347
+Cells - EBV-transformed lymphocytes	med_diff_adj	SHOX	-1
+Colon - Sigmoid	med_diff_adj	SHOX	-0.128563546073202
+Colon - Transverse	med_diff_adj	SHOX	-0.242161635832522
+Esophagus - Gastroesophageal Junction	med_diff_adj	SHOX	-0.0494202898550724
+Esophagus - Muscularis	med_diff_adj	SHOX	-0.0391091797935904
+Heart - Atrial Appendage	med_diff_adj	SHOX	-0.0121351522842639
+Kidney - Medulla	med_diff_adj	SHOX	-1
+Lung	med_diff_adj	SHOX	0.0916445623342176
+Minor Salivary Gland	med_diff_adj	SHOX	0.0595944268174921
+Muscle - Skeletal	med_diff_adj	SHOX	-0.257905138339921
+Nerve - Tibial	med_diff_adj	SHOX	-0.370004933399112
+Pituitary	med_diff_adj	SHOX	-0.227788461538461
+Skin - Not Sun Exposed (Suprapubic)	med_diff_adj	SHOX	-0.0678336980306346
+Skin - Sun Exposed (Lower leg)	med_diff_adj	SHOX	-0.118092454835282
+Small Intestine - Terminal Ileum	med_diff_adj	SHOX	0.142397101740968
+Spleen	med_diff_adj	SHOX	-1
+Thyroid	med_diff_adj	SHOX	-0.345444536195981
+Adipose - Subcutaneous	male_med	SHOX	1.706
+Adipose - Visceral (Omentum)	male_med	SHOX	0.1102
+Adrenal Gland	male_med	SHOX	0
+Artery - Aorta	male_med	SHOX	0.01281
+Artery - Coronary	male_med	SHOX	0.010755
+Artery - Tibial	male_med	SHOX	0.3903
+Bladder	male_med	SHOX	0
+Brain - Amygdala	male_med	SHOX	0
+Brain - Anterior cingulate cortex (BA24)	male_med	SHOX	0.0054245
+Brain - Caudate (basal ganglia)	male_med	SHOX	0
+Brain - Cerebellar Hemisphere	male_med	SHOX	0.02207
+Brain - Cerebellum	male_med	SHOX	0.04379
+Brain - Cortex	male_med	SHOX	0.0111
+Brain - Frontal Cortex (BA9)	male_med	SHOX	0.005926
+Brain - Hippocampus	male_med	SHOX	0
+Brain - Hypothalamus	male_med	SHOX	0.005306
+Brain - Nucleus accumbens (basal ganglia)	male_med	SHOX	0
+Brain - Putamen (basal ganglia)	male_med	SHOX	0
+Brain - Spinal cord (cervical c-1)	male_med	SHOX	0.009077
+Brain - Substantia nigra	male_med	SHOX	0
+Breast - Mammary Tissue	male_med	SHOX	0.2724
+Cells - Cultured fibroblasts	male_med	SHOX	0.12435
+Cells - EBV-transformed lymphocytes	male_med	SHOX	0.0057175
+Colon - Sigmoid	male_med	SHOX	0.027185
+Colon - Transverse	male_med	SHOX	0.1027
+Esophagus - Gastroesophageal Junction	male_med	SHOX	0.01035
+Esophagus - Mucosa	male_med	SHOX	0
+Esophagus - Muscularis	male_med	SHOX	0.01841
+Heart - Atrial Appendage	male_med	SHOX	0.006304
+Heart - Left Ventricle	male_med	SHOX	0
+Kidney - Cortex	male_med	SHOX	0
+Kidney - Medulla	male_med	SHOX	0.005905
+Liver	male_med	SHOX	0
+Lung	male_med	SHOX	0.00754
+Minor Salivary Gland	male_med	SHOX	0.007249
+Muscle - Skeletal	male_med	SHOX	0.2024
+Nerve - Tibial	male_med	SHOX	0.2027
+Pancreas	male_med	SHOX	0
+Pituitary	male_med	SHOX	0.0104
+Skin - Not Sun Exposed (Suprapubic)	male_med	SHOX	0.03656
+Skin - Sun Exposed (Lower leg)	male_med	SHOX	0.3764
+Small Intestine - Terminal Ileum	male_med	SHOX	0.049685
+Spleen	male_med	SHOX	0.006609
+Stomach	male_med	SHOX	0
+Thyroid	male_med	SHOX	0.018165
+Whole Blood	male_med	SHOX	0
+Adipose - Subcutaneous	female_med	SHOX	1.028
+Adipose - Visceral (Omentum)	female_med	SHOX	0.077165
+Adrenal Gland	female_med	SHOX	0
+Artery - Aorta	female_med	SHOX	0.0176
+Artery - Coronary	female_med	SHOX	0.007404
+Artery - Tibial	female_med	SHOX	0.2593
+Bladder	female_med	SHOX	0.01115
+Brain - Amygdala	female_med	SHOX	0
+Brain - Anterior cingulate cortex (BA24)	female_med	SHOX	0
+Brain - Caudate (basal ganglia)	female_med	SHOX	0
+Brain - Cerebellar Hemisphere	female_med	SHOX	0.01807
+Brain - Cerebellum	female_med	SHOX	0.03304
+Brain - Cortex	female_med	SHOX	0.00865
+Brain - Frontal Cortex (BA9)	female_med	SHOX	0
+Brain - Hippocampus	female_med	SHOX	0
+Brain - Hypothalamus	female_med	SHOX	0
+Brain - Nucleus accumbens (basal ganglia)	female_med	SHOX	0
+Brain - Putamen (basal ganglia)	female_med	SHOX	0
+Brain - Spinal cord (cervical c-1)	female_med	SHOX	0.004852
+Brain - Substantia nigra	female_med	SHOX	0
+Breast - Mammary Tissue	female_med	SHOX	0.098035
+Cells - Cultured fibroblasts	female_med	SHOX	0.07011
+Cells - EBV-transformed lymphocytes	female_med	SHOX	0
+Colon - Sigmoid	female_med	SHOX	0.02369
+Colon - Transverse	female_med	SHOX	0.07783
+Esophagus - Gastroesophageal Junction	female_med	SHOX	0.0098385
+Esophagus - Mucosa	female_med	SHOX	0.0041375
+Esophagus - Muscularis	female_med	SHOX	0.01769
+Heart - Atrial Appendage	female_med	SHOX	0.0062275
+Heart - Left Ventricle	female_med	SHOX	0
+Kidney - Cortex	female_med	SHOX	0.005268
+Kidney - Medulla	female_med	SHOX	0
+Liver	female_med	SHOX	0
+Lung	female_med	SHOX	0.008231
+Minor Salivary Gland	female_med	SHOX	0.007681
+Muscle - Skeletal	female_med	SHOX	0.1502
+Nerve - Tibial	female_med	SHOX	0.1277
+Pancreas	female_med	SHOX	0
+Pituitary	female_med	SHOX	0.008031
+Skin - Not Sun Exposed (Suprapubic)	female_med	SHOX	0.03408
+Skin - Sun Exposed (Lower leg)	female_med	SHOX	0.33195
+Small Intestine - Terminal Ileum	female_med	SHOX	0.05676
+Spleen	female_med	SHOX	0
+Stomach	female_med	SHOX	0
+Thyroid	female_med	SHOX	0.01189
+Whole Blood	female_med	SHOX	0
+Adipose - Subcutaneous	med_diff_adj	CRLF2	-0.269204506657562
+Adipose - Visceral (Omentum)	med_diff_adj	CRLF2	-0.395992796037821
+Artery - Aorta	med_diff_adj	CRLF2	-0.35595390524968
+Artery - Coronary	med_diff_adj	CRLF2	-0.126480315800704
+Artery - Tibial	med_diff_adj	CRLF2	-0.373458045275857
+Bladder	med_diff_adj	CRLF2	0.66873985938345
+Brain - Amygdala	med_diff_adj	CRLF2	-1
+Brain - Anterior cingulate cortex (BA24)	med_diff_adj	CRLF2	-1
+Brain - Cortex	med_diff_adj	CRLF2	-1
+Brain - Frontal Cortex (BA9)	med_diff_adj	CRLF2	-1
+Brain - Hippocampus	med_diff_adj	CRLF2	-0.721443228454172
+Brain - Hypothalamus	med_diff_adj	CRLF2	-0.049908256880734
+Brain - Nucleus accumbens (basal ganglia)	med_diff_adj	CRLF2	-1
+Breast - Mammary Tissue	med_diff_adj	CRLF2	-0.219617520049352
+Cells - EBV-transformed lymphocytes	med_diff_adj	CRLF2	-0.288060644346178
+Colon - Sigmoid	med_diff_adj	CRLF2	0.0628199162401117
+Colon - Transverse	med_diff_adj	CRLF2	-0.300559179869525
+Esophagus - Gastroesophageal Junction	med_diff_adj	CRLF2	-0.378996499416569
+Esophagus - Mucosa	med_diff_adj	CRLF2	-0.165159447881961
+Esophagus - Muscularis	med_diff_adj	CRLF2	-0.355916580251181
+Heart - Atrial Appendage	med_diff_adj	CRLF2	-0.195272727272727
+Heart - Left Ventricle	med_diff_adj	CRLF2	-0.77305095150399
+Kidney - Cortex	med_diff_adj	CRLF2	0.692896639727776
+Kidney - Medulla	med_diff_adj	CRLF2	-1
+Liver	med_diff_adj	CRLF2	-1
+Lung	med_diff_adj	CRLF2	-0.229527794381351
+Minor Salivary Gland	med_diff_adj	CRLF2	0.286861732644865
+Nerve - Tibial	med_diff_adj	CRLF2	-0.23567335243553
+Pancreas	med_diff_adj	CRLF2	-0.30855435188644
+Pituitary	med_diff_adj	CRLF2	-1
+Skin - Not Sun Exposed (Suprapubic)	med_diff_adj	CRLF2	-0.0394027374533389
+Skin - Sun Exposed (Lower leg)	med_diff_adj	CRLF2	-0.0856782864342713
+Small Intestine - Terminal Ileum	med_diff_adj	CRLF2	-0.0757087270705947
+Spleen	med_diff_adj	CRLF2	-0.293738819320215
+Stomach	med_diff_adj	CRLF2	-0.212564862861379
+Thyroid	med_diff_adj	CRLF2	-0.0206828627708471
+Whole Blood	med_diff_adj	CRLF2	-0.315091721905349
+Adipose - Subcutaneous	male_med	CRLF2	0.2929
+Adipose - Visceral (Omentum)	male_med	CRLF2	0.2221
+Adrenal Gland	male_med	CRLF2	0
+Artery - Aorta	male_med	CRLF2	0.08591
+Artery - Coronary	male_med	CRLF2	0.09373
+Artery - Tibial	male_med	CRLF2	0.036885
+Bladder	male_med	CRLF2	0.3698
+Brain - Amygdala	male_med	CRLF2	0.01128
+Brain - Anterior cingulate cortex (BA24)	male_med	CRLF2	0.01658
+Brain - Caudate (basal ganglia)	male_med	CRLF2	0
+Brain - Cerebellar Hemisphere	male_med	CRLF2	0
+Brain - Cerebellum	male_med	CRLF2	0
+Brain - Cortex	male_med	CRLF2	0.01401
+Brain - Frontal Cortex (BA9)	male_med	CRLF2	0.01531
+Brain - Hippocampus	male_med	CRLF2	0.01462
+Brain - Hypothalamus	male_med	CRLF2	0.02725
+Brain - Nucleus accumbens (basal ganglia)	male_med	CRLF2	0.01391
+Brain - Putamen (basal ganglia)	male_med	CRLF2	0
+Brain - Spinal cord (cervical c-1)	male_med	CRLF2	0
+Brain - Substantia nigra	male_med	CRLF2	0
+Breast - Mammary Tissue	male_med	CRLF2	0.1621
+Cells - Cultured fibroblasts	male_med	CRLF2	0
+Cells - EBV-transformed lymphocytes	male_med	CRLF2	0.3166
+Colon - Sigmoid	male_med	CRLF2	0.10745
+Colon - Transverse	male_med	CRLF2	0.2146
+Esophagus - Gastroesophageal Junction	male_med	CRLF2	0.4285
+Esophagus - Mucosa	male_med	CRLF2	0.2101
+Esophagus - Muscularis	male_med	CRLF2	0.43395
+Heart - Atrial Appendage	male_med	CRLF2	0.0275
+Heart - Left Ventricle	male_med	CRLF2	0.01629
+Kidney - Cortex	male_med	CRLF2	0.009404
+Kidney - Medulla	male_med	CRLF2	0.01654
+Liver	male_med	CRLF2	0.01095
+Lung	male_med	CRLF2	0.6692
+Minor Salivary Gland	male_med	CRLF2	0.1743
+Muscle - Skeletal	male_med	CRLF2	0
+Nerve - Tibial	male_med	CRLF2	0.2792
+Pancreas	male_med	CRLF2	0.02677
+Pituitary	male_med	CRLF2	0.018525
+Skin - Not Sun Exposed (Suprapubic)	male_med	CRLF2	0.2411
+Skin - Sun Exposed (Lower leg)	male_med	CRLF2	0.2381
+Small Intestine - Terminal Ileum	male_med	CRLF2	0.44975
+Spleen	male_med	CRLF2	0.13975
+Stomach	male_med	CRLF2	0.2698
+Thyroid	male_med	CRLF2	0.06092
+Whole Blood	male_med	CRLF2	0.06487
+Adipose - Subcutaneous	female_med	CRLF2	0.21405
+Adipose - Visceral (Omentum)	female_med	CRLF2	0.13415
+Adrenal Gland	female_med	CRLF2	0
+Artery - Aorta	female_med	CRLF2	0.05533
+Artery - Coronary	female_med	CRLF2	0.081875
+Artery - Tibial	female_med	CRLF2	0.02311
+Bladder	female_med	CRLF2	0.6171
+Brain - Amygdala	female_med	CRLF2	0
+Brain - Anterior cingulate cortex (BA24)	female_med	CRLF2	0
+Brain - Caudate (basal ganglia)	female_med	CRLF2	0
+Brain - Cerebellar Hemisphere	female_med	CRLF2	0
+Brain - Cerebellum	female_med	CRLF2	0
+Brain - Cortex	female_med	CRLF2	0
+Brain - Frontal Cortex (BA9)	female_med	CRLF2	0
+Brain - Hippocampus	female_med	CRLF2	0.0040725
+Brain - Hypothalamus	female_med	CRLF2	0.02589
+Brain - Nucleus accumbens (basal ganglia)	female_med	CRLF2	0
+Brain - Putamen (basal ganglia)	female_med	CRLF2	0
+Brain - Spinal cord (cervical c-1)	female_med	CRLF2	0
+Brain - Substantia nigra	female_med	CRLF2	0
+Breast - Mammary Tissue	female_med	CRLF2	0.1265
+Cells - Cultured fibroblasts	female_med	CRLF2	0
+Cells - EBV-transformed lymphocytes	female_med	CRLF2	0.2254
+Colon - Sigmoid	female_med	CRLF2	0.1142
+Colon - Transverse	female_med	CRLF2	0.1501
+Esophagus - Gastroesophageal Junction	female_med	CRLF2	0.2661
+Esophagus - Mucosa	female_med	CRLF2	0.1754
+Esophagus - Muscularis	female_med	CRLF2	0.2795
+Heart - Atrial Appendage	female_med	CRLF2	0.02213
+Heart - Left Ventricle	female_med	CRLF2	0.003697
+Kidney - Cortex	female_med	CRLF2	0.01592
+Kidney - Medulla	female_med	CRLF2	0
+Liver	female_med	CRLF2	0
+Lung	female_med	CRLF2	0.5156
+Minor Salivary Gland	female_med	CRLF2	0.2243
+Muscle - Skeletal	female_med	CRLF2	0
+Nerve - Tibial	female_med	CRLF2	0.2134
+Pancreas	female_med	CRLF2	0.01851
+Pituitary	female_med	CRLF2	0
+Skin - Not Sun Exposed (Suprapubic)	female_med	CRLF2	0.2316
+Skin - Sun Exposed (Lower leg)	female_med	CRLF2	0.2177
+Small Intestine - Terminal Ileum	female_med	CRLF2	0.4157
+Spleen	female_med	CRLF2	0.0987
+Stomach	female_med	CRLF2	0.21245
+Thyroid	female_med	CRLF2	0.05966
+Whole Blood	female_med	CRLF2	0.04443
+Adipose - Subcutaneous	med_diff_adj	CSF2RA	0.175366568914956
+Adipose - Visceral (Omentum)	med_diff_adj	CSF2RA	-0.179839723444375
+Adrenal Gland	med_diff_adj	CSF2RA	-0.0964102564102564
+Artery - Aorta	med_diff_adj	CSF2RA	-0.0385232744783307
+Artery - Coronary	med_diff_adj	CSF2RA	-0.277213352685051
+Artery - Tibial	med_diff_adj	CSF2RA	-0.101694915254237
+Bladder	med_diff_adj	CSF2RA	0.0407211687907988
+Brain - Amygdala	med_diff_adj	CSF2RA	0.0502063273727648
+Brain - Anterior cingulate cortex (BA24)	med_diff_adj	CSF2RA	-0.0337678991237444
+Brain - Caudate (basal ganglia)	med_diff_adj	CSF2RA	-0.21094264996704
+Brain - Cerebellar Hemisphere	med_diff_adj	CSF2RA	-0.35836038961039
+Brain - Cerebellum	med_diff_adj	CSF2RA	-0.251981415687346
+Brain - Cortex	med_diff_adj	CSF2RA	0.0370562321845037
+Brain - Frontal Cortex (BA9)	med_diff_adj	CSF2RA	0.37231923121997
+Brain - Hippocampus	med_diff_adj	CSF2RA	-0.0554098360655736
+Brain - Hypothalamus	med_diff_adj	CSF2RA	-0.16736577181208
+Brain - Nucleus accumbens (basal ganglia)	med_diff_adj	CSF2RA	0.092511013215859
+Brain - Putamen (basal ganglia)	med_diff_adj	CSF2RA	-0.151113172541744
+Brain - Spinal cord (cervical c-1)	med_diff_adj	CSF2RA	-0.110746023448585
+Brain - Substantia nigra	med_diff_adj	CSF2RA	0.00699504517633344
+Breast - Mammary Tissue	med_diff_adj	CSF2RA	0.212490575521488
+Cells - Cultured fibroblasts	med_diff_adj	CSF2RA	0.267972376316087
+Cells - EBV-transformed lymphocytes	med_diff_adj	CSF2RA	-0.0573347107438016
+Colon - Sigmoid	med_diff_adj	CSF2RA	-0.138010350776308
+Colon - Transverse	med_diff_adj	CSF2RA	-0.16410537870472
+Esophagus - Gastroesophageal Junction	med_diff_adj	CSF2RA	-0.0229779411764705
+Esophagus - Mucosa	med_diff_adj	CSF2RA	0.0123999999999999
+Esophagus - Muscularis	med_diff_adj	CSF2RA	-0.00672430355427464
+Heart - Atrial Appendage	med_diff_adj	CSF2RA	0.0357524012806829
+Heart - Left Ventricle	med_diff_adj	CSF2RA	0.0807217473884141
+Kidney - Cortex	med_diff_adj	CSF2RA	0.171560740144811
+Kidney - Medulla	med_diff_adj	CSF2RA	-0.583976992604766
+Liver	med_diff_adj	CSF2RA	-0.00806134486826603
+Lung	med_diff_adj	CSF2RA	-0.110349554489376
+Minor Salivary Gland	med_diff_adj	CSF2RA	0.0451954397394138
+Muscle - Skeletal	med_diff_adj	CSF2RA	-0.0305128205128206
+Nerve - Tibial	med_diff_adj	CSF2RA	-0.176658957480875
+Pancreas	med_diff_adj	CSF2RA	-0.248972884141331
+Pituitary	med_diff_adj	CSF2RA	-0.431189229618549
+Skin - Not Sun Exposed (Suprapubic)	med_diff_adj	CSF2RA	0.0143283582089552
+Skin - Sun Exposed (Lower leg)	med_diff_adj	CSF2RA	-0.0309250136836344
+Small Intestine - Terminal Ileum	med_diff_adj	CSF2RA	-0.00508582326764145
+Spleen	med_diff_adj	CSF2RA	-0.192366412213741
+Stomach	med_diff_adj	CSF2RA	-0.0328804347826087
+Thyroid	med_diff_adj	CSF2RA	-0.0390713476783692
+Whole Blood	med_diff_adj	CSF2RA	0.119584055459272
+Adipose - Subcutaneous	male_med	CSF2RA	6.82
+Adipose - Visceral (Omentum)	male_med	CSF2RA	6.364
+Adrenal Gland	male_med	CSF2RA	1.95
+Artery - Aorta	male_med	CSF2RA	3.115
+Artery - Coronary	male_med	CSF2RA	3.445
+Artery - Tibial	male_med	CSF2RA	1.652
+Bladder	male_med	CSF2RA	1.6085
+Brain - Amygdala	male_med	CSF2RA	1.454
+Brain - Anterior cingulate cortex (BA24)	male_med	CSF2RA	0.9358
+Brain - Caudate (basal ganglia)	male_med	CSF2RA	1.517
+Brain - Cerebellar Hemisphere	male_med	CSF2RA	0.4928
+Brain - Cerebellum	male_med	CSF2RA	0.3659
+Brain - Cortex	male_med	CSF2RA	0.7718
+Brain - Frontal Cortex (BA9)	male_med	CSF2RA	0.8533
+Brain - Hippocampus	male_med	CSF2RA	1.525
+Brain - Hypothalamus	male_med	CSF2RA	2.384
+Brain - Nucleus accumbens (basal ganglia)	male_med	CSF2RA	1.2485
+Brain - Putamen (basal ganglia)	male_med	CSF2RA	1.078
+Brain - Spinal cord (cervical c-1)	male_med	CSF2RA	6.6955
+Brain - Substantia nigra	male_med	CSF2RA	3.431
+Breast - Mammary Tissue	male_med	CSF2RA	3.979
+Cells - Cultured fibroblasts	male_med	CSF2RA	0.008833
+Cells - EBV-transformed lymphocytes	male_med	CSF2RA	0.1936
+Colon - Sigmoid	male_med	CSF2RA	1.739
+Colon - Transverse	male_med	CSF2RA	1.822
+Esophagus - Gastroesophageal Junction	male_med	CSF2RA	1.088
+Esophagus - Mucosa	male_med	CSF2RA	1.25
+Esophagus - Muscularis	male_med	CSF2RA	1.041
+Heart - Atrial Appendage	male_med	CSF2RA	0.7496
+Heart - Left Ventricle	male_med	CSF2RA	0.3159
+Kidney - Cortex	male_med	CSF2RA	0.9944
+Kidney - Medulla	male_med	CSF2RA	1.217
+Liver	male_med	CSF2RA	0.5086
+Lung	male_med	CSF2RA	14.59
+Minor Salivary Gland	male_med	CSF2RA	2.456
+Muscle - Skeletal	male_med	CSF2RA	0.195
+Nerve - Tibial	male_med	CSF2RA	5.621
+Pancreas	male_med	CSF2RA	0.3651
+Pituitary	male_med	CSF2RA	1.337
+Skin - Not Sun Exposed (Suprapubic)	male_med	CSF2RA	1.675
+Skin - Sun Exposed (Lower leg)	male_med	CSF2RA	1.827
+Small Intestine - Terminal Ileum	male_med	CSF2RA	3.146
+Spleen	male_med	CSF2RA	13.1
+Stomach	male_med	CSF2RA	0.92
+Thyroid	male_med	CSF2RA	1.766
+Whole Blood	male_med	CSF2RA	46.16
+Adipose - Subcutaneous	female_med	CSF2RA	8.016
+Adipose - Visceral (Omentum)	female_med	CSF2RA	5.2195
+Adrenal Gland	female_med	CSF2RA	1.762
+Artery - Aorta	female_med	CSF2RA	2.995
+Artery - Coronary	female_med	CSF2RA	2.49
+Artery - Tibial	female_med	CSF2RA	1.484
+Bladder	female_med	CSF2RA	1.674
+Brain - Amygdala	female_med	CSF2RA	1.527
+Brain - Anterior cingulate cortex (BA24)	female_med	CSF2RA	0.9042
+Brain - Caudate (basal ganglia)	female_med	CSF2RA	1.197
+Brain - Cerebellar Hemisphere	female_med	CSF2RA	0.3162
+Brain - Cerebellum	female_med	CSF2RA	0.2737
+Brain - Cortex	female_med	CSF2RA	0.8004
+Brain - Frontal Cortex (BA9)	female_med	CSF2RA	1.171
+Brain - Hippocampus	female_med	CSF2RA	1.4405
+Brain - Hypothalamus	female_med	CSF2RA	1.985
+Brain - Nucleus accumbens (basal ganglia)	female_med	CSF2RA	1.364
+Brain - Putamen (basal ganglia)	female_med	CSF2RA	0.9151
+Brain - Spinal cord (cervical c-1)	female_med	CSF2RA	5.954
+Brain - Substantia nigra	female_med	CSF2RA	3.455
+Breast - Mammary Tissue	female_med	CSF2RA	4.8245
+Cells - Cultured fibroblasts	female_med	CSF2RA	0.0112
+Cells - EBV-transformed lymphocytes	female_med	CSF2RA	0.1825
+Colon - Sigmoid	female_med	CSF2RA	1.499
+Colon - Transverse	female_med	CSF2RA	1.523
+Esophagus - Gastroesophageal Junction	female_med	CSF2RA	1.063
+Esophagus - Mucosa	female_med	CSF2RA	1.2655
+Esophagus - Muscularis	female_med	CSF2RA	1.034
+Heart - Atrial Appendage	female_med	CSF2RA	0.7764
+Heart - Left Ventricle	female_med	CSF2RA	0.3414
+Kidney - Cortex	female_med	CSF2RA	1.165
+Kidney - Medulla	female_med	CSF2RA	0.5063
+Liver	female_med	CSF2RA	0.5045
+Lung	female_med	CSF2RA	12.98
+Minor Salivary Gland	female_med	CSF2RA	2.567
+Muscle - Skeletal	female_med	CSF2RA	0.18905
+Nerve - Tibial	female_med	CSF2RA	4.628
+Pancreas	female_med	CSF2RA	0.2742
+Pituitary	female_med	CSF2RA	0.7605
+Skin - Not Sun Exposed (Suprapubic)	female_med	CSF2RA	1.699
+Skin - Sun Exposed (Lower leg)	female_med	CSF2RA	1.7705
+Small Intestine - Terminal Ileum	female_med	CSF2RA	3.13
+Spleen	female_med	CSF2RA	10.58
+Stomach	female_med	CSF2RA	0.88975
+Thyroid	female_med	CSF2RA	1.697
+Whole Blood	female_med	CSF2RA	51.68
+Adipose - Subcutaneous	med_diff_adj	IL3RA	-0.298798798798799
+Adipose - Visceral (Omentum)	med_diff_adj	IL3RA	-0.309241441038264
+Adrenal Gland	med_diff_adj	IL3RA	-0.203665521191294
+Artery - Aorta	med_diff_adj	IL3RA	-0.157080799304952
+Artery - Coronary	med_diff_adj	IL3RA	-0.301140030114003
+Artery - Tibial	med_diff_adj	IL3RA	-0.246062303115156
+Bladder	med_diff_adj	IL3RA	-0.253812884133849
+Brain - Amygdala	med_diff_adj	IL3RA	-0.0415240702715036
+Brain - Anterior cingulate cortex (BA24)	med_diff_adj	IL3RA	-0.113307349665924
+Brain - Caudate (basal ganglia)	med_diff_adj	IL3RA	-0.0557217651458489
+Brain - Cerebellar Hemisphere	med_diff_adj	IL3RA	-0.0503718728870858
+Brain - Cerebellum	med_diff_adj	IL3RA	-0.00496060694484957
+Brain - Cortex	med_diff_adj	IL3RA	-0.172873563218391
+Brain - Frontal Cortex (BA9)	med_diff_adj	IL3RA	-0.0522464698331194
+Brain - Hippocampus	med_diff_adj	IL3RA	-0.0875097125097125
+Brain - Hypothalamus	med_diff_adj	IL3RA	-0.0399698340874813
+Brain - Nucleus accumbens (basal ganglia)	med_diff_adj	IL3RA	-0.0320087098530213
+Brain - Putamen (basal ganglia)	med_diff_adj	IL3RA	-0.060064585575888
+Brain - Spinal cord (cervical c-1)	med_diff_adj	IL3RA	-0.121368699046963
+Brain - Substantia nigra	med_diff_adj	IL3RA	-0.310385338345865
+Breast - Mammary Tissue	med_diff_adj	IL3RA	-0.438345356176736
+Cells - Cultured fibroblasts	med_diff_adj	IL3RA	-0.0665385026166827
+Cells - EBV-transformed lymphocytes	med_diff_adj	IL3RA	-0.316798196166855
+Colon - Sigmoid	med_diff_adj	IL3RA	-0.191752577319588
+Colon - Transverse	med_diff_adj	IL3RA	-0.25523295070898
+Esophagus - Gastroesophageal Junction	med_diff_adj	IL3RA	-0.200318326512051
+Esophagus - Mucosa	med_diff_adj	IL3RA	-0.157574990507531
+Esophagus - Muscularis	med_diff_adj	IL3RA	-0.203079012904686
+Heart - Atrial Appendage	med_diff_adj	IL3RA	-0.267071320182094
+Heart - Left Ventricle	med_diff_adj	IL3RA	-0.201038802322029
+Kidney - Cortex	med_diff_adj	IL3RA	-0.15356820234869
+Kidney - Medulla	med_diff_adj	IL3RA	-0.65695652173913
+Liver	med_diff_adj	IL3RA	-0.0882352941176471
+Lung	med_diff_adj	IL3RA	-0.241171088746569
+Minor Salivary Gland	med_diff_adj	IL3RA	-0.050381679389313
+Muscle - Skeletal	med_diff_adj	IL3RA	-0.185220397579948
+Nerve - Tibial	med_diff_adj	IL3RA	-0.237485939257593
+Pancreas	med_diff_adj	IL3RA	-0.210388247639035
+Pituitary	med_diff_adj	IL3RA	-0.0642892398815399
+Skin - Not Sun Exposed (Suprapubic)	med_diff_adj	IL3RA	-0.140377358490566
+Skin - Sun Exposed (Lower leg)	med_diff_adj	IL3RA	-0.157651245551601
+Small Intestine - Terminal Ileum	med_diff_adj	IL3RA	-0.21814724259712
+Spleen	med_diff_adj	IL3RA	-0.215588130139435
+Stomach	med_diff_adj	IL3RA	-0.267596566523605
+Thyroid	med_diff_adj	IL3RA	-0.212910128388017
+Whole Blood	med_diff_adj	IL3RA	-0.151133501259446
+Adipose - Subcutaneous	male_med	IL3RA	49.95
+Adipose - Visceral (Omentum)	male_med	IL3RA	44.69
+Adrenal Gland	male_med	IL3RA	4.365
+Artery - Aorta	male_med	IL3RA	11.51
+Artery - Coronary	male_med	IL3RA	23.245
+Artery - Tibial	male_med	IL3RA	14.285
+Bladder	male_med	IL3RA	21.965
+Brain - Amygdala	male_med	IL3RA	4.383
+Brain - Anterior cingulate cortex (BA24)	male_med	IL3RA	3.592
+Brain - Caudate (basal ganglia)	male_med	IL3RA	5.348
+Brain - Cerebellar Hemisphere	male_med	IL3RA	14.79
+Brain - Cerebellum	male_med	IL3RA	17.135
+Brain - Cortex	male_med	IL3RA	4.35
+Brain - Frontal Cortex (BA9)	male_med	IL3RA	3.895
+Brain - Hippocampus	male_med	IL3RA	5.148
+Brain - Hypothalamus	male_med	IL3RA	5.304
+Brain - Nucleus accumbens (basal ganglia)	male_med	IL3RA	4.5925
+Brain - Putamen (basal ganglia)	male_med	IL3RA	4.645
+Brain - Spinal cord (cervical c-1)	male_med	IL3RA	8.709
+Brain - Substantia nigra	male_med	IL3RA	6.384
+Breast - Mammary Tissue	male_med	IL3RA	44.36
+Cells - Cultured fibroblasts	male_med	IL3RA	0.46815
+Cells - EBV-transformed lymphocytes	male_med	IL3RA	39.915
+Colon - Sigmoid	male_med	IL3RA	19.4
+Colon - Transverse	male_med	IL3RA	14.81
+Esophagus - Gastroesophageal Junction	male_med	IL3RA	21.99
+Esophagus - Mucosa	male_med	IL3RA	7.901
+Esophagus - Muscularis	male_med	IL3RA	22.085
+Heart - Atrial Appendage	male_med	IL3RA	7.249
+Heart - Left Ventricle	male_med	IL3RA	6.546
+Kidney - Cortex	male_med	IL3RA	7.749
+Kidney - Medulla	male_med	IL3RA	18.4
+Liver	male_med	IL3RA	1.564
+Lung	male_med	IL3RA	54.65
+Minor Salivary Gland	male_med	IL3RA	10.48
+Muscle - Skeletal	male_med	IL3RA	5.785
+Nerve - Tibial	male_med	IL3RA	35.56
+Pancreas	male_med	IL3RA	3.812
+Pituitary	male_med	IL3RA	8.104
+Skin - Not Sun Exposed (Suprapubic)	male_med	IL3RA	13.25
+Skin - Sun Exposed (Lower leg)	male_med	IL3RA	14.05
+Small Intestine - Terminal Ileum	male_med	IL3RA	18.405
+Spleen	male_med	IL3RA	13.985
+Stomach	male_med	IL3RA	11.65
+Thyroid	male_med	IL3RA	28.04
+Whole Blood	male_med	IL3RA	7.94
+Adipose - Subcutaneous	female_med	IL3RA	35.025
+Adipose - Visceral (Omentum)	female_med	IL3RA	30.87
+Adrenal Gland	female_med	IL3RA	3.476
+Artery - Aorta	female_med	IL3RA	9.702
+Artery - Coronary	female_med	IL3RA	16.245
+Artery - Tibial	female_med	IL3RA	10.77
+Bladder	female_med	IL3RA	16.39
+Brain - Amygdala	female_med	IL3RA	4.201
+Brain - Anterior cingulate cortex (BA24)	female_med	IL3RA	3.185
+Brain - Caudate (basal ganglia)	female_med	IL3RA	5.05
+Brain - Cerebellar Hemisphere	female_med	IL3RA	14.045
+Brain - Cerebellum	female_med	IL3RA	17.05
+Brain - Cortex	female_med	IL3RA	3.598
+Brain - Frontal Cortex (BA9)	female_med	IL3RA	3.6915
+Brain - Hippocampus	female_med	IL3RA	4.6975
+Brain - Hypothalamus	female_med	IL3RA	5.092
+Brain - Nucleus accumbens (basal ganglia)	female_med	IL3RA	4.4455
+Brain - Putamen (basal ganglia)	female_med	IL3RA	4.366
+Brain - Spinal cord (cervical c-1)	female_med	IL3RA	7.652
+Brain - Substantia nigra	female_med	IL3RA	4.4025
+Breast - Mammary Tissue	female_med	IL3RA	24.915
+Cells - Cultured fibroblasts	female_med	IL3RA	0.437
+Cells - EBV-transformed lymphocytes	female_med	IL3RA	27.27
+Colon - Sigmoid	female_med	IL3RA	15.68
+Colon - Transverse	female_med	IL3RA	11.03
+Esophagus - Gastroesophageal Junction	female_med	IL3RA	17.585
+Esophagus - Mucosa	female_med	IL3RA	6.656
+Esophagus - Muscularis	female_med	IL3RA	17.6
+Heart - Atrial Appendage	female_med	IL3RA	5.313
+Heart - Left Ventricle	female_med	IL3RA	5.23
+Kidney - Cortex	female_med	IL3RA	6.559
+Kidney - Medulla	female_med	IL3RA	6.312
+Liver	female_med	IL3RA	1.426
+Lung	female_med	IL3RA	41.47
+Minor Salivary Gland	female_med	IL3RA	9.952
+Muscle - Skeletal	female_med	IL3RA	4.7135
+Nerve - Tibial	female_med	IL3RA	27.115
+Pancreas	female_med	IL3RA	3.01
+Pituitary	female_med	IL3RA	7.583
+Skin - Not Sun Exposed (Suprapubic)	female_med	IL3RA	11.39
+Skin - Sun Exposed (Lower leg)	female_med	IL3RA	11.835
+Small Intestine - Terminal Ileum	female_med	IL3RA	14.39
+Spleen	female_med	IL3RA	10.97
+Stomach	female_med	IL3RA	8.5325
+Thyroid	female_med	IL3RA	22.07
+Whole Blood	female_med	IL3RA	6.74
+Adipose - Subcutaneous	med_diff_adj	SLC25A6	-0.0704654599187292
+Adipose - Visceral (Omentum)	med_diff_adj	SLC25A6	-0.000704845814977934
+Adrenal Gland	med_diff_adj	SLC25A6	-0.00203214483650454
+Artery - Aorta	med_diff_adj	SLC25A6	-0.045444006492001
+Artery - Coronary	med_diff_adj	SLC25A6	-0.0412632042253521
+Artery - Tibial	med_diff_adj	SLC25A6	-0.0876288659793814
+Bladder	med_diff_adj	SLC25A6	0.0459986320109441
+Brain - Amygdala	med_diff_adj	SLC25A6	-0.071087786259542
+Brain - Anterior cingulate cortex (BA24)	med_diff_adj	SLC25A6	-0.120940460081191
+Brain - Caudate (basal ganglia)	med_diff_adj	SLC25A6	-0.174591099277292
+Brain - Cerebellar Hemisphere	med_diff_adj	SLC25A6	-0.237899801868101
+Brain - Cerebellum	med_diff_adj	SLC25A6	-0.240187463386057
+Brain - Cortex	med_diff_adj	SLC25A6	-0.148159057437408
+Brain - Frontal Cortex (BA9)	med_diff_adj	SLC25A6	-0.148258283772303
+Brain - Hippocampus	med_diff_adj	SLC25A6	-0.17941478439425
+Brain - Hypothalamus	med_diff_adj	SLC25A6	-0.145904023267087
+Brain - Nucleus accumbens (basal ganglia)	med_diff_adj	SLC25A6	-0.18597609561753
+Brain - Putamen (basal ganglia)	med_diff_adj	SLC25A6	-0.257490048187723
+Brain - Spinal cord (cervical c-1)	med_diff_adj	SLC25A6	-0.010388839418225
+Brain - Substantia nigra	med_diff_adj	SLC25A6	-0.124931656642974
+Breast - Mammary Tissue	med_diff_adj	SLC25A6	0.0746282882195958
+Cells - Cultured fibroblasts	med_diff_adj	SLC25A6	-0.0160284463894968
+Cells - EBV-transformed lymphocytes	med_diff_adj	SLC25A6	-0.106501403180542
+Colon - Sigmoid	med_diff_adj	SLC25A6	-0.0727926488214142
+Colon - Transverse	med_diff_adj	SLC25A6	-0.0446479679450487
+Esophagus - Gastroesophageal Junction	med_diff_adj	SLC25A6	-0.0722937749156702
+Esophagus - Mucosa	med_diff_adj	SLC25A6	-0.0236082474226805
+Esophagus - Muscularis	med_diff_adj	SLC25A6	-0.0768608414239482
+Heart - Atrial Appendage	med_diff_adj	SLC25A6	0.010344827586207
+Heart - Left Ventricle	med_diff_adj	SLC25A6	0.0477908025247971
+Kidney - Cortex	med_diff_adj	SLC25A6	0.299199516689322
+Kidney - Medulla	med_diff_adj	SLC25A6	-0.190182789073732
+Liver	med_diff_adj	SLC25A6	0.0746213061832629
+Lung	med_diff_adj	SLC25A6	-0.0402061855670103
+Minor Salivary Gland	med_diff_adj	SLC25A6	-0.102681851579721
+Muscle - Skeletal	med_diff_adj	SLC25A6	0.0624567713376677
+Nerve - Tibial	med_diff_adj	SLC25A6	-0.0508431915429146
+Pancreas	med_diff_adj	SLC25A6	-0.116879859543516
+Pituitary	med_diff_adj	SLC25A6	-0.0963448922211808
+Skin - Not Sun Exposed (Suprapubic)	med_diff_adj	SLC25A6	-0.0512965050732808
+Skin - Sun Exposed (Lower leg)	med_diff_adj	SLC25A6	-0.0354576399394856
+Small Intestine - Terminal Ileum	med_diff_adj	SLC25A6	0.0128764731558271
+Spleen	med_diff_adj	SLC25A6	-0.060017086715079
+Stomach	med_diff_adj	SLC25A6	-0.0715691536947576
+Thyroid	med_diff_adj	SLC25A6	-0.130345394736842
+Whole Blood	med_diff_adj	SLC25A6	-0.0577371695178849
+Adipose - Subcutaneous	male_med	SLC25A6	541.4
+Adipose - Visceral (Omentum)	male_med	SLC25A6	567.5
+Adrenal Gland	male_med	SLC25A6	541.3
+Artery - Aorta	male_med	SLC25A6	431.3
+Artery - Coronary	male_med	SLC25A6	454.4
+Artery - Tibial	male_med	SLC25A6	485
+Bladder	male_med	SLC25A6	584.8
+Brain - Amygdala	male_med	SLC25A6	209.6
+Brain - Anterior cingulate cortex (BA24)	male_med	SLC25A6	295.6
+Brain - Caudate (basal ganglia)	male_med	SLC25A6	262.9
+Brain - Cerebellar Hemisphere	male_med	SLC25A6	353.3
+Brain - Cerebellum	male_med	SLC25A6	341.4
+Brain - Cortex	male_med	SLC25A6	339.5
+Brain - Frontal Cortex (BA9)	male_med	SLC25A6	353.1
+Brain - Hippocampus	male_med	SLC25A6	194.8
+Brain - Hypothalamus	male_med	SLC25A6	206.3
+Brain - Nucleus accumbens (basal ganglia)	male_med	SLC25A6	313.75
+Brain - Putamen (basal ganglia)	male_med	SLC25A6	238.65
+Brain - Spinal cord (cervical c-1)	male_med	SLC25A6	168.45
+Brain - Substantia nigra	male_med	SLC25A6	182.9
+Breast - Mammary Tissue	male_med	SLC25A6	524.6
+Cells - Cultured fibroblasts	male_med	SLC25A6	914
+Cells - EBV-transformed lymphocytes	male_med	SLC25A6	1069
+Colon - Sigmoid	male_med	SLC25A6	625.75
+Colon - Transverse	male_med	SLC25A6	524.1
+Esophagus - Gastroesophageal Junction	male_med	SLC25A6	652.2
+Esophagus - Mucosa	male_med	SLC25A6	485
+Esophagus - Muscularis	male_med	SLC25A6	618
+Heart - Atrial Appendage	male_med	SLC25A6	174
+Heart - Left Ventricle	male_med	SLC25A6	110.9
+Kidney - Cortex	male_med	SLC25A6	331.05
+Kidney - Medulla	male_med	SLC25A6	486.9
+Liver	male_med	SLC25A6	80.54
+Lung	male_med	SLC25A6	485
+Minor Salivary Gland	male_med	SLC25A6	544.4
+Muscle - Skeletal	male_med	SLC25A6	72.29
+Nerve - Tibial	male_med	SLC25A6	397.3
+Pancreas	male_med	SLC25A6	398.7
+Pituitary	male_med	SLC25A6	533.5
+Skin - Not Sun Exposed (Suprapubic)	male_med	SLC25A6	532.2
+Skin - Sun Exposed (Lower leg)	male_med	SLC25A6	528.8
+Small Intestine - Terminal Ileum	male_med	SLC25A6	458.2
+Spleen	male_med	SLC25A6	468.2
+Stomach	male_med	SLC25A6	558.9
+Thyroid	male_med	SLC25A6	729.6
+Whole Blood	male_med	SLC25A6	257.2
+Adipose - Subcutaneous	female_med	SLC25A6	503.25
+Adipose - Visceral (Omentum)	female_med	SLC25A6	567.1
+Adrenal Gland	female_med	SLC25A6	540.2
+Artery - Aorta	female_med	SLC25A6	411.7
+Artery - Coronary	female_med	SLC25A6	435.65
+Artery - Tibial	female_med	SLC25A6	442.5
+Bladder	female_med	SLC25A6	611.7
+Brain - Amygdala	female_med	SLC25A6	194.7
+Brain - Anterior cingulate cortex (BA24)	female_med	SLC25A6	259.85
+Brain - Caudate (basal ganglia)	female_med	SLC25A6	217
+Brain - Cerebellar Hemisphere	female_med	SLC25A6	269.25
+Brain - Cerebellum	female_med	SLC25A6	259.4
+Brain - Cortex	female_med	SLC25A6	289.2
+Brain - Frontal Cortex (BA9)	female_med	SLC25A6	300.75
+Brain - Hippocampus	female_med	SLC25A6	159.85
+Brain - Hypothalamus	female_med	SLC25A6	176.2
+Brain - Nucleus accumbens (basal ganglia)	female_med	SLC25A6	255.4
+Brain - Putamen (basal ganglia)	female_med	SLC25A6	177.2
+Brain - Spinal cord (cervical c-1)	female_med	SLC25A6	166.7
+Brain - Substantia nigra	female_med	SLC25A6	160.05
+Breast - Mammary Tissue	female_med	SLC25A6	563.75
+Cells - Cultured fibroblasts	female_med	SLC25A6	899.35
+Cells - EBV-transformed lymphocytes	female_med	SLC25A6	955.15
+Colon - Sigmoid	female_med	SLC25A6	580.2
+Colon - Transverse	female_med	SLC25A6	500.7
+Esophagus - Gastroesophageal Junction	female_med	SLC25A6	605.05
+Esophagus - Mucosa	female_med	SLC25A6	473.55
+Esophagus - Muscularis	female_med	SLC25A6	570.5
+Heart - Atrial Appendage	female_med	SLC25A6	175.8
+Heart - Left Ventricle	female_med	SLC25A6	116.2
+Kidney - Cortex	female_med	SLC25A6	430.1
+Kidney - Medulla	female_med	SLC25A6	394.3
+Liver	female_med	SLC25A6	86.55
+Lung	female_med	SLC25A6	465.5
+Minor Salivary Gland	female_med	SLC25A6	488.5
+Muscle - Skeletal	female_med	SLC25A6	76.805
+Nerve - Tibial	female_med	SLC25A6	377.1
+Pancreas	female_med	SLC25A6	352.1
+Pituitary	female_med	SLC25A6	482.1
+Skin - Not Sun Exposed (Suprapubic)	female_med	SLC25A6	504.9
+Skin - Sun Exposed (Lower leg)	female_med	SLC25A6	510.05
+Small Intestine - Terminal Ileum	female_med	SLC25A6	464.1
+Spleen	female_med	SLC25A6	440.1
+Stomach	female_med	SLC25A6	518.9
+Thyroid	female_med	SLC25A6	634.5
+Whole Blood	female_med	SLC25A6	242.35
+Adipose - Subcutaneous	med_diff_adj	ASMTL	-0.173795944233206
+Adipose - Visceral (Omentum)	med_diff_adj	ASMTL	-0.12646420824295
+Adrenal Gland	med_diff_adj	ASMTL	-0.0637727759914256
+Artery - Aorta	med_diff_adj	ASMTL	-0.054642166344294
+Artery - Coronary	med_diff_adj	ASMTL	-0.0829138288421677
+Artery - Tibial	med_diff_adj	ASMTL	-0.0728674459089779
+Bladder	med_diff_adj	ASMTL	-0.033047288661676
+Brain - Amygdala	med_diff_adj	ASMTL	-0.0385906040268456
+Brain - Anterior cingulate cortex (BA24)	med_diff_adj	ASMTL	-0.183018867924528
+Brain - Caudate (basal ganglia)	med_diff_adj	ASMTL	-0.175609756097561
+Brain - Cerebellar Hemisphere	med_diff_adj	ASMTL	-0.447147651006711
+Brain - Cerebellum	med_diff_adj	ASMTL	-0.342210871944546
+Brain - Cortex	med_diff_adj	ASMTL	-0.270666036844592
+Brain - Frontal Cortex (BA9)	med_diff_adj	ASMTL	-0.264733840304183
+Brain - Hippocampus	med_diff_adj	ASMTL	-0.228487394957983
+Brain - Hypothalamus	med_diff_adj	ASMTL	-0.286627597229622
+Brain - Nucleus accumbens (basal ganglia)	med_diff_adj	ASMTL	-0.222157940410761
+Brain - Putamen (basal ganglia)	med_diff_adj	ASMTL	-0.184093763080787
+Brain - Spinal cord (cervical c-1)	med_diff_adj	ASMTL	-0.16484746711447
+Brain - Substantia nigra	med_diff_adj	ASMTL	-0.125797306874557
+Breast - Mammary Tissue	med_diff_adj	ASMTL	0.0333097094259391
+Cells - Cultured fibroblasts	med_diff_adj	ASMTL	-0.000856653340948062
+Cells - EBV-transformed lymphocytes	med_diff_adj	ASMTL	-0.104657416370872
+Colon - Sigmoid	med_diff_adj	ASMTL	-0.0363896392817416
+Colon - Transverse	med_diff_adj	ASMTL	-0.113569321533923
+Esophagus - Gastroesophageal Junction	med_diff_adj	ASMTL	-0.0174177053371684
+Esophagus - Mucosa	med_diff_adj	ASMTL	-0.0325396825396824
+Esophagus - Muscularis	med_diff_adj	ASMTL	-0.0162404975812025
+Heart - Atrial Appendage	med_diff_adj	ASMTL	-0.0724312184166196
+Heart - Left Ventricle	med_diff_adj	ASMTL	-0.115232833464878
+Kidney - Cortex	med_diff_adj	ASMTL	0.0180142438206954
+Kidney - Medulla	med_diff_adj	ASMTL	-0.173824130879346
+Liver	med_diff_adj	ASMTL	-0.0355665839536807
+Lung	med_diff_adj	ASMTL	-0.0835899692036956
+Minor Salivary Gland	med_diff_adj	ASMTL	-0.0465337132003799
+Muscle - Skeletal	med_diff_adj	ASMTL	-0.130895091434071
+Nerve - Tibial	med_diff_adj	ASMTL	-0.0727746094718572
+Pancreas	med_diff_adj	ASMTL	-0.115819812126388
+Pituitary	med_diff_adj	ASMTL	-0.114722222222222
+Skin - Not Sun Exposed (Suprapubic)	med_diff_adj	ASMTL	-0.0344969199178645
+Skin - Sun Exposed (Lower leg)	med_diff_adj	ASMTL	-0.0206732528357116
+Small Intestine - Terminal Ileum	med_diff_adj	ASMTL	-0.134610944354653
+Spleen	med_diff_adj	ASMTL	-0.105642256902761
+Stomach	med_diff_adj	ASMTL	-0.105215281989084
+Thyroid	med_diff_adj	ASMTL	-0.142377756471716
+Whole Blood	med_diff_adj	ASMTL	-0.0635276532137518
+Adipose - Subcutaneous	male_med	ASMTL	31.56
+Adipose - Visceral (Omentum)	male_med	ASMTL	23.05
+Adrenal Gland	male_med	ASMTL	18.66
+Artery - Aorta	male_med	ASMTL	41.36
+Artery - Coronary	male_med	ASMTL	33.77
+Artery - Tibial	male_med	ASMTL	40.21
+Bladder	male_med	ASMTL	27.385
+Brain - Amygdala	male_med	ASMTL	11.92
+Brain - Anterior cingulate cortex (BA24)	male_med	ASMTL	15.9
+Brain - Caudate (basal ganglia)	male_med	ASMTL	14.35
+Brain - Cerebellar Hemisphere	male_med	ASMTL	29.8
+Brain - Cerebellum	male_med	ASMTL	27.41
+Brain - Cortex	male_med	ASMTL	21.17
+Brain - Frontal Cortex (BA9)	male_med	ASMTL	21.04
+Brain - Hippocampus	male_med	ASMTL	11.9
+Brain - Hypothalamus	male_med	ASMTL	18.77
+Brain - Nucleus accumbens (basal ganglia)	male_med	ASMTL	17.285
+Brain - Putamen (basal ganglia)	male_med	ASMTL	11.945
+Brain - Spinal cord (cervical c-1)	male_med	ASMTL	17.865
+Brain - Substantia nigra	male_med	ASMTL	14.11
+Breast - Mammary Tissue	male_med	ASMTL	28.22
+Cells - Cultured fibroblasts	male_med	ASMTL	35.02
+Cells - EBV-transformed lymphocytes	male_med	ASMTL	46.485
+Colon - Sigmoid	male_med	ASMTL	31.465
+Colon - Transverse	male_med	ASMTL	20.34
+Esophagus - Gastroesophageal Junction	male_med	ASMTL	31.29
+Esophagus - Mucosa	male_med	ASMTL	12.6
+Esophagus - Muscularis	male_med	ASMTL	28.94
+Heart - Atrial Appendage	male_med	ASMTL	17.81
+Heart - Left Ventricle	male_med	ASMTL	12.67
+Kidney - Cortex	male_med	ASMTL	11.935
+Kidney - Medulla	male_med	ASMTL	14.67
+Liver	male_med	ASMTL	12.09
+Lung	male_med	ASMTL	22.73
+Minor Salivary Gland	male_med	ASMTL	21.06
+Muscle - Skeletal	male_med	ASMTL	10.39
+Nerve - Tibial	male_med	ASMTL	40.33
+Pancreas	male_med	ASMTL	9.368
+Pituitary	male_med	ASMTL	36
+Skin - Not Sun Exposed (Suprapubic)	male_med	ASMTL	24.35
+Skin - Sun Exposed (Lower leg)	male_med	ASMTL	27.33
+Small Intestine - Terminal Ileum	male_med	ASMTL	21.655
+Spleen	male_med	ASMTL	24.99
+Stomach	male_med	ASMTL	16.49
+Thyroid	male_med	ASMTL	41.72
+Whole Blood	male_med	ASMTL	13.38
+Adipose - Subcutaneous	female_med	ASMTL	26.075
+Adipose - Visceral (Omentum)	female_med	ASMTL	20.135
+Adrenal Gland	female_med	ASMTL	17.47
+Artery - Aorta	female_med	ASMTL	39.1
+Artery - Coronary	female_med	ASMTL	30.97
+Artery - Tibial	female_med	ASMTL	37.28
+Bladder	female_med	ASMTL	26.48
+Brain - Amygdala	female_med	ASMTL	11.46
+Brain - Anterior cingulate cortex (BA24)	female_med	ASMTL	12.99
+Brain - Caudate (basal ganglia)	female_med	ASMTL	11.83
+Brain - Cerebellar Hemisphere	female_med	ASMTL	16.475
+Brain - Cerebellum	female_med	ASMTL	18.03
+Brain - Cortex	female_med	ASMTL	15.44
+Brain - Frontal Cortex (BA9)	female_med	ASMTL	15.47
+Brain - Hippocampus	female_med	ASMTL	9.181
+Brain - Hypothalamus	female_med	ASMTL	13.39
+Brain - Nucleus accumbens (basal ganglia)	female_med	ASMTL	13.445
+Brain - Putamen (basal ganglia)	female_med	ASMTL	9.746
+Brain - Spinal cord (cervical c-1)	female_med	ASMTL	14.92
+Brain - Substantia nigra	female_med	ASMTL	12.335
+Breast - Mammary Tissue	female_med	ASMTL	29.16
+Cells - Cultured fibroblasts	female_med	ASMTL	34.99
+Cells - EBV-transformed lymphocytes	female_med	ASMTL	41.62
+Colon - Sigmoid	female_med	ASMTL	30.32
+Colon - Transverse	female_med	ASMTL	18.03
+Esophagus - Gastroesophageal Junction	female_med	ASMTL	30.745
+Esophagus - Mucosa	female_med	ASMTL	12.19
+Esophagus - Muscularis	female_med	ASMTL	28.47
+Heart - Atrial Appendage	female_med	ASMTL	16.52
+Heart - Left Ventricle	female_med	ASMTL	11.21
+Kidney - Cortex	female_med	ASMTL	12.15
+Kidney - Medulla	female_med	ASMTL	12.12
+Liver	female_med	ASMTL	11.66
+Lung	female_med	ASMTL	20.83
+Minor Salivary Gland	female_med	ASMTL	20.08
+Muscle - Skeletal	female_med	ASMTL	9.03
+Nerve - Tibial	female_med	ASMTL	37.395
+Pancreas	female_med	ASMTL	8.283
+Pituitary	female_med	ASMTL	31.87
+Skin - Not Sun Exposed (Suprapubic)	female_med	ASMTL	23.51
+Skin - Sun Exposed (Lower leg)	female_med	ASMTL	26.765
+Small Intestine - Terminal Ileum	female_med	ASMTL	18.74
+Spleen	female_med	ASMTL	22.35
+Stomach	female_med	ASMTL	14.755
+Thyroid	female_med	ASMTL	35.78
+Whole Blood	female_med	ASMTL	12.53
+Adipose - Subcutaneous	med_diff_adj	P2RY8	-0.297496984318456
+Adipose - Visceral (Omentum)	med_diff_adj	P2RY8	-0.353143685450263
+Adrenal Gland	med_diff_adj	P2RY8	-0.309628610729023
+Artery - Aorta	med_diff_adj	P2RY8	-0.215458937198068
+Artery - Coronary	med_diff_adj	P2RY8	-0.470368776008036
+Artery - Tibial	med_diff_adj	P2RY8	-0.44994994994995
+Bladder	med_diff_adj	P2RY8	-0.31443891229414
+Brain - Amygdala	med_diff_adj	P2RY8	0.0120776224725199
+Brain - Anterior cingulate cortex (BA24)	med_diff_adj	P2RY8	-0.100480352783684
+Brain - Caudate (basal ganglia)	med_diff_adj	P2RY8	-0.0853491556366956
+Brain - Cerebellar Hemisphere	med_diff_adj	P2RY8	-0.0304325525730895
+Brain - Cerebellum	med_diff_adj	P2RY8	-0.0311903246339913
+Brain - Cortex	med_diff_adj	P2RY8	-0.171787072243346
+Brain - Frontal Cortex (BA9)	med_diff_adj	P2RY8	0.0261432269197585
+Brain - Hippocampus	med_diff_adj	P2RY8	-0.185237757274663
+Brain - Hypothalamus	med_diff_adj	P2RY8	-0.157335223245925
+Brain - Nucleus accumbens (basal ganglia)	med_diff_adj	P2RY8	0.055053547523427
+Brain - Putamen (basal ganglia)	med_diff_adj	P2RY8	-0.139579826694096
+Brain - Spinal cord (cervical c-1)	med_diff_adj	P2RY8	-0.0255336961071578
+Brain - Substantia nigra	med_diff_adj	P2RY8	0.126889419252188
+Breast - Mammary Tissue	med_diff_adj	P2RY8	-0.352391130109538
+Cells - Cultured fibroblasts	med_diff_adj	P2RY8	-0.0454113171659533
+Cells - EBV-transformed lymphocytes	med_diff_adj	P2RY8	-0.0614775571985795
+Colon - Sigmoid	med_diff_adj	P2RY8	-0.205781142463868
+Colon - Transverse	med_diff_adj	P2RY8	-0.272278971468827
+Esophagus - Gastroesophageal Junction	med_diff_adj	P2RY8	-0.315377313716184
+Esophagus - Mucosa	med_diff_adj	P2RY8	-0.258879363135334
+Esophagus - Muscularis	med_diff_adj	P2RY8	-0.344225770516153
+Heart - Atrial Appendage	med_diff_adj	P2RY8	-0.248726655348047
+Heart - Left Ventricle	med_diff_adj	P2RY8	-0.394126284875184
+Kidney - Cortex	med_diff_adj	P2RY8	-0.0519282168766704
+Kidney - Medulla	med_diff_adj	P2RY8	-0.628311082856537
+Liver	med_diff_adj	P2RY8	-0.0329691767460007
+Lung	med_diff_adj	P2RY8	-0.0642451198418581
+Minor Salivary Gland	med_diff_adj	P2RY8	-0.247164646069613
+Muscle - Skeletal	med_diff_adj	P2RY8	-0.413841648834328
+Nerve - Tibial	med_diff_adj	P2RY8	-0.278635458167331
+Pancreas	med_diff_adj	P2RY8	-0.247697031729785
+Pituitary	med_diff_adj	P2RY8	-0.223300970873786
+Skin - Not Sun Exposed (Suprapubic)	med_diff_adj	P2RY8	-0.10524109014675
+Skin - Sun Exposed (Lower leg)	med_diff_adj	P2RY8	-0.197210782478472
+Small Intestine - Terminal Ileum	med_diff_adj	P2RY8	0.503856041131105
+Spleen	med_diff_adj	P2RY8	-0.062556013622513
+Stomach	med_diff_adj	P2RY8	-0.231528482797518
+Thyroid	med_diff_adj	P2RY8	-0.161904761904762
+Whole Blood	med_diff_adj	P2RY8	-0.0273333333333334
+Adipose - Subcutaneous	male_med	P2RY8	3.316
+Adipose - Visceral (Omentum)	male_med	P2RY8	5.519
+Adrenal Gland	male_med	P2RY8	7.27
+Artery - Aorta	male_med	P2RY8	2.07
+Artery - Coronary	male_med	P2RY8	3.4845
+Artery - Tibial	male_med	P2RY8	1.998
+Bladder	male_med	P2RY8	2.611
+Brain - Amygdala	male_med	P2RY8	0.07369
+Brain - Anterior cingulate cortex (BA24)	male_med	P2RY8	0.063495
+Brain - Caudate (basal ganglia)	male_med	P2RY8	0.08764
+Brain - Cerebellar Hemisphere	male_med	P2RY8	0.05849
+Brain - Cerebellum	male_med	P2RY8	0.070695
+Brain - Cortex	male_med	P2RY8	0.06575
+Brain - Frontal Cortex (BA9)	male_med	P2RY8	0.05795
+Brain - Hippocampus	male_med	P2RY8	0.1409
+Brain - Hypothalamus	male_med	P2RY8	0.1411
+Brain - Nucleus accumbens (basal ganglia)	male_med	P2RY8	0.05976
+Brain - Putamen (basal ganglia)	male_med	P2RY8	0.080205
+Brain - Spinal cord (cervical c-1)	male_med	P2RY8	0.35835
+Brain - Substantia nigra	male_med	P2RY8	0.1257
+Breast - Mammary Tissue	male_med	P2RY8	3.743
+Cells - Cultured fibroblasts	male_med	P2RY8	0.02103
+Cells - EBV-transformed lymphocytes	male_med	P2RY8	85.885
+Colon - Sigmoid	male_med	P2RY8	1.453
+Colon - Transverse	male_med	P2RY8	2.839
+Esophagus - Gastroesophageal Junction	male_med	P2RY8	2.107
+Esophagus - Mucosa	male_med	P2RY8	0.9798
+Esophagus - Muscularis	male_med	P2RY8	2.693
+Heart - Atrial Appendage	male_med	P2RY8	1.767
+Heart - Left Ventricle	male_med	P2RY8	1.7025
+Kidney - Cortex	male_med	P2RY8	2.619
+Kidney - Medulla	male_med	P2RY8	4.719
+Liver	male_med	P2RY8	0.5126
+Lung	male_med	P2RY8	4.047
+Minor Salivary Gland	male_med	P2RY8	2.557
+Muscle - Skeletal	male_med	P2RY8	0.8879
+Nerve - Tibial	male_med	P2RY8	2.008
+Pancreas	male_med	P2RY8	0.7816
+Pituitary	male_med	P2RY8	3.5535
+Skin - Not Sun Exposed (Suprapubic)	male_med	P2RY8	0.477
+Skin - Sun Exposed (Lower leg)	male_med	P2RY8	0.5342
+Small Intestine - Terminal Ileum	male_med	P2RY8	7.002
+Spleen	male_med	P2RY8	27.895
+Stomach	male_med	P2RY8	1.773
+Thyroid	male_med	P2RY8	17.325
+Whole Blood	male_med	P2RY8	22.5
+Adipose - Subcutaneous	female_med	P2RY8	2.3295
+Adipose - Visceral (Omentum)	female_med	P2RY8	3.57
+Adrenal Gland	female_med	P2RY8	5.019
+Artery - Aorta	female_med	P2RY8	1.624
+Artery - Coronary	female_med	P2RY8	1.8455
+Artery - Tibial	female_med	P2RY8	1.099
+Bladder	female_med	P2RY8	1.79
+Brain - Amygdala	female_med	P2RY8	0.07458
+Brain - Anterior cingulate cortex (BA24)	female_med	P2RY8	0.057115
+Brain - Caudate (basal ganglia)	female_med	P2RY8	0.08016
+Brain - Cerebellar Hemisphere	female_med	P2RY8	0.05671
+Brain - Cerebellum	female_med	P2RY8	0.06849
+Brain - Cortex	female_med	P2RY8	0.054455
+Brain - Frontal Cortex (BA9)	female_med	P2RY8	0.059465
+Brain - Hippocampus	female_med	P2RY8	0.1148
+Brain - Hypothalamus	female_med	P2RY8	0.1189
+Brain - Nucleus accumbens (basal ganglia)	female_med	P2RY8	0.06305
+Brain - Putamen (basal ganglia)	female_med	P2RY8	0.06901
+Brain - Spinal cord (cervical c-1)	female_med	P2RY8	0.3492
+Brain - Substantia nigra	female_med	P2RY8	0.14165
+Breast - Mammary Tissue	female_med	P2RY8	2.424
+Cells - Cultured fibroblasts	female_med	P2RY8	0.020075
+Cells - EBV-transformed lymphocytes	female_med	P2RY8	80.605
+Colon - Sigmoid	female_med	P2RY8	1.154
+Colon - Transverse	female_med	P2RY8	2.066
+Esophagus - Gastroesophageal Junction	female_med	P2RY8	1.4425
+Esophagus - Mucosa	female_med	P2RY8	0.72615
+Esophagus - Muscularis	female_med	P2RY8	1.766
+Heart - Atrial Appendage	female_med	P2RY8	1.3275
+Heart - Left Ventricle	female_med	P2RY8	1.0315
+Kidney - Cortex	female_med	P2RY8	2.483
+Kidney - Medulla	female_med	P2RY8	1.754
+Liver	female_med	P2RY8	0.4957
+Lung	female_med	P2RY8	3.787
+Minor Salivary Gland	female_med	P2RY8	1.925
+Muscle - Skeletal	female_med	P2RY8	0.52045
+Nerve - Tibial	female_med	P2RY8	1.4485
+Pancreas	female_med	P2RY8	0.588
+Pituitary	female_med	P2RY8	2.76
+Skin - Not Sun Exposed (Suprapubic)	female_med	P2RY8	0.4268
+Skin - Sun Exposed (Lower leg)	female_med	P2RY8	0.42885
+Small Intestine - Terminal Ileum	female_med	P2RY8	10.53
+Spleen	female_med	P2RY8	26.15
+Stomach	female_med	P2RY8	1.3625
+Thyroid	female_med	P2RY8	14.52
+Whole Blood	female_med	P2RY8	21.885
+Adipose - Subcutaneous	med_diff_adj	AKAP17A	-0.0887596899224806
+Adipose - Visceral (Omentum)	med_diff_adj	AKAP17A	-0.171472337358083
+Adrenal Gland	med_diff_adj	AKAP17A	-0.169385194479297
+Artery - Aorta	med_diff_adj	AKAP17A	-0.037344398340249
+Artery - Coronary	med_diff_adj	AKAP17A	-0.0752611373984465
+Artery - Tibial	med_diff_adj	AKAP17A	-0.0460039351634968
+Bladder	med_diff_adj	AKAP17A	-0.096930393428448
+Brain - Amygdala	med_diff_adj	AKAP17A	0.13355592654424
+Brain - Anterior cingulate cortex (BA24)	med_diff_adj	AKAP17A	-0.0691631639281621
+Brain - Caudate (basal ganglia)	med_diff_adj	AKAP17A	-0.105544422177689
+Brain - Cerebellar Hemisphere	med_diff_adj	AKAP17A	-0.22931654676259
+Brain - Cerebellum	med_diff_adj	AKAP17A	-0.157490130895491
+Brain - Cortex	med_diff_adj	AKAP17A	-0.157585720995773
+Brain - Frontal Cortex (BA9)	med_diff_adj	AKAP17A	-0.0564191134139321
+Brain - Hippocampus	med_diff_adj	AKAP17A	-0.104696673189824
+Brain - Hypothalamus	med_diff_adj	AKAP17A	-0.0191419141914192
+Brain - Nucleus accumbens (basal ganglia)	med_diff_adj	AKAP17A	-0.0750760906323977
+Brain - Putamen (basal ganglia)	med_diff_adj	AKAP17A	-0.0484104046242775
+Brain - Spinal cord (cervical c-1)	med_diff_adj	AKAP17A	-0.0340909090909092
+Brain - Substantia nigra	med_diff_adj	AKAP17A	-0.0380503144654088
+Breast - Mammary Tissue	med_diff_adj	AKAP17A	0.103831529687043
+Cells - Cultured fibroblasts	med_diff_adj	AKAP17A	0.0118413262285376
+Cells - EBV-transformed lymphocytes	med_diff_adj	AKAP17A	-0.0216167885131227
+Colon - Sigmoid	med_diff_adj	AKAP17A	-0.0616146100017069
+Colon - Transverse	med_diff_adj	AKAP17A	-0.0636363636363636
+Esophagus - Gastroesophageal Junction	med_diff_adj	AKAP17A	-0.152001410685946
+Esophagus - Mucosa	med_diff_adj	AKAP17A	-0.0536467751657627
+Esophagus - Muscularis	med_diff_adj	AKAP17A	-0.11022230490187
+Heart - Atrial Appendage	med_diff_adj	AKAP17A	-0.134037367993501
+Heart - Left Ventricle	med_diff_adj	AKAP17A	-0.0574378831881252
+Kidney - Cortex	med_diff_adj	AKAP17A	0.384590534647068
+Kidney - Medulla	med_diff_adj	AKAP17A	-0.357357357357357
+Liver	med_diff_adj	AKAP17A	0.0430871212121212
+Lung	med_diff_adj	AKAP17A	-0.105364394101304
+Minor Salivary Gland	med_diff_adj	AKAP17A	-0.0525628468821417
+Muscle - Skeletal	med_diff_adj	AKAP17A	-0.0158917010005886
+Nerve - Tibial	med_diff_adj	AKAP17A	-0.0830353151542243
+Pancreas	med_diff_adj	AKAP17A	-0.095795508838987
+Pituitary	med_diff_adj	AKAP17A	-0.162223626026532
+Skin - Not Sun Exposed (Suprapubic)	med_diff_adj	AKAP17A	-0.0186207984850876
+Skin - Sun Exposed (Lower leg)	med_diff_adj	AKAP17A	-0.00242483026188165
+Small Intestine - Terminal Ileum	med_diff_adj	AKAP17A	0.0149892933618843
+Spleen	med_diff_adj	AKAP17A	-0.102573666542335
+Stomach	med_diff_adj	AKAP17A	-0.0617738187451587
+Thyroid	med_diff_adj	AKAP17A	-0.0677290836653386
+Whole Blood	med_diff_adj	AKAP17A	0.0103618141668083
+Adipose - Subcutaneous	male_med	AKAP17A	64.5
+Adipose - Visceral (Omentum)	male_med	AKAP17A	55.49
+Adrenal Gland	male_med	AKAP17A	55.79
+Artery - Aorta	male_med	AKAP17A	57.84
+Artery - Coronary	male_med	AKAP17A	56.005
+Artery - Tibial	male_med	AKAP17A	53.365
+Bladder	male_med	AKAP17A	57.825
+Brain - Amygdala	male_med	AKAP17A	11.98
+Brain - Anterior cingulate cortex (BA24)	male_med	AKAP17A	13.085
+Brain - Caudate (basal ganglia)	male_med	AKAP17A	14.97
+Brain - Cerebellar Hemisphere	male_med	AKAP17A	44.48
+Brain - Cerebellum	male_med	AKAP17A	48.13
+Brain - Cortex	male_med	AKAP17A	21.29
+Brain - Frontal Cortex (BA9)	male_med	AKAP17A	17.37
+Brain - Hippocampus	male_med	AKAP17A	15.33
+Brain - Hypothalamus	male_med	AKAP17A	15.15
+Brain - Nucleus accumbens (basal ganglia)	male_med	AKAP17A	14.785
+Brain - Putamen (basal ganglia)	male_med	AKAP17A	13.84
+Brain - Spinal cord (cervical c-1)	male_med	AKAP17A	23.76
+Brain - Substantia nigra	male_med	AKAP17A	15.9
+Breast - Mammary Tissue	male_med	AKAP17A	68.38
+Cells - Cultured fibroblasts	male_med	AKAP17A	42.225
+Cells - EBV-transformed lymphocytes	male_med	AKAP17A	95.065
+Colon - Sigmoid	male_med	AKAP17A	58.59
+Colon - Transverse	male_med	AKAP17A	55
+Esophagus - Gastroesophageal Junction	male_med	AKAP17A	56.71
+Esophagus - Mucosa	male_med	AKAP17A	49.77
+Esophagus - Muscularis	male_med	AKAP17A	53.755
+Heart - Atrial Appendage	male_med	AKAP17A	24.62
+Heart - Left Ventricle	male_med	AKAP17A	15.495
+Kidney - Cortex	male_med	AKAP17A	30.955
+Kidney - Medulla	male_med	AKAP17A	36.63
+Liver	male_med	AKAP17A	42.24
+Lung	male_med	AKAP17A	93.58
+Minor Salivary Gland	male_med	AKAP17A	61.26
+Muscle - Skeletal	male_med	AKAP17A	16.99
+Nerve - Tibial	male_med	AKAP17A	89.48
+Pancreas	male_med	AKAP17A	41.86
+Pituitary	male_med	AKAP17A	79.15
+Skin - Not Sun Exposed (Suprapubic)	male_med	AKAP17A	63.37
+Skin - Sun Exposed (Lower leg)	male_med	AKAP17A	61.86
+Small Intestine - Terminal Ileum	male_med	AKAP17A	70.05
+Spleen	male_med	AKAP17A	134.05
+Stomach	male_med	AKAP17A	51.64
+Thyroid	male_med	AKAP17A	125.5
+Whole Blood	male_med	AKAP17A	58.87
+Adipose - Subcutaneous	female_med	AKAP17A	58.775
+Adipose - Visceral (Omentum)	female_med	AKAP17A	45.975
+Adrenal Gland	female_med	AKAP17A	46.34
+Artery - Aorta	female_med	AKAP17A	55.68
+Artery - Coronary	female_med	AKAP17A	51.79
+Artery - Tibial	female_med	AKAP17A	50.91
+Bladder	female_med	AKAP17A	52.22
+Brain - Amygdala	female_med	AKAP17A	13.58
+Brain - Anterior cingulate cortex (BA24)	female_med	AKAP17A	12.18
+Brain - Caudate (basal ganglia)	female_med	AKAP17A	13.39
+Brain - Cerebellar Hemisphere	female_med	AKAP17A	34.28
+Brain - Cerebellum	female_med	AKAP17A	40.55
+Brain - Cortex	female_med	AKAP17A	17.935
+Brain - Frontal Cortex (BA9)	female_med	AKAP17A	16.39
+Brain - Hippocampus	female_med	AKAP17A	13.725
+Brain - Hypothalamus	female_med	AKAP17A	14.86
+Brain - Nucleus accumbens (basal ganglia)	female_med	AKAP17A	13.675
+Brain - Putamen (basal ganglia)	female_med	AKAP17A	13.17
+Brain - Spinal cord (cervical c-1)	female_med	AKAP17A	22.95
+Brain - Substantia nigra	female_med	AKAP17A	15.295
+Breast - Mammary Tissue	female_med	AKAP17A	75.48
+Cells - Cultured fibroblasts	female_med	AKAP17A	42.725
+Cells - EBV-transformed lymphocytes	female_med	AKAP17A	93.01
+Colon - Sigmoid	female_med	AKAP17A	54.98
+Colon - Transverse	female_med	AKAP17A	51.5
+Esophagus - Gastroesophageal Junction	female_med	AKAP17A	48.09
+Esophagus - Mucosa	female_med	AKAP17A	47.1
+Esophagus - Muscularis	female_med	AKAP17A	47.83
+Heart - Atrial Appendage	female_med	AKAP17A	21.32
+Heart - Left Ventricle	female_med	AKAP17A	14.605
+Kidney - Cortex	female_med	AKAP17A	42.86
+Kidney - Medulla	female_med	AKAP17A	23.54
+Liver	female_med	AKAP17A	44.06
+Lung	female_med	AKAP17A	83.72
+Minor Salivary Gland	female_med	AKAP17A	58.04
+Muscle - Skeletal	female_med	AKAP17A	16.72
+Nerve - Tibial	female_med	AKAP17A	82.05
+Pancreas	female_med	AKAP17A	37.85
+Pituitary	female_med	AKAP17A	66.31
+Skin - Not Sun Exposed (Suprapubic)	female_med	AKAP17A	62.19
+Skin - Sun Exposed (Lower leg)	female_med	AKAP17A	61.71
+Small Intestine - Terminal Ileum	female_med	AKAP17A	71.1
+Spleen	female_med	AKAP17A	120.3
+Stomach	female_med	AKAP17A	48.45
+Thyroid	female_med	AKAP17A	117
+Whole Blood	female_med	AKAP17A	59.48
+Adipose - Subcutaneous	med_diff_adj	ASMT	0.312065972222222
+Adipose - Visceral (Omentum)	med_diff_adj	ASMT	0.718677494199536
+Adrenal Gland	med_diff_adj	ASMT	0.0860846172658352
+Artery - Aorta	med_diff_adj	ASMT	0.326553672316384
+Artery - Coronary	med_diff_adj	ASMT	0.494417406241054
+Artery - Tibial	med_diff_adj	ASMT	0.56815578465063
+Bladder	med_diff_adj	ASMT	0.52216180589883
+Brain - Amygdala	med_diff_adj	ASMT	0.244165170556553
+Brain - Anterior cingulate cortex (BA24)	med_diff_adj	ASMT	0.196747967479675
+Brain - Caudate (basal ganglia)	med_diff_adj	ASMT	0.0415986949429038
+Brain - Cerebellar Hemisphere	med_diff_adj	ASMT	0.887647663071392
+Brain - Cerebellum	med_diff_adj	ASMT	0.976005273566249
+Brain - Cortex	med_diff_adj	ASMT	0.252242152466368
+Brain - Frontal Cortex (BA9)	med_diff_adj	ASMT	0.250797702616465
+Brain - Hippocampus	med_diff_adj	ASMT	-0.151436781609195
+Brain - Hypothalamus	med_diff_adj	ASMT	0.169170476812541
+Brain - Nucleus accumbens (basal ganglia)	med_diff_adj	ASMT	0.0941512125534951
+Brain - Putamen (basal ganglia)	med_diff_adj	ASMT	0.413206801107157
+Brain - Spinal cord (cervical c-1)	med_diff_adj	ASMT	0.252399774138905
+Brain - Substantia nigra	med_diff_adj	ASMT	-0.0943347193347192
+Breast - Mammary Tissue	med_diff_adj	ASMT	1.20637464387464
+Cells - Cultured fibroblasts	med_diff_adj	ASMT	-0.108116925486102
+Cells - EBV-transformed lymphocytes	med_diff_adj	ASMT	0.042541806020067
+Colon - Sigmoid	med_diff_adj	ASMT	0.500666844491864
+Colon - Transverse	med_diff_adj	ASMT	0.671831765356945
+Esophagus - Gastroesophageal Junction	med_diff_adj	ASMT	0.531561996779388
+Esophagus - Mucosa	med_diff_adj	ASMT	0.266938775510204
+Esophagus - Muscularis	med_diff_adj	ASMT	0.571708533760912
+Heart - Atrial Appendage	med_diff_adj	ASMT	0.68059734759835
+Heart - Left Ventricle	med_diff_adj	ASMT	0.416798143851508
+Kidney - Cortex	med_diff_adj	ASMT	0.600134634803096
+Kidney - Medulla	med_diff_adj	ASMT	0.408667032364235
+Liver	med_diff_adj	ASMT	-0.110907335907336
+Lung	med_diff_adj	ASMT	0.513299784327822
+Minor Salivary Gland	med_diff_adj	ASMT	0.478524743230625
+Muscle - Skeletal	med_diff_adj	ASMT	1.08726287262873
+Nerve - Tibial	med_diff_adj	ASMT	0.568525760925013
+Pancreas	med_diff_adj	ASMT	0.903611927761445
+Pituitary	med_diff_adj	ASMT	0.278676988036594
+Skin - Not Sun Exposed (Suprapubic)	med_diff_adj	ASMT	0.697124852304057
+Skin - Sun Exposed (Lower leg)	med_diff_adj	ASMT	0.44170403587444
+Small Intestine - Terminal Ileum	med_diff_adj	ASMT	0.168670559945036
+Spleen	med_diff_adj	ASMT	0.637034392478876
+Stomach	med_diff_adj	ASMT	0.451473577235772
+Thyroid	med_diff_adj	ASMT	0.642296072507553
+Whole Blood	med_diff_adj	ASMT	0.597758405977584
+Adipose - Subcutaneous	male_med	ASMT	0.3456
+Adipose - Visceral (Omentum)	male_med	ASMT	0.1724
+Adrenal Gland	male_med	ASMT	0.4089
+Artery - Aorta	male_med	ASMT	0.354
+Artery - Coronary	male_med	ASMT	0.3493
+Artery - Tibial	male_med	ASMT	0.3492
+Bladder	male_med	ASMT	0.30345
+Brain - Amygdala	male_med	ASMT	0.1114
+Brain - Anterior cingulate cortex (BA24)	male_med	ASMT	0.123
+Brain - Caudate (basal ganglia)	male_med	ASMT	0.1226
+Brain - Cerebellar Hemisphere	male_med	ASMT	0.3894
+Brain - Cerebellum	male_med	ASMT	0.37925
+Brain - Cortex	male_med	ASMT	0.1784
+Brain - Frontal Cortex (BA9)	male_med	ASMT	0.1567
+Brain - Hippocampus	male_med	ASMT	0.174
+Brain - Hypothalamus	male_med	ASMT	0.1531
+Brain - Nucleus accumbens (basal ganglia)	male_med	ASMT	0.10515
+Brain - Putamen (basal ganglia)	male_med	ASMT	0.12645
+Brain - Spinal cord (cervical c-1)	male_med	ASMT	0.1771
+Brain - Substantia nigra	male_med	ASMT	0.1924
+Breast - Mammary Tissue	male_med	ASMT	0.2808
+Cells - Cultured fibroblasts	male_med	ASMT	0.07663
+Cells - EBV-transformed lymphocytes	male_med	ASMT	0.37375
+Colon - Sigmoid	male_med	ASMT	0.3749
+Colon - Transverse	male_med	ASMT	0.1807
+Esophagus - Gastroesophageal Junction	male_med	ASMT	0.3105
+Esophagus - Mucosa	male_med	ASMT	0.1225
+Esophagus - Muscularis	male_med	ASMT	0.28065
+Heart - Atrial Appendage	male_med	ASMT	0.08973
+Heart - Left Ventricle	male_med	ASMT	0.053875
+Kidney - Cortex	male_med	ASMT	0.14855
+Kidney - Medulla	male_med	ASMT	0.1823
+Liver	male_med	ASMT	0.1036
+Lung	male_med	ASMT	0.2782
+Minor Salivary Gland	male_med	ASMT	0.2142
+Muscle - Skeletal	male_med	ASMT	0.0369
+Nerve - Tibial	male_med	ASMT	0.5881
+Pancreas	male_med	ASMT	0.09524
+Pituitary	male_med	ASMT	1.421
+Skin - Not Sun Exposed (Suprapubic)	male_med	ASMT	0.2539
+Skin - Sun Exposed (Lower leg)	male_med	ASMT	0.3122
+Small Intestine - Terminal Ileum	male_med	ASMT	0.2911
+Spleen	male_med	ASMT	0.42015
+Stomach	male_med	ASMT	0.1968
+Thyroid	male_med	ASMT	0.4965
+Whole Blood	male_med	ASMT	0.1606
+Adipose - Subcutaneous	female_med	ASMT	0.45345
+Adipose - Visceral (Omentum)	female_med	ASMT	0.2963
+Adrenal Gland	female_med	ASMT	0.4441
+Artery - Aorta	female_med	ASMT	0.4696
+Artery - Coronary	female_med	ASMT	0.522
+Artery - Tibial	female_med	ASMT	0.5476
+Bladder	female_med	ASMT	0.4619
+Brain - Amygdala	female_med	ASMT	0.1386
+Brain - Anterior cingulate cortex (BA24)	female_med	ASMT	0.1472
+Brain - Caudate (basal ganglia)	female_med	ASMT	0.1277
+Brain - Cerebellar Hemisphere	female_med	ASMT	0.73505
+Brain - Cerebellum	female_med	ASMT	0.7494
+Brain - Cortex	female_med	ASMT	0.2234
+Brain - Frontal Cortex (BA9)	female_med	ASMT	0.196
+Brain - Hippocampus	female_med	ASMT	0.14765
+Brain - Hypothalamus	female_med	ASMT	0.179
+Brain - Nucleus accumbens (basal ganglia)	female_med	ASMT	0.11505
+Brain - Putamen (basal ganglia)	female_med	ASMT	0.1787
+Brain - Spinal cord (cervical c-1)	female_med	ASMT	0.2218
+Brain - Substantia nigra	female_med	ASMT	0.17425
+Breast - Mammary Tissue	female_med	ASMT	0.61955
+Cells - Cultured fibroblasts	female_med	ASMT	0.068345
+Cells - EBV-transformed lymphocytes	female_med	ASMT	0.38965
+Colon - Sigmoid	female_med	ASMT	0.5626
+Colon - Transverse	female_med	ASMT	0.3021
+Esophagus - Gastroesophageal Junction	female_med	ASMT	0.47555
+Esophagus - Mucosa	female_med	ASMT	0.1552
+Esophagus - Muscularis	female_med	ASMT	0.4411
+Heart - Atrial Appendage	female_med	ASMT	0.1508
+Heart - Left Ventricle	female_med	ASMT	0.07633
+Kidney - Cortex	female_med	ASMT	0.2377
+Kidney - Medulla	female_med	ASMT	0.2568
+Liver	female_med	ASMT	0.09211
+Lung	female_med	ASMT	0.421
+Minor Salivary Gland	female_med	ASMT	0.3167
+Muscle - Skeletal	female_med	ASMT	0.07702
+Nerve - Tibial	female_med	ASMT	0.92245
+Pancreas	female_med	ASMT	0.1813
+Pituitary	female_med	ASMT	1.817
+Skin - Not Sun Exposed (Suprapubic)	female_med	ASMT	0.4309
+Skin - Sun Exposed (Lower leg)	female_med	ASMT	0.4501
+Small Intestine - Terminal Ileum	female_med	ASMT	0.3402
+Spleen	female_med	ASMT	0.6878
+Stomach	female_med	ASMT	0.28565
+Thyroid	female_med	ASMT	0.8154
+Whole Blood	female_med	ASMT	0.2566
+Adipose - Subcutaneous	med_diff_adj	DHRSX	-0.072289156626506
+Adipose - Visceral (Omentum)	med_diff_adj	DHRSX	-0.138022648083624
+Adrenal Gland	med_diff_adj	DHRSX	0.0282588878760254
+Artery - Aorta	med_diff_adj	DHRSX	-0.0698852772466541
+Artery - Coronary	med_diff_adj	DHRSX	-0.148868971404183
+Artery - Tibial	med_diff_adj	DHRSX	-0.162799804209496
+Bladder	med_diff_adj	DHRSX	-0.175431553592935
+Brain - Amygdala	med_diff_adj	DHRSX	-0.028783958602846
+Brain - Anterior cingulate cortex (BA24)	med_diff_adj	DHRSX	-0.206307286002796
+Brain - Caudate (basal ganglia)	med_diff_adj	DHRSX	-0.195234790654638
+Brain - Cerebellar Hemisphere	med_diff_adj	DHRSX	-0.35059880239521
+Brain - Cerebellum	med_diff_adj	DHRSX	-0.216887208569628
+Brain - Cortex	med_diff_adj	DHRSX	-0.158874458874459
+Brain - Frontal Cortex (BA9)	med_diff_adj	DHRSX	-0.165828402366864
+Brain - Hippocampus	med_diff_adj	DHRSX	-0.173551171393342
+Brain - Hypothalamus	med_diff_adj	DHRSX	-0.163707127219654
+Brain - Nucleus accumbens (basal ganglia)	med_diff_adj	DHRSX	-0.15859707132735
+Brain - Putamen (basal ganglia)	med_diff_adj	DHRSX	-0.171480907425673
+Brain - Spinal cord (cervical c-1)	med_diff_adj	DHRSX	-0.109958506224066
+Brain - Substantia nigra	med_diff_adj	DHRSX	-0.232705076033412
+Breast - Mammary Tissue	med_diff_adj	DHRSX	-0.124901806755695
+Cells - Cultured fibroblasts	med_diff_adj	DHRSX	0.0367828712599505
+Cells - EBV-transformed lymphocytes	med_diff_adj	DHRSX	-0.122758620689655
+Colon - Sigmoid	med_diff_adj	DHRSX	-0.11858559724019
+Colon - Transverse	med_diff_adj	DHRSX	-0.0809010773751225
+Esophagus - Gastroesophageal Junction	med_diff_adj	DHRSX	-0.108568738229755
+Esophagus - Mucosa	med_diff_adj	DHRSX	-0.0902554196179437
+Esophagus - Muscularis	med_diff_adj	DHRSX	-0.0697674418604652
+Heart - Atrial Appendage	med_diff_adj	DHRSX	-0.18609022556391
+Heart - Left Ventricle	med_diff_adj	DHRSX	-0.0821346675005212
+Kidney - Cortex	med_diff_adj	DHRSX	0.130445715722638
+Kidney - Medulla	med_diff_adj	DHRSX	-0.334024179620035
+Liver	med_diff_adj	DHRSX	0.0242424242424242
+Lung	med_diff_adj	DHRSX	-0.0921619293712317
+Minor Salivary Gland	med_diff_adj	DHRSX	-0.106834249803614
+Muscle - Skeletal	med_diff_adj	DHRSX	-0.151290142936699
+Nerve - Tibial	med_diff_adj	DHRSX	-0.178818112049117
+Pancreas	med_diff_adj	DHRSX	-0.0801098078362864
+Pituitary	med_diff_adj	DHRSX	-0.122362869198312
+Skin - Not Sun Exposed (Suprapubic)	med_diff_adj	DHRSX	-0.123781676413255
+Skin - Sun Exposed (Lower leg)	med_diff_adj	DHRSX	-0.0578568212516884
+Small Intestine - Terminal Ileum	med_diff_adj	DHRSX	-0.0310891938250428
+Spleen	med_diff_adj	DHRSX	-0.160806916426513
+Stomach	med_diff_adj	DHRSX	-0.0983245149911817
+Thyroid	med_diff_adj	DHRSX	-0.179010494752624
+Whole Blood	med_diff_adj	DHRSX	-0.0298149417409183
+Adipose - Subcutaneous	male_med	DHRSX	13.28
+Adipose - Visceral (Omentum)	male_med	DHRSX	11.48
+Adrenal Gland	male_med	DHRSX	10.97
+Artery - Aorta	male_med	DHRSX	10.46
+Artery - Coronary	male_med	DHRSX	11.715
+Artery - Tibial	male_med	DHRSX	10.215
+Bladder	male_med	DHRSX	12.455
+Brain - Amygdala	male_med	DHRSX	3.092
+Brain - Anterior cingulate cortex (BA24)	male_med	DHRSX	3.2185
+Brain - Caudate (basal ganglia)	male_med	DHRSX	4.323
+Brain - Cerebellar Hemisphere	male_med	DHRSX	3.34
+Brain - Cerebellum	male_med	DHRSX	3.9675
+Brain - Cortex	male_med	DHRSX	3.465
+Brain - Frontal Cortex (BA9)	male_med	DHRSX	3.38
+Brain - Hippocampus	male_med	DHRSX	3.244
+Brain - Hypothalamus	male_med	DHRSX	4.111
+Brain - Nucleus accumbens (basal ganglia)	male_med	DHRSX	4.234
+Brain - Putamen (basal ganglia)	male_med	DHRSX	3.5485
+Brain - Spinal cord (cervical c-1)	male_med	DHRSX	5.302
+Brain - Substantia nigra	male_med	DHRSX	4.669
+Breast - Mammary Tissue	male_med	DHRSX	12.73
+Cells - Cultured fibroblasts	male_med	DHRSX	18.215
+Cells - EBV-transformed lymphocytes	male_med	DHRSX	14.5
+Colon - Sigmoid	male_med	DHRSX	11.595
+Colon - Transverse	male_med	DHRSX	10.21
+Esophagus - Gastroesophageal Junction	male_med	DHRSX	10.62
+Esophagus - Mucosa	male_med	DHRSX	4.659
+Esophagus - Muscularis	male_med	DHRSX	10.32
+Heart - Atrial Appendage	male_med	DHRSX	10.64
+Heart - Left Ventricle	male_med	DHRSX	7.1955
+Kidney - Cortex	male_med	DHRSX	7.9535
+Kidney - Medulla	male_med	DHRSX	11.58
+Liver	male_med	DHRSX	11.55
+Lung	male_med	DHRSX	11.61
+Minor Salivary Gland	male_med	DHRSX	12.73
+Muscle - Skeletal	male_med	DHRSX	5.387
+Nerve - Tibial	male_med	DHRSX	13.03
+Pancreas	male_med	DHRSX	8.014
+Pituitary	male_med	DHRSX	11.85
+Skin - Not Sun Exposed (Suprapubic)	male_med	DHRSX	8.208
+Skin - Sun Exposed (Lower leg)	male_med	DHRSX	8.884
+Small Intestine - Terminal Ileum	male_med	DHRSX	9.328
+Spleen	male_med	DHRSX	10.41
+Stomach	male_med	DHRSX	11.34
+Thyroid	male_med	DHRSX	16.675
+Whole Blood	male_med	DHRSX	7.295
+Adipose - Subcutaneous	female_med	DHRSX	12.32
+Adipose - Visceral (Omentum)	female_med	DHRSX	9.8955
+Adrenal Gland	female_med	DHRSX	11.28
+Artery - Aorta	female_med	DHRSX	9.729
+Artery - Coronary	female_med	DHRSX	9.971
+Artery - Tibial	female_med	DHRSX	8.552
+Bladder	female_med	DHRSX	10.27
+Brain - Amygdala	female_med	DHRSX	3.003
+Brain - Anterior cingulate cortex (BA24)	female_med	DHRSX	2.5545
+Brain - Caudate (basal ganglia)	female_med	DHRSX	3.479
+Brain - Cerebellar Hemisphere	female_med	DHRSX	2.169
+Brain - Cerebellum	female_med	DHRSX	3.107
+Brain - Cortex	female_med	DHRSX	2.9145
+Brain - Frontal Cortex (BA9)	female_med	DHRSX	2.8195
+Brain - Hippocampus	female_med	DHRSX	2.681
+Brain - Hypothalamus	female_med	DHRSX	3.438
+Brain - Nucleus accumbens (basal ganglia)	female_med	DHRSX	3.5625
+Brain - Putamen (basal ganglia)	female_med	DHRSX	2.94
+Brain - Spinal cord (cervical c-1)	female_med	DHRSX	4.719
+Brain - Substantia nigra	female_med	DHRSX	3.5825
+Breast - Mammary Tissue	female_med	DHRSX	11.14
+Cells - Cultured fibroblasts	female_med	DHRSX	18.885
+Cells - EBV-transformed lymphocytes	female_med	DHRSX	12.72
+Colon - Sigmoid	female_med	DHRSX	10.22
+Colon - Transverse	female_med	DHRSX	9.384
+Esophagus - Gastroesophageal Junction	female_med	DHRSX	9.467
+Esophagus - Mucosa	female_med	DHRSX	4.2385
+Esophagus - Muscularis	female_med	DHRSX	9.6
+Heart - Atrial Appendage	female_med	DHRSX	8.66
+Heart - Left Ventricle	female_med	DHRSX	6.6045
+Kidney - Cortex	female_med	DHRSX	8.991
+Kidney - Medulla	female_med	DHRSX	7.712
+Liver	female_med	DHRSX	11.83
+Lung	female_med	DHRSX	10.54
+Minor Salivary Gland	female_med	DHRSX	11.37
+Muscle - Skeletal	female_med	DHRSX	4.572
+Nerve - Tibial	female_med	DHRSX	10.7
+Pancreas	female_med	DHRSX	7.372
+Pituitary	female_med	DHRSX	10.4
+Skin - Not Sun Exposed (Suprapubic)	female_med	DHRSX	7.192
+Skin - Sun Exposed (Lower leg)	female_med	DHRSX	8.37
+Small Intestine - Terminal Ileum	female_med	DHRSX	9.038
+Spleen	female_med	DHRSX	8.736
+Stomach	female_med	DHRSX	10.225
+Thyroid	female_med	DHRSX	13.69
+Whole Blood	female_med	DHRSX	7.0775
+Adipose - Subcutaneous	med_diff_adj	ZBED1	-0.215791785635845
+Adipose - Visceral (Omentum)	med_diff_adj	ZBED1	-0.217149595687332
+Adrenal Gland	med_diff_adj	ZBED1	-0.0183391003460207
+Artery - Aorta	med_diff_adj	ZBED1	-0.101907499346747
+Artery - Coronary	med_diff_adj	ZBED1	-0.18212566671003
+Artery - Tibial	med_diff_adj	ZBED1	-0.212121212121212
+Bladder	med_diff_adj	ZBED1	-0.098045656101166
+Brain - Amygdala	med_diff_adj	ZBED1	-0.17162761241292
+Brain - Anterior cingulate cortex (BA24)	med_diff_adj	ZBED1	-0.256681168427595
+Brain - Caudate (basal ganglia)	med_diff_adj	ZBED1	-0.242909987669544
+Brain - Cerebellar Hemisphere	med_diff_adj	ZBED1	-0.488403041825095
+Brain - Cerebellum	med_diff_adj	ZBED1	-0.394862385321101
+Brain - Cortex	med_diff_adj	ZBED1	-0.256706996317728
+Brain - Frontal Cortex (BA9)	med_diff_adj	ZBED1	-0.238448844884489
+Brain - Hippocampus	med_diff_adj	ZBED1	-0.255438596491228
+Brain - Hypothalamus	med_diff_adj	ZBED1	-0.264965197215777
+Brain - Nucleus accumbens (basal ganglia)	med_diff_adj	ZBED1	-0.219940476190476
+Brain - Putamen (basal ganglia)	med_diff_adj	ZBED1	-0.134306023194912
+Brain - Spinal cord (cervical c-1)	med_diff_adj	ZBED1	-0.255041518386714
+Brain - Substantia nigra	med_diff_adj	ZBED1	-0.189924568965517
+Breast - Mammary Tissue	med_diff_adj	ZBED1	-0.162625987469354
+Cells - Cultured fibroblasts	med_diff_adj	ZBED1	-0.0782905150371362
+Cells - EBV-transformed lymphocytes	med_diff_adj	ZBED1	-0.105438217196075
+Colon - Sigmoid	med_diff_adj	ZBED1	-0.150175791059769
+Colon - Transverse	med_diff_adj	ZBED1	-0.121799307958478
+Esophagus - Gastroesophageal Junction	med_diff_adj	ZBED1	-0.0768864933417881
+Esophagus - Mucosa	med_diff_adj	ZBED1	-0.136255359695093
+Esophagus - Muscularis	med_diff_adj	ZBED1	-0.0682352941176471
+Heart - Atrial Appendage	med_diff_adj	ZBED1	-0.263179742631797
+Heart - Left Ventricle	med_diff_adj	ZBED1	-0.0912774990351215
+Kidney - Cortex	med_diff_adj	ZBED1	0.143557422969188
+Kidney - Medulla	med_diff_adj	ZBED1	-0.37295918367347
+Liver	med_diff_adj	ZBED1	0.0184294871794872
+Lung	med_diff_adj	ZBED1	-0.141203703703704
+Minor Salivary Gland	med_diff_adj	ZBED1	-0.0595686408764123
+Muscle - Skeletal	med_diff_adj	ZBED1	-0.335704011507112
+Nerve - Tibial	med_diff_adj	ZBED1	-0.246602624179944
+Pancreas	med_diff_adj	ZBED1	-0.145869947275923
+Pituitary	med_diff_adj	ZBED1	-0.17602523659306
+Skin - Not Sun Exposed (Suprapubic)	med_diff_adj	ZBED1	-0.19173024858479
+Skin - Sun Exposed (Lower leg)	med_diff_adj	ZBED1	-0.150255612358302
+Small Intestine - Terminal Ileum	med_diff_adj	ZBED1	-0.0926527958387516
+Spleen	med_diff_adj	ZBED1	-0.173433962264151
+Stomach	med_diff_adj	ZBED1	-0.108315098468271
+Thyroid	med_diff_adj	ZBED1	-0.185786491039975
+Whole Blood	med_diff_adj	ZBED1	0.0675763482781026
+Adipose - Subcutaneous	male_med	ZBED1	45.53
+Adipose - Visceral (Omentum)	male_med	ZBED1	29.68
+Adrenal Gland	male_med	ZBED1	28.9
+Artery - Aorta	male_med	ZBED1	38.27
+Artery - Coronary	male_med	ZBED1	38.435
+Artery - Tibial	male_med	ZBED1	36.96
+Bladder	male_med	ZBED1	30.445
+Brain - Amygdala	male_med	ZBED1	15.79
+Brain - Anterior cingulate cortex (BA24)	male_med	ZBED1	16.09
+Brain - Caudate (basal ganglia)	male_med	ZBED1	16.22
+Brain - Cerebellar Hemisphere	male_med	ZBED1	26.3
+Brain - Cerebellum	male_med	ZBED1	27.25
+Brain - Cortex	male_med	ZBED1	19.01
+Brain - Frontal Cortex (BA9)	male_med	ZBED1	18.18
+Brain - Hippocampus	male_med	ZBED1	14.25
+Brain - Hypothalamus	male_med	ZBED1	21.55
+Brain - Nucleus accumbens (basal ganglia)	male_med	ZBED1	16.8
+Brain - Putamen (basal ganglia)	male_med	ZBED1	13.365
+Brain - Spinal cord (cervical c-1)	male_med	ZBED1	21.075
+Brain - Substantia nigra	male_med	ZBED1	18.56
+Breast - Mammary Tissue	male_med	ZBED1	36.71
+Cells - Cultured fibroblasts	male_med	ZBED1	41.065
+Cells - EBV-transformed lymphocytes	male_med	ZBED1	60.13
+Colon - Sigmoid	male_med	ZBED1	29.865
+Colon - Transverse	male_med	ZBED1	28.9
+Esophagus - Gastroesophageal Junction	male_med	ZBED1	31.54
+Esophagus - Mucosa	male_med	ZBED1	20.99
+Esophagus - Muscularis	male_med	ZBED1	29.75
+Heart - Atrial Appendage	male_med	ZBED1	24.09
+Heart - Left Ventricle	male_med	ZBED1	25.91
+Kidney - Cortex	male_med	ZBED1	14.28
+Kidney - Medulla	male_med	ZBED1	19.6
+Liver	male_med	ZBED1	24.96
+Lung	male_med	ZBED1	30.24
+Minor Salivary Gland	male_med	ZBED1	29.21
+Muscle - Skeletal	male_med	ZBED1	62.57
+Nerve - Tibial	male_med	ZBED1	42.68
+Pancreas	male_med	ZBED1	17.07
+Pituitary	male_med	ZBED1	23.775
+Skin - Not Sun Exposed (Suprapubic)	male_med	ZBED1	40.63
+Skin - Sun Exposed (Lower leg)	male_med	ZBED1	44.99
+Small Intestine - Terminal Ileum	male_med	ZBED1	30.76
+Spleen	male_med	ZBED1	33.125
+Stomach	male_med	ZBED1	22.85
+Thyroid	male_med	ZBED1	32.645
+Whole Blood	male_med	ZBED1	15.39
+Adipose - Subcutaneous	female_med	ZBED1	35.705
+Adipose - Visceral (Omentum)	female_med	ZBED1	23.235
+Adrenal Gland	female_med	ZBED1	28.37
+Artery - Aorta	female_med	ZBED1	34.37
+Artery - Coronary	female_med	ZBED1	31.435
+Artery - Tibial	female_med	ZBED1	29.12
+Bladder	female_med	ZBED1	27.46
+Brain - Amygdala	female_med	ZBED1	13.08
+Brain - Anterior cingulate cortex (BA24)	female_med	ZBED1	11.96
+Brain - Caudate (basal ganglia)	female_med	ZBED1	12.28
+Brain - Cerebellar Hemisphere	female_med	ZBED1	13.455
+Brain - Cerebellum	female_med	ZBED1	16.49
+Brain - Cortex	female_med	ZBED1	14.13
+Brain - Frontal Cortex (BA9)	female_med	ZBED1	13.845
+Brain - Hippocampus	female_med	ZBED1	10.61
+Brain - Hypothalamus	female_med	ZBED1	15.84
+Brain - Nucleus accumbens (basal ganglia)	female_med	ZBED1	13.105
+Brain - Putamen (basal ganglia)	female_med	ZBED1	11.57
+Brain - Spinal cord (cervical c-1)	female_med	ZBED1	15.7
+Brain - Substantia nigra	female_med	ZBED1	15.035
+Breast - Mammary Tissue	female_med	ZBED1	30.74
+Cells - Cultured fibroblasts	female_med	ZBED1	37.85
+Cells - EBV-transformed lymphocytes	female_med	ZBED1	53.79
+Colon - Sigmoid	female_med	ZBED1	25.38
+Colon - Transverse	female_med	ZBED1	25.38
+Esophagus - Gastroesophageal Junction	female_med	ZBED1	29.115
+Esophagus - Mucosa	female_med	ZBED1	18.13
+Esophagus - Muscularis	female_med	ZBED1	27.72
+Heart - Atrial Appendage	female_med	ZBED1	17.75
+Heart - Left Ventricle	female_med	ZBED1	23.545
+Kidney - Cortex	female_med	ZBED1	16.33
+Kidney - Medulla	female_med	ZBED1	12.29
+Liver	female_med	ZBED1	25.42
+Lung	female_med	ZBED1	25.97
+Minor Salivary Gland	female_med	ZBED1	27.47
+Muscle - Skeletal	female_med	ZBED1	41.565
+Nerve - Tibial	female_med	ZBED1	32.155
+Pancreas	female_med	ZBED1	14.58
+Pituitary	female_med	ZBED1	19.59
+Skin - Not Sun Exposed (Suprapubic)	female_med	ZBED1	32.84
+Skin - Sun Exposed (Lower leg)	female_med	ZBED1	38.23
+Small Intestine - Terminal Ileum	female_med	ZBED1	27.91
+Spleen	female_med	ZBED1	27.38
+Stomach	female_med	ZBED1	20.375
+Thyroid	female_med	ZBED1	26.58
+Whole Blood	female_med	ZBED1	16.43
+Adipose - Subcutaneous	med_diff_adj	CD99	-0.194078947368421
+Adipose - Visceral (Omentum)	med_diff_adj	CD99	-0.240097908322207
+Adrenal Gland	med_diff_adj	CD99	-0.372767339364417
+Artery - Aorta	med_diff_adj	CD99	-0.174816983894583
+Artery - Coronary	med_diff_adj	CD99	-0.244425262552151
+Artery - Tibial	med_diff_adj	CD99	-0.292577635426821
+Bladder	med_diff_adj	CD99	-0.343185550082102
+Brain - Amygdala	med_diff_adj	CD99	-0.434711895910781
+Brain - Anterior cingulate cortex (BA24)	med_diff_adj	CD99	-0.438766771338853
+Brain - Caudate (basal ganglia)	med_diff_adj	CD99	-0.449275362318841
+Brain - Cerebellar Hemisphere	med_diff_adj	CD99	-0.41964965727342
+Brain - Cerebellum	med_diff_adj	CD99	-0.373075846627484
+Brain - Cortex	med_diff_adj	CD99	-0.403695584090197
+Brain - Frontal Cortex (BA9)	med_diff_adj	CD99	-0.382406397673573
+Brain - Hippocampus	med_diff_adj	CD99	-0.436442786069652
+Brain - Hypothalamus	med_diff_adj	CD99	-0.35844915874177
+Brain - Nucleus accumbens (basal ganglia)	med_diff_adj	CD99	-0.482295740407991
+Brain - Putamen (basal ganglia)	med_diff_adj	CD99	-0.458861181490866
+Brain - Spinal cord (cervical c-1)	med_diff_adj	CD99	-0.288888888888889
+Brain - Substantia nigra	med_diff_adj	CD99	-0.485195860081226
+Breast - Mammary Tissue	med_diff_adj	CD99	-0.410526315789474
+Cells - Cultured fibroblasts	med_diff_adj	CD99	-0.040266630390423
+Cells - EBV-transformed lymphocytes	med_diff_adj	CD99	-0.385156159963121
+Colon - Sigmoid	med_diff_adj	CD99	-0.293003478933127
+Colon - Transverse	med_diff_adj	CD99	-0.31041388518024
+Esophagus - Gastroesophageal Junction	med_diff_adj	CD99	-0.197981739548294
+Esophagus - Mucosa	med_diff_adj	CD99	-0.143236074270557
+Esophagus - Muscularis	med_diff_adj	CD99	-0.202064896755162
+Heart - Atrial Appendage	med_diff_adj	CD99	-0.315257819103973
+Heart - Left Ventricle	med_diff_adj	CD99	-0.15978013646702
+Kidney - Cortex	med_diff_adj	CD99	-0.267478813559322
+Kidney - Medulla	med_diff_adj	CD99	-0.610431654676259
+Liver	med_diff_adj	CD99	-0.106081789584062
+Lung	med_diff_adj	CD99	-0.275
+Minor Salivary Gland	med_diff_adj	CD99	-0.12112676056338
+Muscle - Skeletal	med_diff_adj	CD99	-0.292483660130719
+Nerve - Tibial	med_diff_adj	CD99	-0.296248568155785
+Pancreas	med_diff_adj	CD99	-0.219302594612461
+Pituitary	med_diff_adj	CD99	-0.478365384615385
+Skin - Not Sun Exposed (Suprapubic)	med_diff_adj	CD99	-0.145725388601036
+Skin - Sun Exposed (Lower leg)	med_diff_adj	CD99	-0.0934684684684684
+Small Intestine - Terminal Ileum	med_diff_adj	CD99	-0.24165402124431
+Spleen	med_diff_adj	CD99	-0.277927063339731
+Stomach	med_diff_adj	CD99	-0.249644473173885
+Thyroid	med_diff_adj	CD99	-0.306428049671293
+Whole Blood	med_diff_adj	CD99	-0.203811101905551
+Adipose - Subcutaneous	male_med	CD99	334.4
+Adipose - Visceral (Omentum)	male_med	CD99	224.7
+Adrenal Gland	male_med	CD99	86.22
+Artery - Aorta	male_med	CD99	341.5
+Artery - Coronary	male_med	CD99	347.55
+Artery - Tibial	male_med	CD99	359.05
+Bladder	male_med	CD99	243.6
+Brain - Amygdala	male_med	CD99	43.04
+Brain - Anterior cingulate cortex (BA24)	male_med	CD99	35.03
+Brain - Caudate (basal ganglia)	male_med	CD99	42.78
+Brain - Cerebellar Hemisphere	male_med	CD99	26.26
+Brain - Cerebellum	male_med	CD99	35.73
+Brain - Cortex	male_med	CD99	31.93
+Brain - Frontal Cortex (BA9)	male_med	CD99	27.51
+Brain - Hippocampus	male_med	CD99	40.2
+Brain - Hypothalamus	male_med	CD99	54.68
+Brain - Nucleus accumbens (basal ganglia)	male_med	CD99	47.305
+Brain - Putamen (basal ganglia)	male_med	CD99	37.495
+Brain - Spinal cord (cervical c-1)	male_med	CD99	119.25
+Brain - Substantia nigra	male_med	CD99	76.33
+Breast - Mammary Tissue	male_med	CD99	247
+Cells - Cultured fibroblasts	male_med	CD99	367.55
+Cells - EBV-transformed lymphocytes	male_med	CD99	86.77
+Colon - Sigmoid	male_med	CD99	258.7
+Colon - Transverse	male_med	CD99	149.8
+Esophagus - Gastroesophageal Junction	male_med	CD99	208.1
+Esophagus - Mucosa	male_med	CD99	113.1
+Esophagus - Muscularis	male_med	CD99	203.4
+Heart - Atrial Appendage	male_med	CD99	118.3
+Heart - Left Ventricle	male_med	CD99	79.14
+Kidney - Cortex	male_med	CD99	37.76
+Kidney - Medulla	male_med	CD99	55.6
+Liver	male_med	CD99	57.22
+Lung	male_med	CD99	208
+Minor Salivary Gland	male_med	CD99	106.5
+Muscle - Skeletal	male_med	CD99	52.02
+Nerve - Tibial	male_med	CD99	349.2
+Pancreas	male_med	CD99	60.51
+Pituitary	male_med	CD99	104
+Skin - Not Sun Exposed (Suprapubic)	male_med	CD99	154.4
+Skin - Sun Exposed (Lower leg)	male_med	CD99	177.6
+Small Intestine - Terminal Ileum	male_med	CD99	131.8
+Spleen	male_med	CD99	130.25
+Stomach	male_med	CD99	77.35
+Thyroid	male_med	CD99	136.9
+Whole Blood	male_med	CD99	72.42
+Adipose - Subcutaneous	female_med	CD99	269.5
+Adipose - Visceral (Omentum)	female_med	CD99	170.75
+Adrenal Gland	female_med	CD99	54.08
+Artery - Aorta	female_med	CD99	281.8
+Artery - Coronary	female_med	CD99	262.6
+Artery - Tibial	female_med	CD99	254
+Bladder	female_med	CD99	160
+Brain - Amygdala	female_med	CD99	24.33
+Brain - Anterior cingulate cortex (BA24)	female_med	CD99	19.66
+Brain - Caudate (basal ganglia)	female_med	CD99	23.56
+Brain - Cerebellar Hemisphere	female_med	CD99	15.24
+Brain - Cerebellum	female_med	CD99	22.4
+Brain - Cortex	female_med	CD99	19.04
+Brain - Frontal Cortex (BA9)	female_med	CD99	16.99
+Brain - Hippocampus	female_med	CD99	22.655
+Brain - Hypothalamus	female_med	CD99	35.08
+Brain - Nucleus accumbens (basal ganglia)	female_med	CD99	24.49
+Brain - Putamen (basal ganglia)	female_med	CD99	20.29
+Brain - Spinal cord (cervical c-1)	female_med	CD99	84.8
+Brain - Substantia nigra	female_med	CD99	39.295
+Breast - Mammary Tissue	female_med	CD99	145.6
+Cells - Cultured fibroblasts	female_med	CD99	352.75
+Cells - EBV-transformed lymphocytes	female_med	CD99	53.35
+Colon - Sigmoid	female_med	CD99	182.9
+Colon - Transverse	female_med	CD99	103.3
+Esophagus - Gastroesophageal Junction	female_med	CD99	166.9
+Esophagus - Mucosa	female_med	CD99	96.9
+Esophagus - Muscularis	female_med	CD99	162.3
+Heart - Atrial Appendage	female_med	CD99	81.005
+Heart - Left Ventricle	female_med	CD99	66.495
+Kidney - Cortex	female_med	CD99	27.66
+Kidney - Medulla	female_med	CD99	21.66
+Liver	female_med	CD99	51.15
+Lung	female_med	CD99	150.8
+Minor Salivary Gland	female_med	CD99	93.6
+Muscle - Skeletal	female_med	CD99	36.805
+Nerve - Tibial	female_med	CD99	245.75
+Pancreas	female_med	CD99	47.24
+Pituitary	female_med	CD99	54.25
+Skin - Not Sun Exposed (Suprapubic)	female_med	CD99	131.9
+Skin - Sun Exposed (Lower leg)	female_med	CD99	161
+Small Intestine - Terminal Ileum	female_med	CD99	99.95
+Spleen	female_med	CD99	94.05
+Stomach	female_med	CD99	58.04
+Thyroid	female_med	CD99	94.95
+Whole Blood	female_med	CD99	57.66
