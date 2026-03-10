@@ -344,7 +344,7 @@ ggsave("../../FIGURES/sex_diff_vs_xi_expression.pdf", height = 7, width = 10)
 ```
 
 
-# Figure 3
+# Figure 4
 
 
 ## prepare data: Xi expression, gene annotation
@@ -943,7 +943,7 @@ ggplot(sd_df, aes(x=mean_ASE, y=TPMdiff)) +
   geom_smooth(method="lm", formula=y~x, se=FALSE, color = "#D64B27") +
   stat_cor(label.y=c(0.37), label.x=c(0.1), color="#D64B27") +
   labs(
-    y = "Standard Deviatio of Female-Male \nGene Expression Differencess Across Tissues", 
+    y = "Standard Deviation of Female-Male \nGene Expression Differencess Across Tissues", 
     x="Standard Deviation of Proportion of Xi Expression Across Tissues") +
   theme_classic() +
   theme(plot.title = element_text(size=14), axis.title = element_text(size=14),
@@ -1002,7 +1002,7 @@ ggsave("../../FIGURES/tissue_specific_xi_vs_sex_diff.pdf", height = 15, width = 
 
 
 
-# Figure S4
+# Figure S3
 
 ## calculate correlation
 ```{r}
