@@ -1,3 +1,10 @@
+Escape from X inactivation drives sex differences in gene expression
+
+Carrie Zhu*, Liaoyi Xu*, Arbel Harpak
+* contributed equally
+
+Instructions to replicate data and figures in "Escape from X inactivation drives sex differences in gene expression" (2026) are provided below. Further explanation of process are detailed in Methods and Supplementary Text sections of paper.
+
 # Software 
 - R 4.3.1
 - [plink 2.0](https://www.cog-genomics.org/plink/2.0/)
@@ -64,9 +71,13 @@ Perform XWAS using additive and dominance deviation models
 - Run gwas.sh -p [pheno_name]
 - XWAS files uploaded on https://www.harpaklab.com/data
 
+##### Figure 3
+Examples of NPX SNPs with significant dominance effects
+- Lines 27-44 in fig3+s7.ipynb
+
 ##### Figure 4, S3, S4
-- Annotation
-	- NCBI37.3.gene.loc
+- Gene Annotation
+	- NCBI37.3.gene.loc in NCBI.zip
 - Inputs
 	- Xi expression data: XWAS summary statistics, ASE_tissue_3_ind.txt, NCBI37.3.gene.loc
 Correlation between Xi expression and strength of association of trait (Fig S3)
@@ -80,6 +91,9 @@ Association between MAGMA p and xi expression heatmap (Fig S4)
 Correlation between minimum gene-level p-value from trait association analysis and number of SNPs in gene
 - Lines 1131-1457 in fig1+4+s1-4+s6.Rmd
 
+##### Figure S7
+Comparison of the number of independent significant dominance-deviation SNPs across chromosomes
+- "supp" in fig3+s7.ipynb
 
 
 
