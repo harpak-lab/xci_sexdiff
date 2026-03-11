@@ -107,6 +107,7 @@ Comparison of the number of independent significant dominance-deviation SNPs acr
 ---
 
 ## References
-1. Gylemo, B., et al. A whole-organism landscape of X-inactivation in humans. eLife 14, (2025). 
-2. San Roman, A. K. et al. The human inactive X chromosome modulates expression of the active X chromosome. Cell Genomics 3, 100259 (2023). 
+1. Gylemo, B., et al. A whole-organism landscape of X-inactivation in humans. eLife 14, (2025). <https://doi.org/10.7554/eLife.102701.2>
+3. San Roman, A. K. et al. The human inactive X chromosome modulates expression of the active X chromosome. Cell Genomics 3, 100259 (2023). <https://doi.org/10.1016/j.xgen.2023.100259>
+
 
