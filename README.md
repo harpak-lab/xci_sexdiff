@@ -1,4 +1,4 @@
-# Escape from X inactivation drives sex differences in gene expression
+# [Escape from X inactivation drives sex differences in gene expression](https://doi.org/10.1093/molbev/msag050)
 
 Carrie Zhu<sup>1,2,+</sup>, Liaoyi Xu<sup>1,2,+</sup>, Arbel Harpak<sup>1,2,\*</sup>
 
@@ -9,7 +9,7 @@ Carrie Zhu<sup>1,2,+</sup>, Liaoyi Xu<sup>1,2,+</sup>, Arbel Harpak<sup>1,2,\*</
 
 ----
 
-Instructions to replicate data and figures in "Escape from X inactivation drives sex differences in gene expression" (2026) are provided below. Further explanation of process are detailed in Methods and Supplementary Text sections of paper.
+Instructions to replicate data and figures in [Escape from X inactivation drives sex differences in gene expression](https://doi.org/10.1093/molbev/msag050) are provided below. Further explanation of process are detailed in Methods and Supplementary Text sections of paper.
 
 
 ## Software 
